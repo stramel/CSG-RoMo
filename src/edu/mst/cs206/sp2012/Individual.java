@@ -1,14 +1,32 @@
 package edu.mst.cs206.sp2012;
 
+import java.util.Random;
 import java.util.Vector;
 
 public class Individual {
 
 	private int maxNumberOfRules;
+<<<<<<< HEAD
 	private Vector ruleslist = new Vector();
 	/*
 	private Element GeneratedSummaryTable;
 	private OpenSourceProject ProposedSummary;
+=======
+	private Vector<Rule> ruleslist = new Vector<Rule>();
+	
+	public Individual(int maxNumberOfRulesPerSolution) {
+		this.maxNumberOfRules = maxNumberOfRulesPerSolution;
+		
+		int numberOfRulesToBeCreated = new Random().nextInt(maxNumberOfRulesPerSolution);
+		for (int i=0; i<numberOfRulesToBeCreated; i++)
+		{
+			this.ruleslist.add(new Rule());
+		}
+	}
+	
+	/*private Element ProposedSummary;
+	/private Element GeneratedSummaryTable;
+>>>>>>> b6ccf63e545a8533fcde17d4f6e992c5a641a411
 	
 	public Individual(OpenSourceProject Project){
 		ProposedSummary = Project;

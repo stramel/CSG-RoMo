@@ -1,20 +1,17 @@
 package edu.mst.cs206.sp2012;
 
+import java.util.Vector;
+
 public class Population {
 
 	private int maxNumberOfRulesPerSolution;
 	private int maxNumberOfSolutions;
-	private Individual[] individuals;
+	private Vector<Individual> individuals;
 
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution) {
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.maxNumberOfSolutions = maxNumberOfRulesPerSolution;
-		this.individuals = new Individual[maxNumberOfRulesPerSolution];
-		
-		for (int i=0; i<maxNumberOfRulesPerSolution; i++)
-		{
-			this.individuals[i] = new Individual(maxNumberOfRulesPerSolution);
-		}
+		this.individuals = new Vector<Individual>();
 	}
 
 	public Population(int numberOfFinalSolutions) {
@@ -49,5 +46,13 @@ public class Population {
 	public void setAvailableMetrics(String[] availableMetrics) {
 		// TODO Auto-generated method stub
 		System.out.println("Setting available metrics to use");
+	}
+
+	public void initialize() {
+		// Initialize all individuals in the population.
+		for (int i=0; i<maxNumberOfRulesPerSolution; i++)
+		{
+			this.individuals.add(new Individual(maxNumberOfRulesPerSolution));
+		}
 	}
 }

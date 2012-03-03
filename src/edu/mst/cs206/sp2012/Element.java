@@ -8,9 +8,9 @@ public class Element {
 	
 	private String name;
 	private Type type;
-	private HashMap metrics;
+	private HashMap<String, Integer> metrics;
 
-	public Element(String name, Type type, HashMap metrics) {
+	public Element(String name, Type type, HashMap<String, Integer> metrics) {
 		this.name = name;
 		this.type = type;
 		this.metrics = metrics;

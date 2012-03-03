@@ -26,6 +26,8 @@ public class MainController {
 		
 		currentPopulation.setAvailableMetrics(ctrl.availableMetrics);
 		//currentPopulation.setComputedMetrics(ctrl.precomputedMetrics);
+		
+		currentPopulation.initialize();
 		for(int generation=0; generation < ctrl.numberOfIterators; generation++)
 		{
 			currentPopulation.evaluateSolutions();
