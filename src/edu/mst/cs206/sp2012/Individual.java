@@ -6,12 +6,11 @@ import java.util.Vector;
 public class Individual {
 
 	private int maxNumberOfRules;
-<<<<<<< HEAD
+
 	private Vector ruleslist = new Vector();
 	/*
 	private Element GeneratedSummaryTable;
 	private OpenSourceProject ProposedSummary;
-=======
 	private Vector<Rule> ruleslist = new Vector<Rule>();
 	
 	public Individual(int maxNumberOfRulesPerSolution) {
@@ -26,7 +25,6 @@ public class Individual {
 	
 	/*private Element ProposedSummary;
 	/private Element GeneratedSummaryTable;
->>>>>>> b6ccf63e545a8533fcde17d4f6e992c5a641a411
 	
 	public Individual(OpenSourceProject Project){
 		ProposedSummary = Project;
