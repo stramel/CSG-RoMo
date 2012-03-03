@@ -6,18 +6,23 @@ public class Individual {
 
 	private int maxNumberOfRules;
 	private Vector ruleslist = new Vector();
-	/*private Element ProposedSummary;
-	/private Element GeneratedSummaryTable;
+	/*
+	private Element GeneratedSummaryTable;
+	private OpenSourceProject ProposedSummary;
 	
-	
-	public Individual(Element ProposedSummary ) {
-		ProposedSummary = PropsedSummary;
-		
+	public Individual(OpenSourceProject Project){
+		ProposedSummary = Project;
 	}
 	
 	public GenerateSummaryTable(){
 		for(int i = 0; i < 5;i++){
 			
 		}
+		
+	public int FitnessFunction(Summary ProposedSummary, Summary GeneratedSummary){
+		int NumFitnessFunction = (((ProposedSummary.Intersection(GeneratedSummary))/GeneratedSummary.getElements()) + 
+		                      ((ProposedSummary.Intersection(GeneratedSummary))/ProposedSummary.getElements())/(2));
+		return NumFitnessFunction;
+	}
 	}*/
 }

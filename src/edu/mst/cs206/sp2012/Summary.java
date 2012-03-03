@@ -13,12 +13,19 @@ public class Summary {
 		SummarySize = ProjectSummary.getElements().size();
 	}
 	
-	public int Intersection(Summary generated){
-		for(int i = 0; i < SummarySize;i++){
-		  for(int i = 0; i < 
-			if(compareTo(ProjectSummary.getName() == compareTo(
+	public int Intersection(Summary GeneratedSummary){
+		int numIntersections;
+		for(int i = 0; i < GeneratedSummary.SummarySize;i++){
+		  for(int j = 0; j < SummarySize; j++){
+			if(compareTo(ElementNames[j] == compareTo(GeneratedSummary.ElementNames[i])
+		      numInersections++;
+		  }
 		}
-		return Intersection;
+		return numIntersections;
+	}
+	
+	public getSummarySize(int SummarySize){
+		return SummarySize;
 	}*/
 	public Summary(String url) {
 		// TODO Auto-generated constructor stub
