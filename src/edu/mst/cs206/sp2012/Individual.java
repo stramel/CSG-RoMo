@@ -6,6 +6,11 @@ public class Individual {
 
 	private int maxNumberOfRules;
 	private Vector ruleslist = new Vector();
+	
+	public Individual(int maxNumberOfRulesPerSolution) {
+		this.maxNumberOfRules = maxNumberOfRulesPerSolution;
+	}
+	
 	/*private Element ProposedSummary;
 	/private Element GeneratedSummaryTable;
 	
