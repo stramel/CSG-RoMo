@@ -10,11 +10,13 @@ public class Element {
 	private HashMap metrics;
 
 	public Element(String name, Type type, HashMap metrics) {
-		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.type = type;
+		this.metrics = metrics;
 	}
 	
 	public Element(String name, Type type) {
-		// TODO Auto-generated constructor stub
+		this(name, type, new HashMap(0));
 	}
 	
 	public String getName() {
@@ -34,11 +36,11 @@ public class Element {
 	}
 	
 	public int MetricValue(String metricId) {
-		
+		return metrics.get(metricId);
 	}
 	
 	public boolean MetricExists(String metricId) {
-		
+		return metrics.containsKey(metricId);
 	}
 	
 }
