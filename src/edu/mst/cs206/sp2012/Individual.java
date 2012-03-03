@@ -6,13 +6,18 @@ public class Individual {
 
 	private int maxNumberOfRules;
 	private Vector ruleslist = new Vector();
-	private Element ProposedGeneratedSummary;
+	/*private Element ProposedSummary;
+	/private Element GeneratedSummaryTable;
+	
 	
 	public Individual(Element ProposedSummary ) {
-		ProposedGeneratedSummary = PropsedSummary;
-	}
-
-	public Intersection(){
+		ProposedSummary = PropsedSummary;
 		
 	}
+	
+	public GenerateSummaryTable(){
+		for(int i = 0; i < 5;i++){
+			
+		}
+	}*/
 }
