@@ -49,6 +49,7 @@ public class MainController {
 		this.urlToMetricsResults = urlToMetricsResults;
 		this.bestSolutions = new Population(numberOfFinalSolutions);
 		
+		// Hard-coded metrics!
 		this.availableMetrics = new String[6];
 		this.availableMetrics[0] = "MLOC";	// Method Lines of Code
 		this.availableMetrics[1] = "PAR";	// Number of Parameters
