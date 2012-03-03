@@ -3,7 +3,8 @@ package edu.mst.cs206.sp2012;
 public class Summary {
 
 	/*private int SummarySize;
-	private OpenSourceProject ProjectSummary;
+	private OpenSourceProject ProjectProposedSummary; 
+	Vector ElementNames = new Vector();
 	
 	public Summary(String url, OpenSourceProject Project) {
 		// TODO Auto-generated constructor stub
@@ -12,9 +13,10 @@ public class Summary {
 		SummarySize = ProjectSummary.getElements().size();
 	}
 	
-	public int Intersection(){
+	public int Intersection(Summary generated){
 		for(int i = 0; i < SummarySize;i++){
-			
+		  for(int i = 0; i < 
+			if(compareTo(ProjectSummary.getName() == compareTo(
 		}
 		return Intersection;
 	}*/
