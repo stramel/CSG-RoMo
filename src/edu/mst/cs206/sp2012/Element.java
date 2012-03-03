@@ -1,6 +1,7 @@
 package edu.mst.cs206.sp2012;
 
 import java.util.HashMap;
+import java.util.*;
 
 public class Element {
 	public enum Type { CLASS, METHOD }
