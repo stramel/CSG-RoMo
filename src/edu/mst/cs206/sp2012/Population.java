@@ -4,10 +4,17 @@ public class Population {
 
 	private int maxNumberOfRulesPerSolution;
 	private int maxNumberOfSolutions;
+	private Individual[] individuals;
 
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution) {
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.maxNumberOfSolutions = maxNumberOfRulesPerSolution;
+		this.individuals = new Individual[maxNumberOfRulesPerSolution];
+		
+		for (int i=0; i<maxNumberOfRulesPerSolution; i++)
+		{
+			this.individuals[i] = new Individual(maxNumberOfRulesPerSolution);
+		}
 	}
 
 	public Population(int numberOfFinalSolutions) {
@@ -43,5 +50,4 @@ public class Population {
 		// TODO Auto-generated method stub
 		System.out.println("Setting available metrics to use");
 	}
-
 }

@@ -48,5 +48,13 @@ public class MainController {
 		this.urlToSampleSummaries = urlToSampleSummaries;
 		this.urlToMetricsResults = urlToMetricsResults;
 		this.bestSolutions = new Population(numberOfFinalSolutions);
+		
+		this.availableMetrics = new String[6];
+		this.availableMetrics[0] = "MLOC";	// Method Lines of Code
+		this.availableMetrics[1] = "PAR";	// Number of Parameters
+		this.availableMetrics[2] = "VG";	// McCabe Cyclomatic Complexity
+		this.availableMetrics[3] = "NBD";	// Nested Block Depth
+		this.availableMetrics[4] = "NSC";	// Number of Children
+		this.availableMetrics[5] = "NOM";	// Number of Methods
 	}
 }
