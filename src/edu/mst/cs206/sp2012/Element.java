@@ -1,15 +1,19 @@
 package edu.mst.cs206.sp2012;
 
-import java.util.Vector;
+import java.util.HashMap;
 
 public class Element {
 	public enum Type { CLASS, METHOD }
 	
 	private String name;
-	private final Type type;
-	private Vector metrics;
+	private Type type;
+	private HashMap metrics;
+
+	public Element(String name, Type type, HashMap metrics) {
+		// TODO Auto-generated constructor stub
+	}
 	
-	public Element(String string, Type type, Object object) {
+	public Element(String name, Type type) {
 		// TODO Auto-generated constructor stub
 	}
 	
