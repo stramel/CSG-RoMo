@@ -6,9 +6,9 @@ public class OpenSourceProject {
 	private Vector<Element> elements;
 	private Summary summary;
 	
-	public OpenSourceProject(String xml, String summary) {
-		parseMetrics(xml);
-		parseSummary(summary);
+	public OpenSourceProject(String urlToXml, String urlToSampleSummary) {
+		parseMetrics(urlToXml);
+		parseSummary(urlToSampleSummary);
 	}
 	
 	private void parseMetrics(String xml) {
