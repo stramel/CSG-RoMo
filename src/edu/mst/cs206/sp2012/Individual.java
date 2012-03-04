@@ -7,9 +7,8 @@ public class Individual {
 
 	private int maxNumberOfRules;
 
-	/*
-	private Element GeneratedSummaryTable;
-	private OpenSourceProject ProposedSummary;
+	//private Element GeneratedSummaryTable;
+	//private OpenSourceProject ProposedSummary;
 	private Vector<Rule> ruleslist = new Vector<Rule>();
 	
 	public Individual(int maxNumberOfRulesPerSolution) {
