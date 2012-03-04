@@ -30,7 +30,7 @@ public class Summary {
 	return ElementNames.get(i);
   }
 
-  private int getSummarySize(){
+  public int getSummarySize(){
 	return SummarySize;
   }
 	
