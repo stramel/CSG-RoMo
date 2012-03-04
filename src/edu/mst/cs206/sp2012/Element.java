@@ -16,7 +16,7 @@ public class Element {
 	}
 	
 	public Element(String name, Type type) {
-		this(name, type, new HashMap(0));
+		this(name, type, new HashMap<String, Integer>(0));
 	}
 	
 	public String getName() {
