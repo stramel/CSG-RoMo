@@ -18,6 +18,14 @@ public class Individual {
     int numberOfRulesToBeCreated = new Random().nextInt(maxNumberOfRulesPerSolution);
     for (int i=0; i<numberOfRulesToBeCreated; i++)
     {
+    
+  // Method Lines of Code->In the hundreds possibly thousands
+  // Number of Parameters-> less than 10
+  // McCabe Cyclomatic Complexity-> less than 10
+  // Nested Block Depth-> less than 10
+  // Number of Children-> less than 10
+  // Number of Methods-> less than 25
+
 	  Random randomizer = new Random();
 	  int randomThreshold = randomizer.nextInt();
 	  String randomMetric = availableMetrics[randomizer.nextInt(availableMetrics.length)];
