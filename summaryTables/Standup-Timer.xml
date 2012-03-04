@@ -1,0 +1,20 @@
+<summary>
+	<classes>
+		<class>Team</class>
+		<class>Meeting</class>
+		<class>StandupTimer</class>
+	</classes>
+	<methods>
+		<method>TeamDAO::createNewTeam</method>
+		<method>TeamDAO::findByName</method>
+		<method>MeetingDAO::createContentValues</method>
+		<method>MeetingDAO::findByTeamAndDate</method>
+		<method>StandupTimer::onCreate</method>
+		<method>StandupTimer::updateDisplay</method>
+		<method>StandupTimer::loadState</method>
+		<method>StandupTimer::saveState</method>
+		<method>StandupTimer::storeMeetingStats</method>
+		<method>ConfigureStandupTimer::onOptionsItemSelected</method>
+		<method>ConfigureStandupTimer::initializeGUIElements</method>
+	</methods>
+</summary>

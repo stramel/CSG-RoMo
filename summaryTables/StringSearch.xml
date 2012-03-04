@@ -1,0 +1,14 @@
+<summary>
+	<classes>
+		<class>BNDM</class>
+		<class>BNDMWildcards</class>
+		<class>BoyerMooreHorspoolRaita</class>
+		<class>StringSearch</class>
+		<class>Dispatch </class>
+	</classes>
+	<methods>
+		<method>StringSearch::searchChars()</method>
+		<method>StringSearch::searchBytes()</method>
+		<method>StringSearch::searchString()</method>
+	</methods>
+</summary>
