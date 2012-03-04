@@ -3,7 +3,7 @@ package edu.mst.cs206.sp2012;
 import java.util.Vector;
 
 public class OpenSourceProject {
-	private Vector elements;
+	private Vector<Element> elements;
 	private Summary summary;
 	
 	public OpenSourceProject(String xml, String summary) {
