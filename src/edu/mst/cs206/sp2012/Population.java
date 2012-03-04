@@ -7,6 +7,7 @@ public class Population {
 	private int maxNumberOfRulesPerSolution;
 	private int maxNumberOfSolutions;
 	private Vector<Individual> individuals;
+	private String[] availableMetrics;
 
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution) {
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
@@ -46,6 +47,7 @@ public class Population {
 	public void setAvailableMetrics(String[] availableMetrics) {
 		// TODO Auto-generated method stub
 		System.out.println("Setting available metrics to use");
+		this.availableMetrics = availableMetrics;
 	}
 
 	public void initialize() {
