@@ -2,11 +2,11 @@ package edu.mst.cs206.sp2012;
 
 public class MainController {
 	
-	private int numberOfIterators;
-	private int maxNumberOfSolutions;
-	private int maxNumberOfRulesPerSolution;
-	private String urlToSampleSummaries;
-	private String urlToMetricsResults;
+	private final int numberOfIterators;
+	private final int maxNumberOfSolutions;
+	private final int maxNumberOfRulesPerSolution;
+	private final String urlToSampleSummary;
+	private final String urlToMetricsResults;
 	private Population bestSolutions;
 	private String[] availableMetrics;
 	
@@ -16,13 +16,13 @@ public class MainController {
 		System.out.println("Hard coded number of Iterations: " + ctrl.numberOfIterators);
 		System.out.println("Hard coded number of Final Solutions: " + ctrl.maxNumberOfSolutions);
 		System.out.println("Maximum number of Rules per Solution: " + ctrl.maxNumberOfRulesPerSolution);
-		System.out.println("URL to Sample Summaries: " + ctrl.urlToSampleSummaries);
+		System.out.println("URL to Sample Summaries: " + ctrl.urlToSampleSummary);
 		System.out.println("URL to Metrics Results: " + ctrl.urlToMetricsResults);
 		
 		Population currentPopulation = new Population(ctrl.maxNumberOfSolutions, ctrl.maxNumberOfRulesPerSolution);
 		
-		Summary sampleSummary = new Summary(ctrl.urlToSampleSummaries);
-		currentPopulation.setSampleSummary(sampleSummary);
+		currentPopulation.setSampleSummary(new Summary(ctrl.urlToSampleSummary));
+		currentPopulation.setOpenSourceProject(new OpenSourceProject(ctrl.urlToMetricsResults, ctrl.urlToSampleSummary));
 		
 		currentPopulation.setAvailableMetrics(ctrl.availableMetrics);
 		//currentPopulation.setComputedMetrics(ctrl.precomputedMetrics);
@@ -38,8 +38,6 @@ public class MainController {
 		// Output the best solution that is stored in ctrl.bestSolutions;
 	}
 	
-	public MainController() {}
-	
 	public MainController(int numberOfIterations, int numberOfFinalSolutions,
 			int maxNumberOfRulesPerSolution, String urlToSampleSummaries,
 			String urlToMetricsResults)
@@ -47,7 +45,7 @@ public class MainController {
 		this.numberOfIterators = numberOfIterations;
 		this.maxNumberOfSolutions = numberOfFinalSolutions;
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
-		this.urlToSampleSummaries = urlToSampleSummaries;
+		this.urlToSampleSummary = urlToSampleSummaries;
 		this.urlToMetricsResults = urlToMetricsResults;
 		this.bestSolutions = new Population(numberOfFinalSolutions);
 		
