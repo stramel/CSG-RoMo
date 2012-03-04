@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class Summary {
 
-  /*private int SummarySize;
+  private int SummarySize;
   private OpenSourceProject ProjectProposedSummary; 
   private Vector<Element> ElementNames = new Vector<Element>();
 	
@@ -16,23 +16,23 @@ public class Summary {
   }
 	
   public int Intersection(Summary GeneratedSummary){
-	int numIntersections;
-	for(int i = 0; i < GeneratedSummary.SummarySize;i++){
+	int numIntersections=0;
+	for(int i = 0; i < GeneratedSummary.getSummarySize(i);i++){
 	  for(int j = 0; j < SummarySize; j++){
-		if(compareTo(ElementNames.get(j) == compareTo(getGeneratedSummaryLocation(GeneratedSummary,i))))
+		if((ElementNames.get(j).getName()).compareTo((getLocation(i)).getName())==0)
 		  numIntersections++;
 		}
 	}
 	return numIntersections;
   }
 	
-  public int getGeneratedSummaryLocation(Summary GeneratedSummary,int i){
-	return GeneratedSummary.ElementNames.get(i);
+  private Element getLocation(int i){
+	return ElementNames.get(i);
   }
 
-  public int getSummarySize(int SummarySize){
+  private int getSummarySize(int SummarySize){
 	return SummarySize;
-  }*/
+  }
 	
   public Summary(String url) {
 	// TODO Auto-generated constructor stub
