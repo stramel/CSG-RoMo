@@ -22,7 +22,7 @@ public class MainController {
 		Population currentPopulation = new Population(ctrl.maxNumberOfSolutions, ctrl.maxNumberOfRulesPerSolution);
 		
 		currentPopulation.setSampleSummary(new Summary(ctrl.urlToSampleSummary));
-		currentPopulation.setOpenSourceProject(new OpenSourceProject(ctrl.urlToMetricsResults, ctrl.urlToSampleSummary));
+		currentPopulation.setSampleProject(new OpenSourceProject(ctrl.urlToMetricsResults, ctrl.urlToSampleSummary));
 		
 		currentPopulation.setAvailableMetrics(ctrl.availableMetrics);
 		//currentPopulation.setComputedMetrics(ctrl.precomputedMetrics);
