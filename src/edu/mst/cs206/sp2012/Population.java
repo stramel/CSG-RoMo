@@ -8,7 +8,7 @@ public class Population {
 	private int maxNumberOfSolutions;
 	private Vector<Individual> individuals;
 	private String[] availableMetrics;
-	private OpenSourceProject Project;
+	private OpenSourceProject sampleProject;
 
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution) {
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
@@ -55,9 +55,14 @@ public class Population {
 		// Initialize all individuals in the population.
 		for (int i=0; i<maxNumberOfRulesPerSolution; i++)
 		{
-			Individual newIndividual = new Individual(maxNumberOfRulesPerSolution, Project);
+			Individual newIndividual = new Individual(maxNumberOfRulesPerSolution, sampleProject);
 			newIndividual.setAvailableMetrics(availableMetrics);
 			this.individuals.add(newIndividual);
 		}
+	}
+
+	public void setSampleProject(OpenSourceProject sampleProject) {
+		// TODO Auto-generated method stub
+		this.sampleProject = sampleProject;
 	}
 }
