@@ -11,10 +11,10 @@ public class Rule {
 	}
 	
     public boolean EvalutateMetric(){
-    	
+		return true;
   }
     
     public String ToString(){
-    	return "If " + metric + " is greater than " + threshold + " than add " + Element.ToString() + "to the summary"; 
+    	return "If " + metric + " is greater than " + Threshold + " then add " + CodeElement.getName() + "to the summary"; 
     }
 }
