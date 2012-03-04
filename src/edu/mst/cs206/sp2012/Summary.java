@@ -16,10 +16,10 @@ public class Summary {
   }
 	
   public int Intersection(Summary GeneratedSummary){
-	int numIntersections=0;
-	for(int i = 0; i < GeneratedSummary.getSummarySize(i);i++){
+	int numIntersections = 0;
+	for(int i = 0; i < GeneratedSummary.getSummarySize(); i++){
 	  for(int j = 0; j < SummarySize; j++){
-		if((ElementNames.get(j).getName()).compareTo((getLocation(i)).getName())==0)
+		if((ElementNames.get(j).getName()).compareTo((getLocation(i)).getName()) == 0)
 		  numIntersections++;
 		}
 	}
@@ -30,7 +30,7 @@ public class Summary {
 	return ElementNames.get(i);
   }
 
-  private int getSummarySize(int SummarySize){
+  private int getSummarySize(){
 	return SummarySize;
   }
 	
