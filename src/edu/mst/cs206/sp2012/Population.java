@@ -54,7 +54,9 @@ public class Population {
 		// Initialize all individuals in the population.
 		for (int i=0; i<maxNumberOfRulesPerSolution; i++)
 		{
-			this.individuals.add(new Individual(maxNumberOfRulesPerSolution));
+			Individual newIndividual = new Individual(maxNumberOfRulesPerSolution);
+			newIndividual.setAvailableMetrics(availableMetrics);
+			this.individuals.add(newIndividual);
 		}
 	}
 }
