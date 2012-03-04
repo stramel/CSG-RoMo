@@ -11,9 +11,10 @@ public class Individual {
 
   private String[] availableMetrics;
 	
-  public Individual(int maxNumberOfRulesPerSolution) {
+  public Individual(int maxNumberOfRulesPerSolution, OpenSourceProject Project) {
 	this.maxNumberOfRules = maxNumberOfRulesPerSolution;
-		
+	ProposedSummary = Project;
+	
     int numberOfRulesToBeCreated = new Random().nextInt(maxNumberOfRulesPerSolution);
     for (int i=0; i<numberOfRulesToBeCreated; i++)
     {
@@ -27,10 +28,6 @@ public class Individual {
   public void setAvailableMetrics(String[] availableMetrics) {
 	// TODO Auto-generated method stub
 	this.availableMetrics = availableMetrics;
-  }
-	
-  public Individual(OpenSourceProject Project){
-	ProposedSummary = Project;
   }
 		
   public int FitnessFunction(Summary ProposedSummary, Summary GeneratedSummary){
