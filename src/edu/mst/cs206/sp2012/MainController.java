@@ -20,7 +20,7 @@ public class MainController {
 		System.out.println("URL to Metrics Results: " + ctrl.urlToMetricsResults);
 		
 		Population currentPopulation = new Population(ctrl.maxNumberOfSolutions, ctrl.maxNumberOfRulesPerSolution);
-		currentPopulation.setSampleProject(new OpenSourceProject(ctrl.urlToMetricsResults, ctrl.urlToSampleSummary));
+		currentPopulation.setSampleProject(new OpenSourceProject(ctrl.urlToMetricsResults, ctrl.urlToSampleSummary, ctrl.availableMetrics));
 		currentPopulation.setAvailableMetrics(ctrl.availableMetrics);
 		
 		currentPopulation.initialize();
