@@ -34,7 +34,7 @@ public class Individual {
 	  if(availableMetrics[i].compareTo("MLOC") == 0)
 		  this.ruleslist.add(new Rule(randomThresholdMLOC, availableMetrics[i], null));
 	  else
-		  this.ruleslist.add(new Rule(randomThresholdMLOC, availableMetrics[i], null));
+		  this.ruleslist.add(new Rule(randomThreshold, availableMetrics[i], null));
     }
   }
 
