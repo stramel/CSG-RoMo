@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Vector;
 
-public static class XMLParser {
+public class XMLParser {
 	public static Vector<edu.mst.cs206.sp2012.Element> parseMetricsXML(String filename, String[] metricsToSave) {
 		Vector<edu.mst.cs206.sp2012.Element> elements = new Vector<edu.mst.cs206.sp2012.Element>();
 		
@@ -56,6 +56,7 @@ public static class XMLParser {
 
 	
 	public static Summary parseSummaryXML(String filename) {
+		return null; //Return Summary!!!!!!!!!
 	}
 	
 	

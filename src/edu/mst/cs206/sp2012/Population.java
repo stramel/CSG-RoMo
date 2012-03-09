@@ -16,7 +16,7 @@ public class Population {
 		System.out.println("Population: each individual can only have " + maxNumberOfRulesPerSolution + " rules.");
 		
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
-		this.maxNumberOfSolutions = maxNumberOfRulesPerSolution;
+		this.maxNumberOfSolutions = maxNumberOfSolutions;
 		this.individuals = new Vector<Individual>(maxNumberOfSolutions);
 	}
 
