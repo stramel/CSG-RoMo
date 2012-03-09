@@ -48,7 +48,7 @@ public class XMLParser {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace(); // Change this to some actual error message!
 		}
 			
 		return elements;
@@ -56,7 +56,45 @@ public class XMLParser {
 
 	
 	public static Summary parseSummaryXML(String filename) {
-		return null; //Return Summary!!!!!!!!!
+		Summary summary = new Summary();
+		
+		try {
+			File xmlFile = new File(filename);
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(xmlFile);
+			doc.getDocumentElement().normalize();
+			
+			// Grab the classes and add them to the summary
+			NodeList classList = doc.getElementsByTagName("class");
+			
+			for (int i = 0; i < classList.getLength(); i++)
+			{
+				Node classNode = classList.item(i);
+				
+				if (classNode.getNodeType() == Node.ELEMENT_NODE)
+				{
+					summary.addElement(new edu.mst.cs206.sp2012.Element(classNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.CLASS));
+				}
+			}
+			
+			// Grab the methods and add them to the summary
+			NodeList methodList = doc.getElementsByTagName("method");
+			
+			for (int i = 0; i < methodList.getLength(); i++)
+			{
+				Node methodNode = methodList.item(i);
+				
+				if (methodNode.getNodeType() == Node.ELEMENT_NODE)
+				{
+					summary.addElement(new edu.mst.cs206.sp2012.Element(methodNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.METHOD));
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace(); // Change this to some actual error message!
+		}
+			
+		return elements;
 	}
 	
 	

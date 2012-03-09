@@ -14,6 +14,11 @@ public class Summary {
 	ProjectProposedSummary = Project;
 	SummarySize = ProjectProposedSummary.getElements().size();
   }
+  
+  public void addElement(Element element)
+  {
+	  this.ElementName.add(element);
+  }
 	
   public int Intersection(Summary GeneratedSummary){
 	int numIntersections = 0;
