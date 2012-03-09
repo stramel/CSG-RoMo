@@ -4,38 +4,38 @@ import java.util.Vector;
 
 public class Summary {
 
-  private int SummarySize;
-  private OpenSourceProject ProjectProposedSummary; 
-  private Vector<Element> ElementNames = new Vector<Element>();
+//  private int SummarySize;
+//  private OpenSourceProject ProjectProposedSummary; 
+  private Vector<Element> elements = new Vector<Element>();
 
-  public Summary(String url, OpenSourceProject Project) {
+/*  public Summary(OpenSourceProject Project) {
 	// TODO Auto-generated constructor stub
 	System.out.println("Constructing Summary from an input file located at " + url);
 	ProjectProposedSummary = Project;
 	SummarySize = ProjectProposedSummary.getElements().size();
-  }
+  }*/
   
-  public void addElement(Element element)
+  public Summary(Vector<Element> elements)
   {
-	  this.ElementName.add(element);
+	  this.elements = elements;
   }
 	
   public int Intersection(Summary GeneratedSummary){
 	int numIntersections = 0;
 	for(int i = 0; i < GeneratedSummary.getSummarySize(); i++){
-	  for(int j = 0; j < SummarySize; j++){
-		if((ElementNames.get(j).getName()).compareTo((getLocation(i)).getName()) == 0)
+	  for(int j = 0; j < elements.size(); j++){
+		if((elements.get(j).getName()).compareTo((getElement(i)).getName()) == 0)
 		  numIntersections++;
 		}
 	}
 	return numIntersections;
   }
 	
-  private Element getLocation(int i){
-	return ElementNames.get(i);
+  private Element getElement(int i){
+	return this.elements.get(i);
   }
 
   public int getSummarySize(){
-	return SummarySize;
+	return this.elements.size();
   }
 }

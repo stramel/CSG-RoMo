@@ -56,7 +56,7 @@ public class XMLParser {
 
 	
 	public static Summary parseSummaryXML(String filename) {
-		Summary summary = new Summary();
+		Vector<edu.mst.cs206.sp2012.Element> elements = new Vector<edu.mst.cs206.sp2012.Element>();
 		
 		try {
 			File xmlFile = new File(filename);
@@ -74,7 +74,7 @@ public class XMLParser {
 				
 				if (classNode.getNodeType() == Node.ELEMENT_NODE)
 				{
-					summary.addElement(new edu.mst.cs206.sp2012.Element(classNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.CLASS));
+					elements.add(new edu.mst.cs206.sp2012.Element(classNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.CLASS));
 				}
 			}
 			
@@ -87,14 +87,14 @@ public class XMLParser {
 				
 				if (methodNode.getNodeType() == Node.ELEMENT_NODE)
 				{
-					summary.addElement(new edu.mst.cs206.sp2012.Element(methodNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.METHOD));
+					elements.add(new edu.mst.cs206.sp2012.Element(methodNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.METHOD));
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace(); // Change this to some actual error message!
 		}
 			
-		return elements;
+		return new Summary(elements);
 	}
 	
 	
@@ -125,12 +125,12 @@ public class XMLParser {
 	}
 	
 	
-	private static String getTagValue(String tag, Element element)
+	/*private static String getTagValue(String tag, Element element)
 	{
 		NodeList nList = element.getElementsByTagName(tag).item(0).getChildNodes();
 		Node node = (Node) nList.item(0);
 		return node.getNodeValue();
-	}
+	}*/
 	
 	private static Node getFirstChildByTagName(String tag, Node element)
 	{
