@@ -7,20 +7,28 @@ public class Element {
 	
 	private String name;
 	private Type type;
-	private HashMap<String, Integer> metrics;
+	private HashMap<String, String> metrics;
 
-	public Element(String name, Type type, HashMap<String, Integer> metrics) {
+	public Element(String name, Type type, HashMap<String, String> metrics) {
 		this.name = name;
 		this.type = type;
 		this.metrics = metrics;
 	}
 	
 	public Element(String name, Type type) {
-		this(name, type, new HashMap<String, Integer>(0));
+		this(name, type, new HashMap<String, String>(0));
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public String getName() {
 		return name;
+	}
+	
+	public void setType(Type type) {
+		this.type = type;
 	}
 	
 	public Type getType() {
@@ -35,12 +43,23 @@ public class Element {
 		return (type == Type.METHOD);		
 	}
 	
-	public int MetricValue(String metricId) {
+	public void setMetrics(HashMap<String, String> metrics) {
+		this.metrics = metrics;
+	}
+	
+	public void setMetric(String metricID, String value) {
+		this.metrics.put(metricID, value);
+	}
+	
+	public HashMap<String, String> getMetrics() {
+		return this.metrics;
+	}
+	
+	public String MetricValue(String metricId) {
 		return metrics.get(metricId);
 	}
 	
 	public boolean MetricExists(String metricId) {
 		return metrics.containsKey(metricId);
 	}
-	
 }

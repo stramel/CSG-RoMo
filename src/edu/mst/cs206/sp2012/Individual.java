@@ -27,14 +27,14 @@ public class Individual {
   // Number of Methods-> less than 40
 
 	  Random randomizer = new Random();
-	  int randomThresholdMLOC = randomizer.nextInt(2000)//This number needs to be changed to something a little greater 
+	  int randomThresholdMLOC = randomizer.nextInt(2000); //This number needs to be changed to something a little greater 
 	  													//the highest number of lines of code in the projects.
 	  int randomThreshold = randomizer.nextInt(25);//This might be too small for NUM METHODS  
 	  
 	  if(availableMetrics[i].compareTo("MLOC") == 0)
 		  this.ruleslist.add(new Rule(randomThresholdMLOC, availableMetrics[i], null));
 	  else
-		  this.ruleslist.add(new Rule(randomThresholdMLOC, availableMetrics[i], null));
+		  this.ruleslist.add(new Rule(randomThreshold, availableMetrics[i], null));
     }
   }
 
