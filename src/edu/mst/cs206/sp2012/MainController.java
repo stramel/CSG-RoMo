@@ -1,19 +1,18 @@
 package edu.mst.cs206.sp2012;
 
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 
 public class MainController extends JFrame implements ActionListener{
 	
-	private final int numberOfIterators;
-	private final int maxNumberOfSolutions;
-	private final int maxNumberOfRulesPerSolution;
-	private final String urlToSampleSummary;
-	private final String urlToMetricsResults;
-	private Population bestSolutions;
-	private String[] availableMetrics;
+
+	private static int numberOfIterators;
+	private static int maxNumberOfSolutions;
+	private static int maxNumberOfRulesPerSolution;
+	private static String urlToSampleSummary;
+	private static String urlToMetricsResults;
+	private static Population bestSolutions;
+	private static String[] availableMetrics;
 	private SpringLayout layout;
 	private JTextField NIText;
 	private JTextField NFSText;
@@ -42,7 +41,6 @@ public class MainController extends JFrame implements ActionListener{
 	public MainController()
 	{
 		JPanel frame = new JPanel();
-		frame.super();
 		layout = new SpringLayout();
 		frame.setLayout(layout);
 		create();
@@ -50,13 +48,13 @@ public class MainController extends JFrame implements ActionListener{
 		setTitle("CSG - RoMo");
 		setSize(250,300);
 		setLocationRelativeTo(null);
-		setResizeable(false);
-		setDefaultCloseOpteration(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	private void create()
 	{
-		boxWidth = 100;
+		int boxWidth = 100;
 
 		JLabel NILabel = new JLabel("Number of Iterations: ");
 		layout.putConstraint(SpringLayout.NORTH, NILabel, 10, SpringLayout.NORTH, this);
@@ -104,9 +102,9 @@ public class MainController extends JFrame implements ActionListener{
 		add(URLMRText);
 
 		JButton RunButton = new JButton("Run");
-		layout.putContraint(SpringLayout.NORTH, RunButton, 10, SpringLayout.SOUTH, URLSSLabel);
-		layout.putContraint(SpringLayout.WEST, RunButton, 10, SpringLayout.WEST, this);
-		RunButton.addActionListner(this);
+		layout.putConstraint(SpringLayout.NORTH, RunButton, 10, SpringLayout.SOUTH, URLSSLabel);
+		layout.putConstraint(SpringLayout.WEST, RunButton, 10, SpringLayout.WEST, this);
+		RunButton.addActionListener(this);
 		add(RunButton);
 	}
 
@@ -115,24 +113,24 @@ public class MainController extends JFrame implements ActionListener{
 		RunAction(NIText.getText(),NFSText.getText(),NRSText.getText(),URLSSText.getText(),URLMRText.getText());
 	}
 	
-	public RunAction(int numberOfIterations, int numberOfFinalSolutions,
-			int maxNumberOfRulesPerSolution, String urlToSampleSummaries,
-			String urlToMetricsResults)
+	public void RunAction(String Ni, String NFS,
+			String NRS, String urlToSampleSummaries,
+			String urlToMetricsResult)
 	{
-		this.numberOfIterators = numberOfIterations;
-		this.maxNumberOfSolutions = numberOfFinalSolutions;
-		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
-		this.urlToSampleSummary = urlToSampleSummaries;
-		this.urlToMetricsResults = urlToMetricsResults;
-		this.bestSolutions = new Population(numberOfFinalSolutions);
+		numberOfIterators = Integer.parseInt(Ni);
+		maxNumberOfSolutions = Integer.parseInt(NFS);
+		maxNumberOfRulesPerSolution = Integer.parseInt(NRS);
+		urlToSampleSummary = urlToSampleSummaries;
+		urlToMetricsResults = urlToMetricsResult;
+		bestSolutions = new Population(Integer.parseInt(NRS), Integer.parseInt(NFS));
 		
 		// Hard-coded metrics!
-		this.availableMetrics = new String[6];
-		this.availableMetrics[0] = "MLOC";	// Method Lines of Code
-		this.availableMetrics[1] = "PAR";	// Number of Parameters
-		this.availableMetrics[2] = "VG";	// McCabe Cyclomatic Complexity
-		this.availableMetrics[3] = "NBD";	// Nested Block Depth
-		this.availableMetrics[4] = "NSC";	// Number of Children
-		this.availableMetrics[5] = "NOM";	// Number of Methods
+		availableMetrics = new String[6];
+		availableMetrics[0] = "MLOC";	// Method Lines of Code
+		availableMetrics[1] = "PAR";	// Number of Parameters
+		availableMetrics[2] = "VG";	// McCabe Cyclomatic Complexity
+		availableMetrics[3] = "NBD";	// Nested Block Depth
+		availableMetrics[4] = "NSC";	// Number of Children
+		availableMetrics[5] = "NOM";	// Number of Methods
 	}
 }
