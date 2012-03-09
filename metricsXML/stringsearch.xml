@@ -1,0 +1,1812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Metrics>
+   <MetricDescriptions>
+      <MetricDescription id = "NORM" description ="Number of Overridden Methods"/>
+      <MetricDescription id = "NOF" description ="Number of Attributes"/>
+      <MetricDescription id = "NSC" description ="Number of Children"/>
+      <MetricDescription id = "NOC" description ="Number of Classes"/>
+      <MetricDescription id = "MLOC" description ="Method Lines of Code"/>
+      <MetricDescription id = "NOM" description ="Number of Methods"/>
+      <MetricDescription id = "NBD" description ="Nested Block Depth"/>
+      <MetricDescription id = "DIT" description ="Depth of Inheritance Tree"/>
+      <MetricDescription id = "NOP" description ="Number of Packages"/>
+      <MetricDescription id = "CA" description ="Afferent Coupling"/>
+      <MetricDescription id = "NOI" description ="Number of Interfaces"/>
+      <MetricDescription id = "VG" description ="McCabe Cyclomatic Complexity"/>
+      <MetricDescription id = "TLOC" description ="Total Lines of Code"/>
+      <MetricDescription id = "RMI" description ="Instability"/>
+      <MetricDescription id = "PAR" description ="Number of Parameters"/>
+      <MetricDescription id = "LCOM" description ="Lack of Cohesion of Methods"/>
+      <MetricDescription id = "CE" description ="Efferent Coupling"/>
+      <MetricDescription id = "NSM" description ="Number of Static Methods"/>
+      <MetricDescription id = "RMD" description ="Normalized Distance"/>
+      <MetricDescription id = "RMA" description ="Abstractness"/>
+      <MetricDescription id = "SIX" description ="Specialization Index"/>
+      <MetricDescription id = "WMC" description ="Weighted methods per Class"/>
+      <MetricDescription id = "NSF" description ="Number of Static Attributes"/>
+   </MetricDescriptions>
+   <Project name = "stringsearch" handle = "=stringsearch">
+      <Metrics>
+         <Metric id ="NORM" value ="16" avg ="1.143" stddev ="1.301" points ="14" max ="4" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+         <Metric id ="NOF" value ="5" avg ="0.357" stddev ="0.895" points ="14" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+         <Metric id ="NSC" value ="11" avg ="0.786" stddev ="1.319" points ="14" max ="5" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+         <Metric id ="NOC" value ="14" avg ="14" stddev ="0" points ="1" max ="14" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="MLOC" value ="1397" avg ="10.123" stddev ="17.548" points ="138" max ="136" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+         <Metric id ="NOM" value ="137" avg ="9.786" stddev ="7.812" points ="14" max ="30" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+         <Metric id ="NBD" avg ="1.652" stddev ="1.397" points ="138" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+         <Metric id ="DIT" avg ="2.143" stddev ="0.742" points ="14" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+         <Metric id ="NOP" value ="1"/>
+         <Metric id ="CA" avg ="0" stddev ="0" points ="1" max ="0" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="NOI" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="VG" avg ="2.877" stddev ="6.342" points ="138" max ="53" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+         <Metric id ="TLOC" value ="1825"/>
+         <Metric id ="RMI" avg ="1" stddev ="0" points ="1" max ="1" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="PAR" avg ="2.739" stddev ="2.097" points ="138" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+         <Metric id ="LCOM" avg ="0.013" stddev ="0.047" points ="14" max ="0.182" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+         <Metric id ="CE" avg ="11" stddev ="0" points ="1" max ="11" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="NSM" value ="1" avg ="0.071" stddev ="0.258" points ="14" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+         <Metric id ="RMD" avg ="0.143" stddev ="0" points ="1" max ="0.143" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="RMA" avg ="0.143" stddev ="0" points ="1" max ="0.143" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+         <Metric id ="SIX" avg ="0.43" stddev ="0.605" points ="14" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+         <Metric id ="WMC" value ="397" avg ="28.357" stddev ="23.157" points ="14" max ="106" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+         <Metric id ="NSF" value ="11" avg ="0.786" stddev ="1.567" points ="14" max ="6" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+      </Metrics>
+      <PackageRoot name = "src" handle = "=stringsearch/src">
+         <Metrics>
+            <Metric id ="NORM" value ="16" avg ="1.143" stddev ="1.301" points ="14" max ="4" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+            <Metric id ="NOF" value ="5" avg ="0.357" stddev ="0.895" points ="14" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+            <Metric id ="NSC" value ="11" avg ="0.786" stddev ="1.319" points ="14" max ="5" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+            <Metric id ="NOC" value ="14" avg ="14" stddev ="0" points ="1" max ="14" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="MLOC" value ="1397" avg ="10.123" stddev ="17.548" points ="138" max ="136" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+            <Metric id ="NOM" value ="137" avg ="9.786" stddev ="7.812" points ="14" max ="30" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+            <Metric id ="NBD" avg ="1.652" stddev ="1.397" points ="138" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+            <Metric id ="DIT" avg ="2.143" stddev ="0.742" points ="14" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+            <Metric id ="NOP" value ="1"/>
+            <Metric id ="CA" avg ="0" stddev ="0" points ="1" max ="0" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="NOI" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="VG" avg ="2.877" stddev ="6.342" points ="138" max ="53" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+            <Metric id ="TLOC" value ="1825"/>
+            <Metric id ="RMI" avg ="1" stddev ="0" points ="1" max ="1" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="PAR" avg ="2.739" stddev ="2.097" points ="138" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+            <Metric id ="LCOM" avg ="0.013" stddev ="0.047" points ="14" max ="0.182" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+            <Metric id ="CE" avg ="11" stddev ="0" points ="1" max ="11" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="NSM" value ="1" avg ="0.071" stddev ="0.258" points ="14" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+            <Metric id ="RMD" avg ="0.143" stddev ="0" points ="1" max ="0.143" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="RMA" avg ="0.143" stddev ="0" points ="1" max ="0.143" per ="packageFragment" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch"/>
+            <Metric id ="SIX" avg ="0.43" stddev ="0.605" points ="14" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+            <Metric id ="WMC" value ="397" avg ="28.357" stddev ="23.157" points ="14" max ="106" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+            <Metric id ="NSF" value ="11" avg ="0.786" stddev ="1.567" points ="14" max ="6" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+         </Metrics>
+         <Package name = "com.eaio.stringsearch" handle = "=stringsearch/src&lt;com.eaio.stringsearch">
+            <Metrics>
+               <Metric id ="NORM" value ="16" avg ="1.143" stddev ="1.301" points ="14" max ="4" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+               <Metric id ="NOF" value ="5" avg ="0.357" stddev ="0.895" points ="14" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+               <Metric id ="NSC" value ="11" avg ="0.786" stddev ="1.319" points ="14" max ="5" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+               <Metric id ="NOC" value ="14"/>
+               <Metric id ="MLOC" value ="1397" avg ="10.123" stddev ="17.548" points ="138" max ="136" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+               <Metric id ="NOM" value ="137" avg ="9.786" stddev ="7.812" points ="14" max ="30" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+               <Metric id ="NBD" avg ="1.652" stddev ="1.397" points ="138" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+               <Metric id ="DIT" avg ="2.143" stddev ="0.742" points ="14" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+               <Metric id ="CA" value ="0"/>
+               <Metric id ="NOI" value ="0"/>
+               <Metric id ="VG" avg ="2.877" stddev ="6.342" points ="138" max ="53" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+               <Metric id ="TLOC" value ="1825"/>
+               <Metric id ="RMI" value ="1"/>
+               <Metric id ="PAR" avg ="2.739" stddev ="2.097" points ="138" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+               <Metric id ="LCOM" avg ="0.013" stddev ="0.047" points ="14" max ="0.182" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+               <Metric id ="CE" value ="11"/>
+               <Metric id ="NSM" value ="1" avg ="0.071" stddev ="0.258" points ="14" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+               <Metric id ="RMD" value ="0.143"/>
+               <Metric id ="RMA" value ="0.143"/>
+               <Metric id ="SIX" avg ="0.43" stddev ="0.605" points ="14" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+               <Metric id ="WMC" value ="397" avg ="28.357" stddev ="23.157" points ="14" max ="106" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+               <Metric id ="NSF" value ="11" avg ="0.786" stddev ="1.567" points ="14" max ="6" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+            </Metrics>
+            <CompilationUnit name = "ShiftOr.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NSC" value ="2" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="81" avg ="11.571" stddev ="8.051" points ="7" max ="20" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~searchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="NOM" value ="7" avg ="7" stddev ="0" points ="1" max ="7" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NBD" avg ="2" stddev ="1.069" points ="7" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~searchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="DIT" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="2.571" stddev ="1.178" points ="7" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="TLOC" value ="110"/>
+                  <Metric id ="PAR" avg ="3.286" stddev ="2.312" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~nativeSearchBytes~\[B~I~I~\[B~\[I~I"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="SIX" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="WMC" value ="18" avg ="18" stddev ="0" points ="1" max ="18" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr"/>
+               </Metrics>
+               <Type name = "ShiftOr" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="2"/>
+                     <Metric id ="MLOC" value ="81" avg ="11.571" stddev ="8.051" points ="7" max ="20" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="NOM" value ="7"/>
+                     <Metric id ="NBD" avg ="2" stddev ="1.069" points ="7" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="DIT" value ="2"/>
+                     <Metric id ="VG" avg ="2.571" stddev ="1.178" points ="7" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="PAR" avg ="3.286" stddev ="2.312" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~nativeSearchBytes~\[B~I~I~\[B~\[I~I"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="18"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "javaSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~javaSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="20"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="13"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="10"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "ShiftOr" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~ShiftOr">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "nativeSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOr.java[ShiftOr~nativeSearchBytes~\[B~I~I~\[B~\[I~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "BoyerMooreHorspool.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NSC" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="41" avg ="5.857" stddev ="4.357" points ="7" max ="10" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~processChars~\[C"/>
+                  <Metric id ="NOM" value ="7" avg ="7" stddev ="0" points ="1" max ="7" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NBD" avg ="1.429" stddev ="0.728" points ="7" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~processBytes~\[B"/>
+                  <Metric id ="DIT" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="3" stddev ="2" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="TLOC" value ="71"/>
+                  <Metric id ="PAR" avg ="3.143" stddev ="2.167" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~searchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="SIX" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="WMC" value ="21" avg ="21" stddev ="0" points ="1" max ="21" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool"/>
+               </Metrics>
+               <Type name = "BoyerMooreHorspool" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="1"/>
+                     <Metric id ="MLOC" value ="41" avg ="5.857" stddev ="4.357" points ="7" max ="10" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~processChars~\[C"/>
+                     <Metric id ="NOM" value ="7"/>
+                     <Metric id ="NBD" avg ="1.429" stddev ="0.728" points ="7" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~processBytes~\[B"/>
+                     <Metric id ="DIT" value ="2"/>
+                     <Metric id ="VG" avg ="3" stddev ="2" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="PAR" avg ="3.143" stddev ="2.167" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="21"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="3"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="10"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "javaSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~javaSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="10"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="10"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "nativeSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~nativeSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "BoyerMooreHorspool" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~BoyerMooreHorspool">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspool.java[BoyerMooreHorspool~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="8"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "MismatchSearch.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NSC" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="154" avg ="5.923" stddev ="6" points ="26" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~I~I~QString;~QObject;~I"/>
+                  <Metric id ="NOM" value ="26" avg ="26" stddev ="0" points ="1" max ="26" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NBD" avg ="0.846" stddev ="0.361" points ="26" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~MismatchSearch"/>
+                  <Metric id ="DIT" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="1" stddev ="0" points ="26" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~MismatchSearch"/>
+                  <Metric id ="TLOC" value ="196"/>
+                  <Metric id ="PAR" avg ="3.808" stddev ="1.618" points ="26" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~I~\[B~QObject;~I"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="SIX" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="WMC" value ="26" avg ="26" stddev ="0" points ="1" max ="26" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch"/>
+               </Metrics>
+               <Type name = "MismatchSearch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="1"/>
+                     <Metric id ="MLOC" value ="154" avg ="5.923" stddev ="6" points ="26" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~I~I~QString;~QObject;~I"/>
+                     <Metric id ="NOM" value ="26"/>
+                     <Metric id ="NBD" avg ="0.846" stddev ="0.361" points ="26" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~MismatchSearch"/>
+                     <Metric id ="DIT" value ="2"/>
+                     <Metric id ="VG" avg ="1" stddev ="0" points ="26" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~MismatchSearch"/>
+                     <Metric id ="PAR" avg ="3.808" stddev ="1.618" points ="26" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~I~\[B~QObject;~I"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="26"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~processChars~\[C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~I~QString;~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="13"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~\[B~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~\[C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "MismatchSearch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~MismatchSearch">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~I~\[C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="18"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~\[B~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~I~I~QString;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~I~QString;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~QString;~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="12"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~I~I~QString;~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="21"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~\[C~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="12"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~I~\[C~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="13"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~I~I~\[C~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~processBytes~\[B~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~processString~QString;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~I~\[B~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchChars~\[C~I~I~\[C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~\[B~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="11"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchString~QString;~QString;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~I~\[B~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{MismatchSearch.java[MismatchSearch~searchBytes~\[B~I~\[B~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "BNDMWildcards.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="2" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="65" avg ="10.833" stddev ="6.962" points ="6" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processChars~\[C~C"/>
+                  <Metric id ="NOM" value ="6" avg ="6" stddev ="0" points ="1" max ="6" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NBD" avg ="1.667" stddev ="0.943" points ="6" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B"/>
+                  <Metric id ="DIT" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="2.667" stddev ="2.427" points ="6" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B"/>
+                  <Metric id ="TLOC" value ="49"/>
+                  <Metric id ="PAR" avg ="1.333" stddev ="0.745" points ="6" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="SIX" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="WMC" value ="16" avg ="16" stddev ="0" points ="1" max ="16" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+                  <Metric id ="NSF" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards"/>
+               </Metrics>
+               <Type name = "BNDMWildcards" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards">
+                  <Metrics>
+                     <Metric id ="NORM" value ="2"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="65" avg ="10.833" stddev ="6.962" points ="6" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processChars~\[C~C"/>
+                     <Metric id ="NOM" value ="6"/>
+                     <Metric id ="NBD" avg ="1.667" stddev ="0.943" points ="6" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B"/>
+                     <Metric id ="DIT" value ="3"/>
+                     <Metric id ="VG" avg ="2.667" stddev ="2.427" points ="6" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B"/>
+                     <Metric id ="PAR" avg ="1.333" stddev ="0.745" points ="6" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="1"/>
+                     <Metric id ="WMC" value ="16"/>
+                     <Metric id ="NSF" value ="1"/>
+                  </Metrics>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B~B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="18"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="7"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processString~QString;~C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processChars~\[C~C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="21"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="5"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "BNDMWildcards" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~BNDMWildcards">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="10"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDMWildcards.java[BNDMWildcards~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "ShiftOrWildcards.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="2" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="66" avg ="11" stddev ="7.047" points ="6" max ="22" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processChars~\[C~C"/>
+                  <Metric id ="NOM" value ="6" avg ="6" stddev ="0" points ="1" max ="6" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NBD" avg ="1.667" stddev ="0.943" points ="6" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B"/>
+                  <Metric id ="DIT" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="2.5" stddev ="2.141" points ="6" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B"/>
+                  <Metric id ="TLOC" value ="49"/>
+                  <Metric id ="PAR" avg ="1.333" stddev ="0.745" points ="6" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="SIX" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="WMC" value ="15" avg ="15" stddev ="0" points ="1" max ="15" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+                  <Metric id ="NSF" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards"/>
+               </Metrics>
+               <Type name = "ShiftOrWildcards" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards">
+                  <Metrics>
+                     <Metric id ="NORM" value ="2"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="66" avg ="11" stddev ="7.047" points ="6" max ="22" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processChars~\[C~C"/>
+                     <Metric id ="NOM" value ="6"/>
+                     <Metric id ="NBD" avg ="1.667" stddev ="0.943" points ="6" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B"/>
+                     <Metric id ="DIT" value ="3"/>
+                     <Metric id ="VG" avg ="2.5" stddev ="2.141" points ="6" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B"/>
+                     <Metric id ="PAR" avg ="1.333" stddev ="0.745" points ="6" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="1"/>
+                     <Metric id ="WMC" value ="15"/>
+                     <Metric id ="NSF" value ="1"/>
+                  </Metrics>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B~B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="17"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processString~QString;~C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="11"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~processChars~\[C~C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="22"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="5"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "ShiftOrWildcards" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrWildcards.java[ShiftOrWildcards~ShiftOrWildcards">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "BNDM.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NSC" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="64" avg ="9.143" stddev ="8.442" points ="7" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="NOM" value ="7" avg ="7" stddev ="0" points ="1" max ="7" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NBD" avg ="2.286" stddev ="1.829" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="DIT" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="2.857" stddev ="1.552" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="TLOC" value ="94"/>
+                  <Metric id ="PAR" avg ="3.143" stddev ="2.167" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~searchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="SIX" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="WMC" value ="20" avg ="20" stddev ="0" points ="1" max ="20" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM"/>
+               </Metrics>
+               <Type name = "BNDM" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="1"/>
+                     <Metric id ="MLOC" value ="64" avg ="9.143" stddev ="8.442" points ="7" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="NOM" value ="7"/>
+                     <Metric id ="NBD" avg ="2.286" stddev ="1.829" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="DIT" value ="2"/>
+                     <Metric id ="VG" avg ="2.857" stddev ="1.552" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="PAR" avg ="3.143" stddev ="2.167" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="20"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "nativeSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~nativeSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="12"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="3"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "BNDM" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~BNDM">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="21"/>
+                        <Metric id ="NBD" value ="5"/>
+                        <Metric id ="VG" value ="5"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "javaSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BNDM.java[BNDM~javaSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="21"/>
+                        <Metric id ="NBD" value ="5"/>
+                        <Metric id ="VG" value ="5"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "BoyerMooreSunday.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="53" avg ="7.571" stddev ="6.366" points ="7" max ="16" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="NOM" value ="7" avg ="7" stddev ="0" points ="1" max ="7" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NBD" avg ="1.714" stddev ="1.03" points ="7" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="DIT" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="3" stddev ="2" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="TLOC" value ="83"/>
+                  <Metric id ="PAR" avg ="3.143" stddev ="2.167" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~searchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="SIX" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="WMC" value ="21" avg ="21" stddev ="0" points ="1" max ="21" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday"/>
+               </Metrics>
+               <Type name = "BoyerMooreSunday" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="53" avg ="7.571" stddev ="6.366" points ="7" max ="16" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="NOM" value ="7"/>
+                     <Metric id ="NBD" avg ="1.714" stddev ="1.03" points ="7" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="DIT" value ="2"/>
+                     <Metric id ="VG" avg ="3" stddev ="2" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="PAR" avg ="3.143" stddev ="2.167" points ="7" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="21"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="16"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "javaSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~javaSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="16"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="10"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "BoyerMooreSunday" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~BoyerMooreSunday">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "nativeSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~nativeSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="3"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreSunday.java[BoyerMooreSunday~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="8"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "CharIntMap.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="4" avg ="4" stddev ="0" points ="1" max ="4" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NOF" value ="3" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="104" avg ="7.429" stddev ="7.394" points ="14" max ="28" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~equals~QObject;"/>
+                  <Metric id ="NOM" value ="14" avg ="14" stddev ="0" points ="1" max ="14" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NBD" avg ="2.143" stddev ="0.99" points ="14" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~toString"/>
+                  <Metric id ="DIT" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="2.857" stddev ="2.973" points ="14" max ="13" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~equals~QObject;"/>
+                  <Metric id ="TLOC" value ="143"/>
+                  <Metric id ="PAR" avg ="0.786" stddev ="0.939" points ="14" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~CharIntMap~I~C~I"/>
+                  <Metric id ="LCOM" avg ="0.182" stddev ="0" points ="1" max ="0.182" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="SIX" avg ="0.286" stddev ="0" points ="1" max ="0.286" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="WMC" value ="40" avg ="40" stddev ="0" points ="1" max ="40" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+                  <Metric id ="NSF" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap"/>
+               </Metrics>
+               <Type name = "CharIntMap" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap">
+                  <Metrics>
+                     <Metric id ="NORM" value ="4"/>
+                     <Metric id ="NOF" value ="3"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="104" avg ="7.429" stddev ="7.394" points ="14" max ="28" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~equals~QObject;"/>
+                     <Metric id ="NOM" value ="14"/>
+                     <Metric id ="NBD" avg ="2.143" stddev ="0.99" points ="14" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~toString"/>
+                     <Metric id ="DIT" value ="1"/>
+                     <Metric id ="VG" avg ="2.857" stddev ="2.973" points ="14" max ="13" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~equals~QObject;"/>
+                     <Metric id ="PAR" avg ="0.786" stddev ="0.939" points ="14" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~CharIntMap~I~C~I"/>
+                     <Metric id ="LCOM" value ="0.182"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0.286"/>
+                     <Metric id ="WMC" value ="40"/>
+                     <Metric id ="NSF" value ="1"/>
+                  </Metrics>
+                  <Method name = "hashCode" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~hashCode">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "equals" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~equals~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="28"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="13"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "getExtent" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~getExtent">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "set" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~set~C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="5"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "clone" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~clone">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="8"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "writeExternal" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~writeExternal~QObjectOutput;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="11"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "getLowest" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~getLowest">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "readExternal" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~readExternal~QObjectInput;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "toString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~toString">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="17"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "CharIntMap" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~CharIntMap~I~C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="8"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "CharIntMap" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~CharIntMap~I~C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "getHighest" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~getHighest">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "CharIntMap" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~CharIntMap">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "get" handle = "=stringsearch/src&lt;com.eaio.stringsearch{CharIntMap.java[CharIntMap~get~C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="5"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "StringSearch.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="3" avg ="1" stddev ="1.414" points ="3" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="NOF" value ="2" avg ="0.667" stddev ="0.943" points ="3" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch"/>
+                  <Metric id ="NSC" value ="6" avg ="2" stddev ="2.16" points ="3" max ="5" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="NOC" value ="3"/>
+                  <Metric id ="MLOC" value ="298" avg ="6.93" stddev ="7.798" points ="43" max ="32" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+                  <Metric id ="NOM" value ="42" avg ="14" stddev ="11.314" points ="3" max ="30" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="NBD" avg ="1.326" stddev ="1.05" points ="43" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~QStringSearch;"/>
+                  <Metric id ="DIT" avg ="1.333" stddev ="0.471" points ="3" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="1.465" stddev ="0.996" points ="43" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~charsOf~QString;"/>
+                  <Metric id ="TLOC" value ="489"/>
+                  <Metric id ="PAR" avg ="2.884" stddev ="2.093" points ="43" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="3" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="NSM" value ="1" avg ="0.333" stddev ="0.471" points ="3" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="SIX" avg ="0.033" stddev ="0.047" points ="3" max ="0.1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="WMC" value ="63" avg ="21" stddev ="12.675" points ="3" max ="37" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+                  <Metric id ="NSF" value ="6" avg ="2" stddev ="2.828" points ="3" max ="6" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch"/>
+               </Metrics>
+               <Type name = "Dispatch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="1"/>
+                     <Metric id ="MLOC" value ="25" avg ="4.167" stddev ="2.672" points ="6" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+                     <Metric id ="NOM" value ="6"/>
+                     <Metric id ="NBD" avg ="1" stddev ="0" points ="6" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~Dispatch"/>
+                     <Metric id ="DIT" value ="1"/>
+                     <Metric id ="VG" avg ="1" stddev ="0" points ="6" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~Dispatch"/>
+                     <Metric id ="PAR" avg ="4.167" stddev ="2.672" points ="6" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="6"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="5"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "Dispatch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~Dispatch">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="7"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "charsOf" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~charsOf~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+               <Type name = "StringSearch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch">
+                  <Metrics>
+                     <Metric id ="NORM" value ="3"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="5"/>
+                     <Metric id ="MLOC" value ="156" avg ="5.032" stddev ="5.568" points ="31" max ="21" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~toStringBuffer~QStringBuffer;"/>
+                     <Metric id ="NOM" value ="30"/>
+                     <Metric id ="NBD" avg ="0.968" stddev ="0.474" points ="31" max ="2" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~equals~QObject;"/>
+                     <Metric id ="DIT" value ="1"/>
+                     <Metric id ="VG" avg ="1.194" stddev ="0.534" points ="31" max ="3" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~equals~QObject;"/>
+                     <Metric id ="PAR" avg ="2.323" stddev ="1.614" points ="31" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="1"/>
+                     <Metric id ="SIX" value ="0.1"/>
+                     <Metric id ="WMC" value ="37"/>
+                     <Metric id ="NSF" value ="6"/>
+                  </Metrics>
+                  <Method name = "equals" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~equals~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchChars~\[C~I~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="5"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "Dispatch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~Dispatch">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "charsOf" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~charsOf~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="5"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="7"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "toString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~toString">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~processString~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "ReflectionDispatch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~ReflectionDispatch~QField;~QField;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="2"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchString~QString;~I~I~QString;~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="18"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "usesReflection" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~usesReflection">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchString~QString;~QString;~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchChars~\[C~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="11"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchString~QString;~I~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="26"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="2"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "createCharIntMap" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~createCharIntMap~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="9"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchChars~\[C~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "charsOf" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~charsOf~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~I~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "hashCode" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~hashCode">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~I~I~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "createCharIntMap" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~createCharIntMap~\[C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="16"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="32"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="7"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchString~QString;~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchString~QString;~I~I~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[Dispatch~searchString~QString;~I~I~QString;~QObject;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="6"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "usesNative" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~usesNative">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "StringSearch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~StringSearch">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "index" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~index~B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "toStringBuffer" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~toStringBuffer~QStringBuffer;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="21"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchBytes~\[B~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchString~QString;~I~QString;~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="11"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchChars~\[C~I~I~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="4"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch~searchChars~\[C~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="7"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="3"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+               <Type name = "ReflectionDispatch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch">
+                  <Metrics>
+                     <Metric id ="NORM" value ="0"/>
+                     <Metric id ="NOF" value ="2"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="117" avg ="19.5" stddev ="9.179" points ="6" max ="32" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+                     <Metric id ="NOM" value ="6"/>
+                     <Metric id ="NBD" avg ="3.5" stddev ="1.118" points ="6" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~QStringSearch;"/>
+                     <Metric id ="DIT" value ="2"/>
+                     <Metric id ="VG" avg ="3.333" stddev ="1.247" points ="6" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~charsOf~QString;"/>
+                     <Metric id ="PAR" avg ="4.5" stddev ="2.217" points ="6" max ="7" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0"/>
+                     <Metric id ="WMC" value ="20"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "charsOf" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~charsOf~QString;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="5"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "ReflectionDispatch" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~ReflectionDispatch~QField;~QField;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="2"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="26"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QObject;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="32"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="7"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~QStringSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="3"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchString" handle = "=stringsearch/src&lt;com.eaio.stringsearch{StringSearch.java[StringSearch[ReflectionDispatch~searchString~QString;~I~I~QString;~I~QMismatchSearch;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="19"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="4"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "ShiftOrClasses.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="2" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="271" avg ="90.333" stddev ="63.877" points ="3" max ="136" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                  <Metric id ="NOM" value ="3" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NBD" avg ="5.667" stddev ="3.3" points ="3" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                  <Metric id ="DIT" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="35.333" stddev ="24.281" points ="3" max ="53" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                  <Metric id ="TLOC" value ="279"/>
+                  <Metric id ="PAR" avg ="0.667" stddev ="0.471" points ="3" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="SIX" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="WMC" value ="106" avg ="106" stddev ="0" points ="1" max ="106" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses"/>
+               </Metrics>
+               <Type name = "ShiftOrClasses" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses">
+                  <Metrics>
+                     <Metric id ="NORM" value ="2"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="271" avg ="90.333" stddev ="63.877" points ="3" max ="136" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                     <Metric id ="NOM" value ="3"/>
+                     <Metric id ="NBD" avg ="5.667" stddev ="3.3" points ="3" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                     <Metric id ="DIT" value ="3"/>
+                     <Metric id ="VG" avg ="35.333" stddev ="24.281" points ="3" max ="53" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                     <Metric id ="PAR" avg ="0.667" stddev ="0.471" points ="3" max ="1" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="2"/>
+                     <Metric id ="WMC" value ="106"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processChars~\[C">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="135"/>
+                        <Metric id ="NBD" value ="8"/>
+                        <Metric id ="VG" value ="52"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~processBytes~\[B">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="136"/>
+                        <Metric id ="NBD" value ="8"/>
+                        <Metric id ="VG" value ="53"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "ShiftOrClasses" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrClasses.java[ShiftOrClasses~ShiftOrClasses">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "BoyerMooreHorspoolRaita.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="2" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="53" avg ="10.6" stddev ="11.808" points ="5" max ="25" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="NOM" value ="5" avg ="5" stddev ="0" points ="1" max ="5" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NBD" avg ="2.4" stddev ="2.154" points ="5" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="DIT" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="4" stddev ="3.286" points ="5" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="TLOC" value ="85"/>
+                  <Metric id ="PAR" avg ="4" stddev ="2" points ="5" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~searchBytes~\[B~I~I~\[B~QObject;"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="SIX" avg ="1.2" stddev ="0" points ="1" max ="1.2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="WMC" value ="20" avg ="20" stddev ="0" points ="1" max ="20" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+                  <Metric id ="NSF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita"/>
+               </Metrics>
+               <Type name = "BoyerMooreHorspoolRaita" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita">
+                  <Metrics>
+                     <Metric id ="NORM" value ="2"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="53" avg ="10.6" stddev ="11.808" points ="5" max ="25" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="NOM" value ="5"/>
+                     <Metric id ="NBD" avg ="2.4" stddev ="2.154" points ="5" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="DIT" value ="3"/>
+                     <Metric id ="VG" avg ="4" stddev ="3.286" points ="5" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="PAR" avg ="4" stddev ="2" points ="5" max ="5" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~searchBytes~\[B~I~I~\[B~QObject;"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="1.2"/>
+                     <Metric id ="WMC" value ="20"/>
+                     <Metric id ="NSF" value ="0"/>
+                  </Metrics>
+                  <Method name = "javaSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~javaSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="25"/>
+                        <Metric id ="NBD" value ="5"/>
+                        <Metric id ="VG" value ="8"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "nativeSearchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~nativeSearchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="0"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~searchChars~\[C~I~I~\[C~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="25"/>
+                        <Metric id ="NBD" value ="5"/>
+                        <Metric id ="VG" value ="8"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~searchBytes~\[B~I~I~\[B~QObject;">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="3"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="5"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "BoyerMooreHorspoolRaita" handle = "=stringsearch/src&lt;com.eaio.stringsearch{BoyerMooreHorspoolRaita.java[BoyerMooreHorspoolRaita~BoyerMooreHorspoolRaita">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+            <CompilationUnit name = "ShiftOrMismatches.java" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java">
+               <Metrics>
+                  <Metric id ="NORM" value ="1" avg ="1" stddev ="0" points ="1" max ="1" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NOF" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NSC" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NOC" value ="1"/>
+                  <Metric id ="MLOC" value ="147" avg ="21" stddev ="16.699" points ="7" max ="39" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~processChars~\[C~I"/>
+                  <Metric id ="NOM" value ="7" avg ="7" stddev ="0" points ="1" max ="7" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NBD" avg ="2.571" stddev ="1.178" points ="7" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~searchBytes~\[B~I~I~\[B~QObject;~I"/>
+                  <Metric id ="DIT" avg ="3" stddev ="0" points ="1" max ="3" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NOI" value ="0"/>
+                  <Metric id ="VG" avg ="4.429" stddev ="2.77" points ="7" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~processBytes~\[B~I"/>
+                  <Metric id ="TLOC" value ="177"/>
+                  <Metric id ="PAR" avg ="2.429" stddev ="2.382" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~searchBytes~\[B~I~I~\[B~QObject;~I"/>
+                  <Metric id ="LCOM" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NSM" value ="0" avg ="0" stddev ="0" points ="1" max ="0" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="SIX" avg ="0.429" stddev ="0" points ="1" max ="0.429" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="WMC" value ="31" avg ="31" stddev ="0" points ="1" max ="31" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+                  <Metric id ="NSF" value ="2" avg ="2" stddev ="0" points ="1" max ="2" per ="type" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches"/>
+               </Metrics>
+               <Type name = "ShiftOrMismatches" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches">
+                  <Metrics>
+                     <Metric id ="NORM" value ="1"/>
+                     <Metric id ="NOF" value ="0"/>
+                     <Metric id ="NSC" value ="0"/>
+                     <Metric id ="MLOC" value ="147" avg ="21" stddev ="16.699" points ="7" max ="39" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~processChars~\[C~I"/>
+                     <Metric id ="NOM" value ="7"/>
+                     <Metric id ="NBD" avg ="2.571" stddev ="1.178" points ="7" max ="4" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~searchBytes~\[B~I~I~\[B~QObject;~I"/>
+                     <Metric id ="DIT" value ="3"/>
+                     <Metric id ="VG" avg ="4.429" stddev ="2.77" points ="7" max ="8" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~processBytes~\[B~I"/>
+                     <Metric id ="PAR" avg ="2.429" stddev ="2.382" points ="7" max ="6" per ="method" maxhandle ="=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~searchBytes~\[B~I~I~\[B~QObject;~I"/>
+                     <Metric id ="LCOM" value ="0"/>
+                     <Metric id ="NSM" value ="0"/>
+                     <Metric id ="SIX" value ="0.429"/>
+                     <Metric id ="WMC" value ="31"/>
+                     <Metric id ="NSF" value ="2"/>
+                  </Metrics>
+                  <Method name = "processBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~processBytes~\[B~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="38"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="8"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchBytes" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~searchBytes~\[B~I~I~\[B~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="32"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "searchChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~searchChars~\[C~I~I~\[C~QObject;~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="32"/>
+                        <Metric id ="NBD" value ="4"/>
+                        <Metric id ="VG" value ="6"/>
+                        <Metric id ="PAR" value ="6"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "clog2" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~clog2~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="5"/>
+                        <Metric id ="NBD" value ="2"/>
+                        <Metric id ="VG" value ="2"/>
+                        <Metric id ="PAR" value ="1"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "ShiftOrMismatches" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~ShiftOrMismatches">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="0"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "usesNative" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~usesNative">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="1"/>
+                        <Metric id ="NBD" value ="1"/>
+                        <Metric id ="VG" value ="1"/>
+                        <Metric id ="PAR" value ="0"/>
+                     </Metrics>
+                  </Method>
+                  <Method name = "processChars" handle = "=stringsearch/src&lt;com.eaio.stringsearch{ShiftOrMismatches.java[ShiftOrMismatches~processChars~\[C~I">
+                     <Metrics>
+                        <Metric id ="MLOC" value ="39"/>
+                        <Metric id ="NBD" value ="3"/>
+                        <Metric id ="VG" value ="7"/>
+                        <Metric id ="PAR" value ="2"/>
+                     </Metrics>
+                  </Method>
+               </Type>
+            </CompilationUnit>
+         </Package>
+      </PackageRoot>
+   </Project>
+</Metrics>

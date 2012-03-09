@@ -11,9 +11,13 @@ public class Population {
 	private OpenSourceProject sampleProject;
 
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution) {
+		System.out.println("Initializing the population.");
+		System.out.println("Population: there may only be " + maxNumberOfSolutions + " individuals in this population.");
+		System.out.println("Population: each individual can only have " + maxNumberOfRulesPerSolution + " rules.");
+		
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.maxNumberOfSolutions = maxNumberOfRulesPerSolution;
-		this.individuals = new Vector<Individual>();
+		this.individuals = new Vector<Individual>(maxNumberOfSolutions);
 	}
 
 	public Population(int numberOfFinalSolutions) {
@@ -47,7 +51,7 @@ public class Population {
 
 	public void setAvailableMetrics(String[] availableMetrics) {
 		// TODO Auto-generated method stub
-		System.out.println("Setting available metrics to use");
+		System.out.println("Setting available metrics to use: " + availableMetrics.toString());
 		this.availableMetrics = availableMetrics;
 	}
 
