@@ -4,48 +4,36 @@ import java.util.Random;
 import java.util.Vector;
 
 public class Individual {
-
-  private int maxNumberOfRules;
-  private Summary ProposedSummary;
-  private Vector<Rule> ruleslist = new Vector<Rule>();
-
-  private String[] availableMetrics;
+  private Summary generatedSummary;
+  private OpenSourceProject project;
+  private Vector<Rule> rulesList = new Vector<Rule>();
 	
-  public Individual(int maxNumberOfRulesPerSolution, OpenSourceProject Project) {
-	this.maxNumberOfRules = maxNumberOfRulesPerSolution;
-	ProposedSummary = Project.getSummary();
+  public Individual(OpenSourceProject project, String[] availableMetrics, int maxNumberOfRules) {
+	this.project = project;
 	
-    int numberOfRulesToBeCreated = new Random().nextInt(maxNumberOfRulesPerSolution);
-    for (int i = 0; i<numberOfRulesToBeCreated; i++)
-    {
-    
-  // Method Lines of Code->In the hundreds possibly thousands
-  // Number of Parameters-> less than 10
-  // McCabe Cyclomatic Complexity-> less than 20
-  // Nested Block Depth-> less than 10
-  // Number of Children-> less than 10
-  // Number of Methods-> less than 40
-
-	  Random randomizer = new Random();
-	  int randomThresholdMLOC = randomizer.nextInt(2000); //This number needs to be changed to something a little greater 
-	  													//the highest number of lines of code in the projects.
-	  int randomThreshold = randomizer.nextInt(25);//This might be too small for NUM METHODS  
-	  
-	  if(availableMetrics[i].compareTo("MLOC") == 0)
-		  this.ruleslist.add(new Rule(randomThresholdMLOC, availableMetrics[i], null));
-	  else
-		  this.ruleslist.add(new Rule(randomThreshold, availableMetrics[i], null));
-    }
+	int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
+	for (int i = 0; i < rulesToCreate; i++)
+	{
+		rulesList.add(new Rule(availableMetrics));
+	}
   }
-
-  public void setAvailableMetrics(String[] availableMetrics) {
-	// TODO Auto-generated method stub
-	this.availableMetrics = availableMetrics;
+  
+  public void GenerateSummary() {
+	  Vector<Element> elements = project.getElements();
+	  for (int i = 0; i < elements.size(); i++) {
+		  for (int j = 0; j < rulesList.size(); j++) {
+			  if (rulesList.get(j).evaluate(elements.get(i)))
+			  {
+				  // add this element to the generated summary
+				  break;
+			  }
+		  }
+	  }
   }
 		
-  public int FitnessFunction(Summary ProposedSummary, Summary GeneratedSummary){
-	int NumFitnessFunction = (((ProposedSummary.Intersection(GeneratedSummary))/GeneratedSummary.getSummarySize()) + 
-		                     ((ProposedSummary.Intersection(GeneratedSummary))/ProposedSummary.getSummarySize())/(2));
+  public int FitnessFunction() {
+	int NumFitnessFunction = (((project.getSummary().Intersection(generatedSummary))/generatedSummary.getSummarySize()) + 
+		                     ((project.getSummary().Intersection(generatedSummary))/project.getSummary().getSummarySize())/(2));
 	return NumFitnessFunction;
   }
 }
