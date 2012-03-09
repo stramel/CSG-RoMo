@@ -6,14 +6,14 @@ import java.util.Vector;
 public class Individual {
 
   private int maxNumberOfRules;
-  private OpenSourceProject ProposedSummary;
+  private Summary ProposedSummary;
   private Vector<Rule> ruleslist = new Vector<Rule>();
 
   private String[] availableMetrics;
 	
   public Individual(int maxNumberOfRulesPerSolution, OpenSourceProject Project) {
 	this.maxNumberOfRules = maxNumberOfRulesPerSolution;
-	ProposedSummary = Project;
+	ProposedSummary = Project.getSummary();
 	
     int numberOfRulesToBeCreated = new Random().nextInt(maxNumberOfRulesPerSolution);
     for (int i = 0; i<numberOfRulesToBeCreated; i++)
