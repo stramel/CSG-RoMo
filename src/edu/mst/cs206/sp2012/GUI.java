@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 
 public class GUI extends JFrame implements ActionListener {
 	
+	private static final long serialVersionUID = 1331420879L;
 	private JPanel inputPanel;
 	private JTextField numberOfIterations;
 	private JTextField numberOfFinalSolutions;
