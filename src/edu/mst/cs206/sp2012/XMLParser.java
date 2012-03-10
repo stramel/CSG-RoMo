@@ -23,12 +23,10 @@ public class XMLParser {
 			
 			NodeList classList = doc.getElementsByTagName("Type");
 			
-			for (int i = 0; i < classList.getLength(); i++)
-			{
+			for (int i = 0; i < classList.getLength(); i++) {
 				Node classNode = classList.item(i);
 				
-				if (classNode.getNodeType() == Node.ELEMENT_NODE)
-				{
+				if (classNode.getNodeType() == Node.ELEMENT_NODE) {
 					String className = ((Element) classNode).getAttribute("name");
 
 					// Confirm that we have a className
@@ -68,12 +66,10 @@ public class XMLParser {
 			// Grab the classes and add them to the summary
 			NodeList classList = doc.getElementsByTagName("class");
 			
-			for (int i = 0; i < classList.getLength(); i++)
-			{
+			for (int i = 0; i < classList.getLength(); i++) {
 				Node classNode = classList.item(i);
 				
-				if (classNode.getNodeType() == Node.ELEMENT_NODE)
-				{
+				if (classNode.getNodeType() == Node.ELEMENT_NODE) {
 					elements.add(new edu.mst.cs206.sp2012.Element(classNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.CLASS));
 				}
 			}
@@ -81,12 +77,10 @@ public class XMLParser {
 			// Grab the methods and add them to the summary
 			NodeList methodList = doc.getElementsByTagName("method");
 			
-			for (int i = 0; i < methodList.getLength(); i++)
-			{
+			for (int i = 0; i < methodList.getLength(); i++) {
 				Node methodNode = methodList.item(i);
 				
-				if (methodNode.getNodeType() == Node.ELEMENT_NODE)
-				{
+				if (methodNode.getNodeType() == Node.ELEMENT_NODE) {
 					elements.add(new edu.mst.cs206.sp2012.Element(methodNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.METHOD));
 				}
 			}
@@ -106,16 +100,13 @@ public class XMLParser {
 		
 		HashMap<String, Float> metrics = new HashMap<String, Float>();
 		
-		for (int j = 0; j < metricsNodeList.getLength(); j++)
-		{
+		for (int j = 0; j < metricsNodeList.getLength(); j++) {
 			Node metricNode = metricsNodeList.item(j);
 			
-			if (metricNode.getNodeType() == Node.ELEMENT_NODE)
-			{
+			if (metricNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element metricElement = (Element) metricNode;
 				
-				if (!metricElement.getAttribute("value").equals(""))
-				{
+				if (!metricElement.getAttribute("value").equals("")) {
 					metrics.put(metricElement.getAttribute("id"), Float.parseFloat(metricElement.getAttribute("value")));
 				}
 			}
@@ -123,7 +114,6 @@ public class XMLParser {
 		
 		return metrics;
 	}
-	
 	
 	/*private static String getTagValue(String tag, Element element)
 	{
@@ -136,13 +126,11 @@ public class XMLParser {
 	{
 		element = element.getFirstChild();
 		
-		while (element.getNodeName() != tag && element.getNextSibling() != null)
-		{
+		while (element.getNodeName() != tag && element.getNextSibling() != null) {
 			element = element.getNextSibling();
 		}
 		
-		if (element.getNodeName() == tag)
-		{
+		if (element.getNodeName() == tag) {
 			return element;
 		}
 		
@@ -155,8 +143,7 @@ public class XMLParser {
 			element = element.getNextSibling();
 		} while (element.getNodeName() != tag && element.getNextSibling() != null);
 		
-		if (element.getNodeName() == tag)
-		{
+		if (element.getNodeName() == tag) {
 			return element;
 		}
 		

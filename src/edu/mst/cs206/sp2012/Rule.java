@@ -11,22 +11,31 @@ public class Rule {
 		int thresholdsToCreate = new Random().nextInt(availableMetrics.length) + 1;
 		Vector<String> metricsToUse = new Vector<String>();
 		
-		for (int i = 0; i < availableMetrics.length; i++)
-		{
-			metricsToUse.add(availableMetrics[i]);
-		}
-		
-		for (int i = metricsToUse.size() - thresholdsToCreate; i > 0; i--)
-		{
-			int metricToRemove;
+		if (thresholdsToCreate > (availableMetrics.length / 2)) {
+			// Remove metrics to hit the value wanted
+			for (int i = 0; i < availableMetrics.length; i++) {
+				metricsToUse.add(availableMetrics[i]);
+			}
 			
-			do {
-				metricToRemove = new Random().nextInt(availableMetrics.length);
-			} while (metricsToUse.remove(availableMetrics[metricToRemove]));
+			for (int i = metricsToUse.size() - thresholdsToCreate; i > 0; i--) {
+				int metricToRemove;
+				
+				do {
+					metricToRemove = new Random().nextInt(availableMetrics.length);
+				} while (!metricsToUse.remove(availableMetrics[metricToRemove]));
+			}
+		} else {
+			// Add metrics to hit the value wanted
+			for (int i = 0; i < thresholdsToCreate; i++) {
+				int metricToAdd;
+				
+				do {
+					metricToAdd = new Random().nextInt(availableMetrics.length);
+				} while (metricsToUse.contains(availableMetrics[metricToAdd]) || !metricsToUse.add(availableMetrics[metricToAdd]));
+			}
 		}
 		
-		for (int i = 0; i < metricsToUse.size(); i++)
-		{
+		for (int i = 0; i < metricsToUse.size(); i++) {
 			float thresholdValue = Float.parseFloat("2");
 			HashMap<String,Float> threshold = new HashMap<String,Float>();
 			threshold.put(metricsToUse.get(i), thresholdValue);
@@ -57,17 +66,15 @@ public class Rule {
     public boolean evaluate(Element element) {
     	boolean evaluatesTrue = true;
     	
-    	for (int i = 0; i < thresholds.size(); i++)
-    	{
+    	for (int i = 0; i < thresholds.size(); i++) {
     		HashMap<String, Float> threshold = thresholds.get(i);
     		
-    		if (element.getMetrics().get(threshold.get("metric")).compareTo(threshold.get("value")) < 0)
-    		{
+    		if (element.getMetrics().get(threshold.get("metric")).compareTo(threshold.get("value")) < 0) {
     			evaluatesTrue = false;
     			break;
     		}
     	}
     	
 		return evaluatesTrue;
-  }
+    }
 }
