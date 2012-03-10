@@ -24,6 +24,10 @@ public class GUI extends JFrame implements ActionListener {
 	private JTextField numberOfFinalSolutions;
 	private JLabel labelForNumberOfRulesPerSolution;
 	private JTextField numberOfRulesPerSolution;
+	private JLabel labelForSampleSummaryPath;
+	private JTextField pathToSampleSummary;
+	private JLabel labelForMetricsResultsPath;
+	private JTextField pathToMetricsResults;
 	
 	public static void main(String[] args) {
 		GUI gui = new GUI();
@@ -59,6 +63,16 @@ public class GUI extends JFrame implements ActionListener {
 		inputPanel.add(labelForNumberOfRulesPerSolution);
 	    inputPanel.add(numberOfRulesPerSolution);
 	    
+	    labelForSampleSummaryPath = new JLabel("Path to Sample Summary: ");
+		pathToSampleSummary = new JTextField(20);
+		inputPanel.add(labelForSampleSummaryPath);
+	    inputPanel.add(pathToSampleSummary);
+	    
+	    labelForMetricsResultsPath = new JLabel("Path to Metrics Results: ");
+		pathToMetricsResults = new JTextField(20);
+		inputPanel.add(labelForMetricsResultsPath);
+	    inputPanel.add(pathToMetricsResults);
+	    
 	    runButton = new JButton ("Run");
 	    runButton.addActionListener(this);
 	    inputPanel.add(runButton);
@@ -70,10 +84,12 @@ public class GUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		final int NUM_ITERATIONS = Integer.parseInt(numberOfIterations.getText());
 		final int NUM_FINAL_SOLUTIONS = Integer.parseInt(numberOfFinalSolutions.getText());
-		JOptionPane.showMessageDialog(this, String.valueOf(NUM_FINAL_SOLUTIONS), "Number of Final Solutions", JOptionPane.INFORMATION_MESSAGE);
-		
 		final int NUM_RULES_PER_SOLUTIONS = Integer.parseInt(numberOfRulesPerSolution.getText());
-		JOptionPane.showMessageDialog(this, String.valueOf(NUM_RULES_PER_SOLUTIONS), "Number of Rules per Solution", JOptionPane.INFORMATION_MESSAGE);
+		final String SAMPLE_SUMMARY_PATH = pathToSampleSummary.getText();
+		JOptionPane.showMessageDialog(this, SAMPLE_SUMMARY_PATH, "Path to Sample Summary", JOptionPane.INFORMATION_MESSAGE);
+
+		final String METRICS_RESULT_PATH = pathToMetricsResults.getText();
+		JOptionPane.showMessageDialog(this, METRICS_RESULT_PATH, "Path to Metrics Results", JOptionPane.INFORMATION_MESSAGE);
 		
 //		controller = new MainController(NUM_ITERATIONS, numberOfFinalSolutions,
 //				maxNumberOfRulesPerSolution, urlToSampleSummaries,
