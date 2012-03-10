@@ -24,22 +24,19 @@ public class GUI extends JFrame {
 //		JTextField numberOfFinalSolutions = new JTextField(20);
 //		inputPanel.add(labelForNumberOfFinalSolutions);
 //	    inputPanel.add(numberOfFinalSolutions);
-	    
+		
+	    JButton runButton = new JButton ("Run");
+		inputPanel.add(runButton);
+		
 	    gui.add(inputPanel);
 	    gui.setVisible(true);
 	    
-//		JPanel j2 = new JPanel();
-//		JButton b1 = new JButton ("Click me");
-
-//	    j2.add(b1);
-	    
-//	    gui.add(j2);
 		//MainController ctrl = new MainController(0, 0, 0, "./", "./");
 	}
 	
 	public GUI()
 	{
-		setSize(400,150);
+		setSize(500,150);
 		setTitle("cs206sp2012 Project");
 		//setLayout(new FlowLayout());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
