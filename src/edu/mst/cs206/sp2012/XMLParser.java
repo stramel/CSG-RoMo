@@ -92,13 +92,13 @@ public class XMLParser {
 	}
 	
 	
-	private static HashMap<String, Float> getElementMetrics(Node element, String[] metricsToSave)
+	private static HashMap<String, Integer> getElementMetrics(Node element, String[] metricsToSave)
 	{
 		Node metricsNode = getFirstChildByTagName("Metrics", element);
-		if (metricsNode == null) { return new HashMap<String, Float>(); }
+		if (metricsNode == null) { return new HashMap<String, Integer>(); }
 		NodeList metricsNodeList = metricsNode.getChildNodes();
 		
-		HashMap<String, Float> metrics = new HashMap<String, Float>();
+		HashMap<String, Integer> metrics = new HashMap<String, Integer>();
 		
 		for (int j = 0; j < metricsNodeList.getLength(); j++) {
 			Node metricNode = metricsNodeList.item(j);
@@ -107,7 +107,7 @@ public class XMLParser {
 				Element metricElement = (Element) metricNode;
 				
 				if (!metricElement.getAttribute("value").equals("")) {
-					metrics.put(metricElement.getAttribute("id"), Float.parseFloat(metricElement.getAttribute("value")));
+					metrics.put(metricElement.getAttribute("id"), Integer.parseInt(metricElement.getAttribute("value")));
 				}
 			}
 		}

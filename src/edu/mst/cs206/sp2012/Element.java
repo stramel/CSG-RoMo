@@ -7,16 +7,16 @@ public class Element {
 	
 	private String name;
 	private Type type;
-	private HashMap<String, Float> metrics;
+	private HashMap<String, Integer> metrics;
 
-	public Element(String name, Type type, HashMap<String, Float> metrics) {
+	public Element(String name, Type type, HashMap<String, Integer> metrics) {
 		this.name = name;
 		this.type = type;
 		this.metrics = metrics;
 	}
 	
 	public Element(String name, Type type) {
-		this(name, type, new HashMap<String, Float>(0));
+		this(name, type, new HashMap<String, Integer>(0));
 	}
 	
 	public void setName(String name) {
@@ -43,19 +43,19 @@ public class Element {
 		return (type == Type.METHOD);		
 	}
 	
-	public void setMetrics(HashMap<String, Float> metrics) {
+	public void setMetrics(HashMap<String, Integer> metrics) {
 		this.metrics = metrics;
 	}
 	
-	public void setMetric(String metricID, Float value) {
+	public void setMetric(String metricID, Integer value) {
 		this.metrics.put(metricID, value);
 	}
 	
-	public HashMap<String, Float> getMetrics() {
+	public HashMap<String, Integer> getMetrics() {
 		return this.metrics;
 	}
 	
-	public Float MetricValue(String metricId) {
+	public Integer MetricValue(String metricId) {
 		return metrics.get(metricId);
 	}
 	

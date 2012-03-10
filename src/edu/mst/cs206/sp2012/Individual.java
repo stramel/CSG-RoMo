@@ -12,8 +12,15 @@ public class Individual {
 		this.project = project;
 
 		int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
+		Integer[] maxMetricsThresholds = new Integer[availableMetrics.length];
+
+		// Find the max of each metric
+		for (int i = 0; i < maxMetricsThresholds.length; i++) {
+			//...
+		}
+		
 		for (int i = 0; i < rulesToCreate; i++) {
-			rulesList.add(new Rule(availableMetrics));
+			rulesList.add(new Rule(availableMetrics, maxMetricsThresholds));
 		}
 	}
   
