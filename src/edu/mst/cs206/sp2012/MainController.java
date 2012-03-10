@@ -10,30 +10,6 @@ public class MainController {
 	private Population bestSolutions;
 	private String[] availableMetrics;
 	
-	public static void main(String[] args) {
-		MainController ctrl = new MainController(0, 0, 0, "./", "./");
-		
-		System.out.println("Hard coded number of Iterations: " + ctrl.numberOfIterators);
-		System.out.println("Hard coded number of Final Solutions: " + ctrl.maxNumberOfSolutions);
-		System.out.println("Maximum number of Rules per Solution: " + ctrl.maxNumberOfRulesPerSolution);
-		System.out.println("URL to Sample Summaries: " + ctrl.urlToSampleSummary);
-		System.out.println("URL to Metrics Results: " + ctrl.urlToMetricsResults);
-		
-		Population currentPopulation = new Population(ctrl.maxNumberOfSolutions, ctrl.maxNumberOfRulesPerSolution);
-		currentPopulation.setSampleProject(new OpenSourceProject(ctrl.urlToMetricsResults, ctrl.urlToSampleSummary, ctrl.availableMetrics));
-		currentPopulation.setAvailableMetrics(ctrl.availableMetrics);
-		
-		currentPopulation.initialize();
-		for(int generation=0; generation < ctrl.numberOfIterators; generation++)
-		{
-			currentPopulation.evaluateSolutions();
-			ctrl.bestSolutions.push(currentPopulation.getBestSolution());
-			currentPopulation.purgeAndRenew();
-		}
-		
-		// Output the best solution that is stored in ctrl.bestSolutions;
-	}
-	
 	public MainController(int numberOfIterations, int numberOfFinalSolutions,
 			int maxNumberOfRulesPerSolution, String urlToSampleSummaries,
 			String urlToMetricsResults)
@@ -53,5 +29,30 @@ public class MainController {
 		this.availableMetrics[3] = "NBD";	// Nested Block Depth
 		this.availableMetrics[4] = "NSC";	// Number of Children
 		this.availableMetrics[5] = "NOM";	// Number of Methods
+	}
+
+	public void run() {
+		System.out.println("Hard coded number of Iterations: " + numberOfIterators);
+		System.out.println("Hard coded number of Final Solutions: " + maxNumberOfSolutions);
+		System.out.println("Maximum number of Rules per Solution: " + maxNumberOfRulesPerSolution);
+		System.out.println("URL to Sample Summaries: " + urlToSampleSummary);
+		System.out.println("URL to Metrics Results: " + urlToMetricsResults);
+		
+		Population currentPopulation = new Population(maxNumberOfSolutions, maxNumberOfRulesPerSolution);
+		currentPopulation.setSampleProject(new OpenSourceProject(urlToMetricsResults, urlToSampleSummary, availableMetrics));
+		currentPopulation.setAvailableMetrics(availableMetrics);
+		
+		currentPopulation.initialize();
+		for(int generation=0; generation < numberOfIterators; generation++)
+		{
+			currentPopulation.evaluateSolutions();
+			bestSolutions.push(currentPopulation.getBestSolution());
+			currentPopulation.purgeAndRenew();
+		}
+	}
+	
+	public Population getBestSolutions() {
+		// Output the best solution that is stored in ctrl.bestSolutions;
+		return bestSolutions;
 	}
 }
