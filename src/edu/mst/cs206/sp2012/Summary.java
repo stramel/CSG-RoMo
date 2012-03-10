@@ -3,39 +3,35 @@ package edu.mst.cs206.sp2012;
 import java.util.Vector;
 
 public class Summary {
-
-//  private int SummarySize;
-//  private OpenSourceProject ProjectProposedSummary; 
-  private Vector<Element> elements = new Vector<Element>();
-
-/*  public Summary(OpenSourceProject Project) {
-	// TODO Auto-generated constructor stub
-	System.out.println("Constructing Summary from an input file located at " + url);
-	ProjectProposedSummary = Project;
-	SummarySize = ProjectProposedSummary.getElements().size();
-  }*/
+	private Vector<Element> elements = new Vector<Element>();
   
-  public Summary(Vector<Element> elements)
-  {
-	  this.elements = elements;
-  }
-	
-  public int Intersection(Summary GeneratedSummary){
-	int numIntersections = 0;
-	for(int i = 0; i < GeneratedSummary.getSummarySize(); i++){
-	  for(int j = 0; j < elements.size(); j++){
-		if((elements.get(j).getName()).compareTo((getElement(i)).getName()) == 0)
-		  numIntersections++;
-		}
+	public Summary(Vector<Element> elements) {
+		this.elements = elements;
 	}
-	return numIntersections;
-  }
-	
-  private Element getElement(int i){
-	return this.elements.get(i);
-  }
 
-  public int getSummarySize(){
-	return this.elements.size();
-  }
+	public int Intersection(Summary otherSummary) {
+		int numIntersections = 0;
+
+		for (int i = 0; i < otherSummary.getSummarySize(); i++) {
+			for (int j = 0; j < this.getSummarySize(); j++) {
+				if ( (this.elements.get(j).getName()).compareTo((otherSummary.getElement(i)).getName()) == 0) {
+					numIntersections++;
+				}
+			}
+		}
+	
+		return numIntersections;
+	}
+  
+	public boolean addElement(Element element) {
+		return this.elements.add(element);
+	}
+	
+	public Element getElement(int i) {
+		return this.elements.get(i);
+	}
+
+	public int getSummarySize() {
+		return this.elements.size();
+	}
 }
