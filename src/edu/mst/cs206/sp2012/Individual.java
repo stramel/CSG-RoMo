@@ -13,12 +13,20 @@ public class Individual {
 
 		int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
 		Integer[] maxMetricsThresholds = new Integer[availableMetrics.length];
-
+		Vector<Element> elements = project.getElements();
+		
 		// Find the max of each metric
 		for (int i = 0; i < maxMetricsThresholds.length; i++) {
-			//...
+			maxMetricsThresholds[i] = 0;
+			
+			for (int j = 0; j < elements.size(); j++) {
+				if (elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0) {
+					maxMetricsThresholds[i] = elements.get(j).MetricValue(availableMetrics[i]);
+				}
+			}
 		}
 		
+		// Create the rules for this individual
 		for (int i = 0; i < rulesToCreate; i++) {
 			rulesList.add(new Rule(availableMetrics, maxMetricsThresholds));
 		}
