@@ -14,29 +14,15 @@ import javax.swing.JTextField;
 public class GUI extends JFrame implements ActionListener {
 	
 	private JPanel inputPanel;
-	private JLabel labelForNumberOfIterations;
 	private JTextField numberOfIterations;
-	
-	private JButton runButton;
-	
-	private MainController controller;
-	private JLabel labelForNumberOfFinalSolutions;
 	private JTextField numberOfFinalSolutions;
-	private JLabel labelForNumberOfRulesPerSolution;
 	private JTextField numberOfRulesPerSolution;
-	private JLabel labelForSampleSummaryPath;
 	private JTextField pathToSampleSummary;
-	private JLabel labelForMetricsResultsPath;
 	private JTextField pathToMetricsResults;
 	
 	public static void main(String[] args) {
 		GUI gui = new GUI();
-		
-//		
-		
 	    gui.setVisible(true);
-	    
-		//MainController ctrl = new MainController(0, 0, 0, "./", "./");
 	}
 	
 	public GUI()
@@ -48,32 +34,27 @@ public class GUI extends JFrame implements ActionListener {
 		
 		inputPanel = new JPanel (new FlowLayout());
 		
-		labelForNumberOfIterations = new JLabel("Number of Iterations: ");
 		numberOfIterations = new JTextField(20);
-		inputPanel.add(labelForNumberOfIterations);
+		inputPanel.add(new JLabel("Number of Iterations: "));
 	    inputPanel.add(numberOfIterations);
 	    
-	    labelForNumberOfFinalSolutions = new JLabel("Number of Final Solutions: ");
 		numberOfFinalSolutions = new JTextField(20);
-		inputPanel.add(labelForNumberOfFinalSolutions);
+		inputPanel.add(new JLabel("Number of Final Solutions: "));
 	    inputPanel.add(numberOfFinalSolutions);
 	    
-	    labelForNumberOfRulesPerSolution = new JLabel("Number of Rules per Solution: ");
-		numberOfRulesPerSolution = new JTextField(20);
-		inputPanel.add(labelForNumberOfRulesPerSolution);
+	    numberOfRulesPerSolution = new JTextField(20);
+		inputPanel.add(new JLabel("Number of Rules per Solution: "));
 	    inputPanel.add(numberOfRulesPerSolution);
 	    
-	    labelForSampleSummaryPath = new JLabel("Path to Sample Summary: ");
 		pathToSampleSummary = new JTextField(20);
-		inputPanel.add(labelForSampleSummaryPath);
+		inputPanel.add(new JLabel("Path to Sample Summary: "));
 	    inputPanel.add(pathToSampleSummary);
 	    
-	    labelForMetricsResultsPath = new JLabel("Path to Metrics Results: ");
-		pathToMetricsResults = new JTextField(20);
-		inputPanel.add(labelForMetricsResultsPath);
+	    pathToMetricsResults = new JTextField(20);
+		inputPanel.add(new JLabel("Path to Metrics Results: "));
 	    inputPanel.add(pathToMetricsResults);
 	    
-	    runButton = new JButton ("Run");
+	    JButton runButton = new JButton ("Run");
 	    runButton.addActionListener(this);
 	    inputPanel.add(runButton);
 	    
@@ -86,18 +67,15 @@ public class GUI extends JFrame implements ActionListener {
 		final int NUM_FINAL_SOLUTIONS = Integer.parseInt(numberOfFinalSolutions.getText());
 		final int NUM_RULES_PER_SOLUTIONS = Integer.parseInt(numberOfRulesPerSolution.getText());
 		final String SAMPLE_SUMMARY_PATH = pathToSampleSummary.getText();
-		JOptionPane.showMessageDialog(this, SAMPLE_SUMMARY_PATH, "Path to Sample Summary", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(this, SAMPLE_SUMMARY_PATH,
+				"Path to Sample Summary", JOptionPane.INFORMATION_MESSAGE);
 
 		final String METRICS_RESULT_PATH = pathToMetricsResults.getText();
-		JOptionPane.showMessageDialog(this, METRICS_RESULT_PATH, "Path to Metrics Results", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(this, METRICS_RESULT_PATH,
+				"Path to Metrics Results", JOptionPane.INFORMATION_MESSAGE);
 		
-//		controller = new MainController(NUM_ITERATIONS, numberOfFinalSolutions,
-//				maxNumberOfRulesPerSolution, urlToSampleSummaries,
-//				urlToMetricsResults);
-	}
-
-	private void getInput() {
-		// TODO Auto-generated method stub
-		
+		new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
+				NUM_RULES_PER_SOLUTIONS, SAMPLE_SUMMARY_PATH,
+				METRICS_RESULT_PATH).run();
 	}
 }
