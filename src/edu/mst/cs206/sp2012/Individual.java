@@ -2,12 +2,25 @@ package edu.mst.cs206.sp2012;
 
 import java.util.Random;
 import java.util.Vector;
-
+/**This class will build an Individual*/
 public class Individual {
 	private Summary generatedSummary;
 	private OpenSourceProject project;
 	private Vector<Rule> rulesList = new Vector<Rule>();
 	
+	/**public Individual(OpenSourceProject project, String[] availableMetrics, int maxNumberOfRules)
+	 * 
+	 * This constructor will create a random number of Rules, an array of maxMetricsThresholds for the availableMetrics length,
+	 * and a Vector of type Element named elements set equal to the projects elements.
+	 * 
+	 * The nested for loop will:build a max number for each metric to generate the rules in better bounds.
+	 * 
+	 * The last for loop will create the rules for this specific Individual.
+	 * 
+	 * @param project of type OpenSourceProject
+	 * @param availableMetrics of type String[]
+	 * @param maxNumberOfRules of type int
+	 */
 	public Individual(OpenSourceProject project, String[] availableMetrics, int maxNumberOfRules) {
 		this.project = project;
 
@@ -32,6 +45,9 @@ public class Individual {
 		}
 	}
   
+	/** public void GenerateSummary()
+	 * This function will add Elements to the generatedSummary based on the evaluate function of the Rule.java class.
+	 */
 	public void GenerateSummary() {
 		Vector<Element> elements = project.getElements();
 		for (int i = 0; i < elements.size(); i++) {
@@ -45,6 +61,10 @@ public class Individual {
 		}
 	}
 	
+	/** public int FitnessFunction()
+	 * This function will run the FitnessFuntion on both Summaries looking for a better Summary to create.  
+	 * @return the value of the FitnessFunction.
+	 */
 	public int FitnessFunction() {
 		int intersectionValue = project.getSummary().Intersection(generatedSummary);
 		return (intersectionValue / generatedSummary.getSummarySize()) + (intersectionValue / (project.getSummary().getSummarySize() / 2));
