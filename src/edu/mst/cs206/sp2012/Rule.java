@@ -5,7 +5,7 @@ import java.util.Vector;
 import java.util.HashMap;
 
 public class Rule {
-	private HashMap<String, Integer> thresholds;
+	private HashMap<String, Integer> thresholds = new HashMap<String, Integer>();
 
 	public Rule(String[] availableMetrics, Integer[] maxMetricsThresholds) {		
 		int thresholdsToCreate = new Random().nextInt(availableMetrics.length) + 1;
@@ -37,14 +37,10 @@ public class Rule {
 		
 		for (int i = 0; i < metricsToUse.size(); i++) {			
 			// Generate the threshold
-			System.out.println("test");
 			int thresholdValue = new Random().nextInt(maxMetricsThresholds[i]);
-			System.out.println("test2");
 			
 			// Save this threshold to the list
-			System.out.println("thresholdValue = " + thresholdValue + ", metric = '" + metricsToUse.get(i) + "'");
-			// TODO Figure out why this next line is throwing errors :(
-			thresholds.put(metricsToUse.get(i), thresholdValue);
+			this.thresholds.put(metricsToUse.get(i), thresholdValue);
 		}		
 	}
 	
