@@ -52,7 +52,7 @@ public class GUI extends JFrame implements ActionListener {
 	
 	public GUI()
 	{
-		setSize(500,150);
+		setSize(500,200);
 		setTitle("cs206sp2012 Project");
 		//setLayout(new FlowLayout());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,11 +100,11 @@ public class GUI extends JFrame implements ActionListener {
 		final int NUM_ITERATIONS = getNumberOfIterations();
 		final int NUM_FINAL_SOLUTIONS = getNumberOfFinalSolutions();
 		final int NUM_RULES_PER_SOLUTIONS = getNumberOfRulesPerSolution();
-		final String SAMPLE_SUMMARY_PATH = pathToSampleSummary.getText();
+		final String SAMPLE_SUMMARY_PATH = getPathToSampleSummary();
 		JOptionPane.showMessageDialog(this, SAMPLE_SUMMARY_PATH,
 				"Path to Sample Summary", JOptionPane.INFORMATION_MESSAGE);
 
-		final String METRICS_RESULT_PATH = pathToMetricsResults.getText();
+		final String METRICS_RESULT_PATH = getPathToMetricsResults();
 		JOptionPane.showMessageDialog(this, METRICS_RESULT_PATH,
 				"Path to Metrics Results", JOptionPane.INFORMATION_MESSAGE);
 		
@@ -113,15 +113,65 @@ public class GUI extends JFrame implements ActionListener {
 				METRICS_RESULT_PATH).run();
 	}
 
+	private String getPathToMetricsResults() {
+		return pathToMetricsResults.getText();
+	}
+
+	private String getPathToSampleSummary() {
+		return pathToSampleSummary.getText();
+	}
+
 	private int getNumberOfRulesPerSolution() throws NumberFormatException {
-		return Integer.parseInt(numberOfRulesPerSolution.getText());
+		final String USER_INPUT = numberOfRulesPerSolution.getText();
+		int temp = 0;
+		try {
+			temp = Integer.parseInt(USER_INPUT);
+		} catch (NumberFormatException e) {
+			String errorMessage = "Number of Rules per Solution is expected to be an Integer value, but you input '";
+			errorMessage += USER_INPUT;
+			errorMessage += "'. Please fix this.";
+			JOptionPane.showMessageDialog(this, errorMessage,
+				"Number of Rules per Solution must be a positive Interger!",
+				JOptionPane.INFORMATION_MESSAGE);
+			
+			throw new NumberFormatException(errorMessage);
+		}
+		return temp; 
 	}
 
 	private int getNumberOfFinalSolutions() throws NumberFormatException {
-		return Integer.parseInt(numberOfFinalSolutions.getText());
+		final String USER_INPUT = numberOfFinalSolutions.getText();
+		int temp = 0;
+		try {
+			temp = Integer.parseInt(USER_INPUT);
+		} catch (NumberFormatException e) {
+			String errorMessage = "Number of Final Solutions is expected to be an Integer value, but you input '";
+			errorMessage += USER_INPUT;
+			errorMessage += "'. Please fix this.";
+			JOptionPane.showMessageDialog(this, errorMessage,
+				"Number of Final Solutions must be a positive Interger!",
+				JOptionPane.INFORMATION_MESSAGE);
+			
+			throw new NumberFormatException(errorMessage);
+		}
+		return temp;
 	}
 
 	private int getNumberOfIterations() throws NumberFormatException {
-		return Integer.parseInt(numberOfIterations.getText());
+		final String USER_INPUT = numberOfIterations.getText();
+		int temp = 0;
+		try {
+			temp = Integer.parseInt(USER_INPUT);
+		} catch (NumberFormatException e) {
+			String errorMessage = "Number of Iterations is expected to be an Integer value, but you input '";
+			errorMessage += USER_INPUT;
+			errorMessage += "'. Please fix this.";
+			JOptionPane.showMessageDialog(this, errorMessage,
+				"Number of Iterations must be a positive Interger!",
+				JOptionPane.INFORMATION_MESSAGE);
+			
+			throw new NumberFormatException(errorMessage);
+		}
+		return temp;
 	}
 }
