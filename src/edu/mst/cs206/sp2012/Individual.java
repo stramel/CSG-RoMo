@@ -2,6 +2,7 @@ package edu.mst.cs206.sp2012;
 
 import java.util.Random;
 import java.util.Vector;
+
 /**This class will build an Individual*/
 public class Individual {
 	private Summary generatedSummary;

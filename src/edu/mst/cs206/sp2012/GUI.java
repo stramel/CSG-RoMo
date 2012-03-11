@@ -107,12 +107,13 @@ public class GUI extends JFrame implements ActionListener {
 		final String SAMPLE_SUMMARY_PATH = getPathToSampleSummary();
 
 		final String METRICS_RESULT_PATH = getPathToMetricsResults();
-
+		
+		MainController controller = new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
+				NUM_RULES_PER_SOLUTIONS, SAMPLE_SUMMARY_PATH,
+				METRICS_RESULT_PATH);
 		try
 		{
-		new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
-				NUM_RULES_PER_SOLUTIONS, SAMPLE_SUMMARY_PATH,
-				METRICS_RESULT_PATH).run();
+			controller.run();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+" , please fix and try again.",
 					"File Path Error", JOptionPane.INFORMATION_MESSAGE);
