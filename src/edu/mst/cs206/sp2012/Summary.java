@@ -27,14 +27,20 @@ public class Summary {
 	public int Intersection(Summary otherSummary) {
 		int numIntersections = 0;
 
-		/*
 		for (int i = 0; i < otherSummary.getSummarySize(); i++) {
 			for (int j = 0; j < this.getSummarySize(); j++) {
-				if ( (this.elements.get(j).getName()).compareTo((otherSummary.getElement(i)).getName()) == 0) {
+				Element element = this.elements.get(j);
+
+				System.out.println(element.getName());
+				
+				if ( 
+						(element.getName()).equals(
+								(otherSummary.getElement(i)).getName()
+						)) {
 					numIntersections++;
 				}
 			}
-		}*/
+		}
 	
 		return numIntersections;
 	}
