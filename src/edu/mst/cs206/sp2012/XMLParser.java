@@ -47,7 +47,7 @@ public class XMLParser {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace(); // TODO Change this to some actual error message!
+		//	e.printStackTrace(); // TODO Change this to some actual error message!
 			throw new InvalidNameException("Metrics Results");
 		}
 			
@@ -88,7 +88,7 @@ public class XMLParser {
 			}
 		} catch (Exception e) {
 		//	e.printStackTrace(); // TODO Change this to some actual error message!
-			throw new InvalidNameException("Summary Table");
+			throw new InvalidNameException("Sample Summary");
 		}
 			
 		return new Summary(elements);
