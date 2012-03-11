@@ -5,6 +5,10 @@ import java.util.Vector;
 public class Summary {
 	private Vector<Element> elements = new Vector<Element>();
   
+	public Summary() {
+		this(new Vector<Element>());
+	}
+  
 	/** public Summary(Vector<Element> elements is a constructor that will
 	   * pass in a Vector of elements setting the elements equal to each other.  
 	   * 
@@ -23,13 +27,14 @@ public class Summary {
 	public int Intersection(Summary otherSummary) {
 		int numIntersections = 0;
 
+		/*
 		for (int i = 0; i < otherSummary.getSummarySize(); i++) {
 			for (int j = 0; j < this.getSummarySize(); j++) {
 				if ( (this.elements.get(j).getName()).compareTo((otherSummary.getElement(i)).getName()) == 0) {
 					numIntersections++;
 				}
 			}
-		}
+		}*/
 	
 		return numIntersections;
 	}
