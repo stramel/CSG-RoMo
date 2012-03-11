@@ -1,5 +1,6 @@
 package edu.mst.cs206.sp2012;
 
+import javax.naming.InvalidNameException;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
@@ -11,7 +12,7 @@ import java.util.HashMap;
 import java.util.Vector;
 
 public class XMLParser {
-	public static Vector<edu.mst.cs206.sp2012.Element> parseMetricsXML(String filename, String[] metricsToSave) {
+	public static Vector<edu.mst.cs206.sp2012.Element> parseMetricsXML(String filename, String[] metricsToSave) throws InvalidNameException {
 		Vector<edu.mst.cs206.sp2012.Element> elements = new Vector<edu.mst.cs206.sp2012.Element>();
 		
 		try {
@@ -47,13 +48,14 @@ public class XMLParser {
 			}
 		} catch (Exception e) {
 			e.printStackTrace(); // TODO Change this to some actual error message!
+			throw new InvalidNameException("Metrics Results");
 		}
 			
 		return elements;
 	}
 
 	
-	public static Summary parseSummaryXML(String filename) {
+	public static Summary parseSummaryXML(String filename) throws InvalidNameException {
 		Vector<edu.mst.cs206.sp2012.Element> elements = new Vector<edu.mst.cs206.sp2012.Element>();
 		
 		try {
@@ -85,7 +87,8 @@ public class XMLParser {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace(); // TODO Change this to some actual error message!
+		//	e.printStackTrace(); // TODO Change this to some actual error message!
+			throw new InvalidNameException("Summary Table");
 		}
 			
 		return new Summary(elements);

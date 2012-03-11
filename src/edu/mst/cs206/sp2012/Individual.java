@@ -25,17 +25,29 @@ public class Individual {
 		this.project = project;
 		this.generatedSummary = new Summary();
 
-		int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
+		final int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
 		Integer[] maxMetricsThresholds = new Integer[availableMetrics.length];
 		Vector<Element> elements = project.getElements();
+		this.generatedSummary = new Summary();
 		
 		// Find the max of each metric
 		for (int i = 0; i < maxMetricsThresholds.length; i++) {
 			maxMetricsThresholds[i] = 0;
 			
+			// Loop over all elements available for the given open source project
 			for (int j = 0; j < elements.size(); j++) {
-				if (elements.get(j).MetricExists(availableMetrics[i]) && elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0) {
-					maxMetricsThresholds[i] = elements.get(j).MetricValue(availableMetrics[i]);
+				
+				final boolean availableMetricExistsInMetricResults = elements.get(j).MetricExists(availableMetrics[i]);
+				if (availableMetricExistsInMetricResults)
+				{
+					final boolean actualMetricResultIsGreaterThanCurrentMetricMax = elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0;
+					if (actualMetricResultIsGreaterThanCurrentMetricMax) {
+						// If the availableMetric exists in the metricResults and the 
+						//  value of the metric result exceeds the current maximum value
+						//  for the given metric, then update the maximum value of the given
+						//  metric.
+						maxMetricsThresholds[i] = elements.get(j).MetricValue(availableMetrics[i]);
+					}
 				}
 			}
 		}
@@ -73,7 +85,7 @@ public class Individual {
 		}
 		
 		int intersectionValue = project.getSummary().Intersection(generatedSummary);
-		return ((intersectionValue / generatedSummary.getSummarySize()) + (intersectionValue / project.getSummary().getSummarySize())) / 2;
+		return ((intersectionValue / generatedSummary.getSummarySize()) + (intersectionValue / project.getSummary().getSummarySize())) / 2;		
 	}
 }
 
