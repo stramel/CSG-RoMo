@@ -3,8 +3,6 @@ package edu.mst.cs206.sp2012;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
@@ -129,7 +127,7 @@ public class GUI extends JFrame implements ActionListener {
 		} catch (NumberFormatException e) {
 			String errorMessage = "Number of Rules per Solution is expected to be an Integer value, but you input '";
 			errorMessage += USER_INPUT;
-			errorMessage += "'. Please fix this.";
+			errorMessage += "'. Please fix this before moving on.";
 			JOptionPane.showMessageDialog(this, errorMessage,
 				"Number of Rules per Solution must be a positive Interger!",
 				JOptionPane.INFORMATION_MESSAGE);
@@ -147,7 +145,7 @@ public class GUI extends JFrame implements ActionListener {
 		} catch (NumberFormatException e) {
 			String errorMessage = "Number of Final Solutions is expected to be an Integer value, but you input '";
 			errorMessage += USER_INPUT;
-			errorMessage += "'. Please fix this.";
+			errorMessage += "'. Please fix this before moving on.";
 			JOptionPane.showMessageDialog(this, errorMessage,
 				"Number of Final Solutions must be a positive Interger!",
 				JOptionPane.INFORMATION_MESSAGE);
@@ -165,7 +163,7 @@ public class GUI extends JFrame implements ActionListener {
 		} catch (NumberFormatException e) {
 			String errorMessage = "Number of Iterations is expected to be an Integer value, but you input '";
 			errorMessage += USER_INPUT;
-			errorMessage += "'. Please fix this.";
+			errorMessage += "'. Please fix this before moving on.";
 			JOptionPane.showMessageDialog(this, errorMessage,
 				"Number of Iterations must be a positive Interger!",
 				JOptionPane.INFORMATION_MESSAGE);
