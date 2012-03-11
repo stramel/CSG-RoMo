@@ -1,27 +1,27 @@
 package edu.mst.cs206.sp2012;
 
+import java.util.Vector;
 import javax.naming.InvalidNameException;
 
 public class MainController {
-	
-	private final int numberOfIterators;
+	private final int numberOfIterations;
 	private final int maxNumberOfSolutions;
 	private final int maxNumberOfRulesPerSolution;
 	private final String urlToSampleSummary;
 	private final String urlToMetricsResults;
-	private Population bestSolutions;
+	private Vector<Individual> bestSolutions;
 	private String[] availableMetrics;
 	
 	public MainController(int numberOfIterations, int numberOfFinalSolutions,
 			int maxNumberOfRulesPerSolution, String urlToSampleSummaries,
 			String urlToMetricsResults)
 	{
-		this.numberOfIterators = numberOfIterations;
+		this.numberOfIterations = numberOfIterations;
 		this.maxNumberOfSolutions = numberOfFinalSolutions;
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.urlToSampleSummary = urlToSampleSummaries;
 		this.urlToMetricsResults = urlToMetricsResults;
-		this.bestSolutions = new Population(numberOfFinalSolutions);
+		this.bestSolutions = new Vector<Individual>(numberOfFinalSolutions);
 		
 		// Hard-coded metrics!
 		this.availableMetrics = new String[6];
@@ -34,27 +34,26 @@ public class MainController {
 	}
 
 	public void run() throws InvalidNameException {
-		System.out.println("Hard coded number of Iterations: " + numberOfIterators);
+		System.out.println("Hard coded number of Iterations: " + numberOfIterations);
 		System.out.println("Hard coded number of Final Solutions: " + maxNumberOfSolutions);
 		System.out.println("Maximum number of Rules per Solution: " + maxNumberOfRulesPerSolution);
 		System.out.println("URL to Sample Summaries: " + urlToSampleSummary);
 		System.out.println("URL to Metrics Results: " + urlToMetricsResults);
+
 		
-		Population currentPopulation = new Population(maxNumberOfSolutions, maxNumberOfRulesPerSolution);
+		Population currentPopulation = new Population(maxNumberOfSolutions, maxNumberOfRulesPerSolution, availableMetrics);
 		currentPopulation.setSampleProject(new OpenSourceProject(urlToMetricsResults, urlToSampleSummary, availableMetrics));
-		currentPopulation.setAvailableMetrics(availableMetrics);
-		
 		currentPopulation.initialize();
-		for(int generation=0; generation < numberOfIterators; generation++)
-		{
+		
+		for (int i = 0; i < numberOfIterations; i++) {
 			currentPopulation.evaluateSolutions();
-			bestSolutions.push(currentPopulation.getBestSolution());
+			bestSolutions.add(currentPopulation.getBestSolution());
 			currentPopulation.purgeAndRenew();
 		}
 	}
 	
-	public Population getBestSolutions() {
-		// Output the best solution that is stored in ctrl.bestSolutions;
+	public Vector<Individual> getBestSolutions() {
+		// Output the best solutions that are stored in ctrl.bestSolutions;
 		return bestSolutions;
 	}
 }
