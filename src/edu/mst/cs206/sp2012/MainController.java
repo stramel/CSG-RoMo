@@ -1,5 +1,7 @@
 package edu.mst.cs206.sp2012;
 
+import javax.naming.InvalidNameException;
+
 public class MainController {
 	
 	private final int numberOfIterators;
@@ -31,7 +33,7 @@ public class MainController {
 		this.availableMetrics[5] = "NOM";	// Number of Methods
 	}
 
-	public void run() {
+	public void run() throws InvalidNameException {
 		System.out.println("Hard coded number of Iterations: " + numberOfIterators);
 		System.out.println("Hard coded number of Final Solutions: " + maxNumberOfSolutions);
 		System.out.println("Maximum number of Rules per Solution: " + maxNumberOfRulesPerSolution);

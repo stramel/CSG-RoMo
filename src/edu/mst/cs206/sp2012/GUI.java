@@ -105,16 +105,18 @@ public class GUI extends JFrame implements ActionListener {
 		final int NUM_FINAL_SOLUTIONS = getNumberOfFinalSolutions();
 		final int NUM_RULES_PER_SOLUTIONS = getNumberOfRulesPerSolution();
 		final String SAMPLE_SUMMARY_PATH = getPathToSampleSummary();
-		JOptionPane.showMessageDialog(this, SAMPLE_SUMMARY_PATH,
-				"Path to Sample Summary", JOptionPane.INFORMATION_MESSAGE);
 
 		final String METRICS_RESULT_PATH = getPathToMetricsResults();
-		JOptionPane.showMessageDialog(this, METRICS_RESULT_PATH,
-				"Path to Metrics Results", JOptionPane.INFORMATION_MESSAGE);
-		
+
+		try
+		{
 		new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
 				NUM_RULES_PER_SOLUTIONS, SAMPLE_SUMMARY_PATH,
 				METRICS_RESULT_PATH).run();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+" , please fix and try again.",
+					"File Path Error", JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
 
 	private String getPathToMetricsResults() {
