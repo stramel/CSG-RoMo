@@ -5,7 +5,7 @@ import java.util.Vector;
 import java.util.HashMap;
 
 public class Rule {
-	private Vector<HashMap<String, Integer>> thresholds;
+	private HashMap<String, Integer> thresholds;
 
 	public Rule(String[] availableMetrics, Integer[] maxMetricsThresholds) {		
 		int thresholdsToCreate = new Random().nextInt(availableMetrics.length) + 1;
@@ -37,22 +37,23 @@ public class Rule {
 		
 		for (int i = 0; i < metricsToUse.size(); i++) {			
 			// Generate the threshold
+			System.out.println("test");
 			int thresholdValue = new Random().nextInt(maxMetricsThresholds[i]);
+			System.out.println("test2");
 			
 			// Save this threshold to the list
-			HashMap<String,Integer> threshold = new HashMap<String, Integer>();
-			threshold.put(metricsToUse.get(i), thresholdValue);
-			thresholds.add(threshold);
+			System.out.println("thresholdValue = " + thresholdValue + ", metric = '" + metricsToUse.get(i) + "'");
+			// TODO Figure out why this next line is throwing errors :(
+			thresholds.put(metricsToUse.get(i), thresholdValue);
 		}		
 	}
 	
     public boolean evaluate(Element element) {
     	boolean evaluatesTrue = true;
+    	String[] keys = thresholds.keySet().toArray(new String[0]);
     	
-    	for (int i = 0; i < thresholds.size(); i++) {
-    		HashMap<String, Integer> threshold = thresholds.get(i);
-    		
-    		if (element.getMetrics().get(threshold.get("metric")).compareTo(threshold.get("value")) < 0) {
+    	for (int i = 0; i < keys.length; i++) {
+    		if (element.MetricExists(keys[i]) && element.MetricValue(keys[i]).compareTo(thresholds.get(keys[i])) < 0) {
     			evaluatesTrue = false;
     			break;
     		}

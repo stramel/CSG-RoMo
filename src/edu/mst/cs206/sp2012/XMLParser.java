@@ -46,7 +46,7 @@ public class XMLParser {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace(); // Change this to some actual error message!
+			e.printStackTrace(); // TODO Change this to some actual error message!
 		}
 			
 		return elements;
@@ -85,7 +85,7 @@ public class XMLParser {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace(); // Change this to some actual error message!
+			e.printStackTrace(); // TODO Change this to some actual error message!
 		}
 			
 		return new Summary(elements);
@@ -107,7 +107,20 @@ public class XMLParser {
 				Element metricElement = (Element) metricNode;
 				
 				if (!metricElement.getAttribute("value").equals("")) {
-					metrics.put(metricElement.getAttribute("id"), Integer.parseInt(metricElement.getAttribute("value")));
+					// Check that this metric is in the list of ones to save
+					boolean save = false;
+					
+					for (int i = 0; i < metricsToSave.length; i++) {
+						if (metricsToSave[i].equals(metricElement.getAttribute("id"))) {
+							save = true;
+							break;
+						}
+					}
+					
+					// Save it if we are supposed to
+					if (save) {
+						metrics.put(metricElement.getAttribute("id"), Integer.parseInt(metricElement.getAttribute("value")));
+					}
 				}
 			}
 		}
@@ -115,6 +128,7 @@ public class XMLParser {
 		return metrics;
 	}
 	
+	// TODO Delete this block if not needed!
 	/*private static String getTagValue(String tag, Element element)
 	{
 		NodeList nList = element.getElementsByTagName(tag).item(0).getChildNodes();

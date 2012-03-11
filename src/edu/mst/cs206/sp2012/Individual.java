@@ -33,7 +33,7 @@ public class Individual {
 			maxMetricsThresholds[i] = 0;
 			
 			for (int j = 0; j < elements.size(); j++) {
-				if (elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0) {
+				if (elements.get(j).MetricExists(availableMetrics[i]) && elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0) {
 					maxMetricsThresholds[i] = elements.get(j).MetricValue(availableMetrics[i]);
 				}
 			}
