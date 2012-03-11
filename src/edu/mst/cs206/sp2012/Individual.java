@@ -23,6 +23,7 @@ public class Individual {
 	 */
 	public Individual(OpenSourceProject project, String[] availableMetrics, int maxNumberOfRules) {
 		this.project = project;
+		this.generatedSummary = new Summary();
 
 		int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
 		Integer[] maxMetricsThresholds = new Integer[availableMetrics.length];
@@ -50,6 +51,7 @@ public class Individual {
 	 */
 	public void GenerateSummary() {
 		Vector<Element> elements = project.getElements();
+		
 		for (int i = 0; i < elements.size(); i++) {
 			for (int j = 0; j < rulesList.size(); j++) {
 				if (rulesList.get(j).evaluate(elements.get(i))) {
@@ -65,9 +67,13 @@ public class Individual {
 	 * This function will run the FitnessFuntion on both Summaries looking for a better Summary to create.  
 	 * @return the value of the FitnessFunction.
 	 */
-	public int FitnessFunction() {
+	public float FitnessFunction() {
+		if (generatedSummary.getSummarySize() == 0) {
+			return (float) 1;
+		}
+		
 		int intersectionValue = project.getSummary().Intersection(generatedSummary);
-		return (intersectionValue / generatedSummary.getSummarySize()) + (intersectionValue / (project.getSummary().getSummarySize() / 2));
+		return ((intersectionValue / generatedSummary.getSummarySize()) + (intersectionValue / project.getSummary().getSummarySize())) / 2;
 	}
 }
 

@@ -3,69 +3,66 @@ package edu.mst.cs206.sp2012;
 import java.util.Vector;
 
 public class Population {
-
 	private int maxNumberOfRulesPerSolution;
 	private int maxNumberOfSolutions;
-	private Vector<Individual> individuals;
 	private String[] availableMetrics;
 	private OpenSourceProject sampleProject;
+	private Vector<Individual> individuals;
+	private Individual bestSolution;
 
-	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution) {
+	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution, String[] availableMetrics) {
 		System.out.println("Initializing the population.");
 		System.out.println("Population: there may only be " + maxNumberOfSolutions + " individuals in this population.");
 		System.out.println("Population: each individual can only have " + maxNumberOfRulesPerSolution + " rules.");
 		
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.maxNumberOfSolutions = maxNumberOfSolutions;
+		this.availableMetrics = availableMetrics;
 		this.individuals = new Vector<Individual>(maxNumberOfSolutions);
 	}
 
-	public Population(int numberOfFinalSolutions) {
-		this.maxNumberOfRulesPerSolution = 0;
-		this.maxNumberOfSolutions = numberOfFinalSolutions;
-	}
-
-	public void purgeAndRenew() {
-		System.out.println("Purge the abomonations of our generation, and replace with them new candidates who must prove their worthiness.");
-	}
-
-	public Object getBestSolution() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void push(Object solution) {
-		// TODO Auto-generated method stub
-		System.out.println("Adding a new solution to the population.");
-	}
-
-	public void evaluateSolutions() {
-		// TODO Auto-generated method stub
-		System.out.println("Evaluating all solutions against the criterium.");
-	}
-
-	public void setSampleSummary(Summary sampleSummary) {
-		// TODO Auto-generated method stub
-		System.out.println("Setting the sample summary to evaluate an individual's quality against.");
-	}
-
-	public void setAvailableMetrics(String[] availableMetrics) {
-		// TODO Auto-generated method stub
-		System.out.println("Setting available metrics to use: " + availableMetrics.toString());
-		this.availableMetrics = availableMetrics;
+	public void setSampleProject(OpenSourceProject sampleProject) {
+		this.sampleProject = sampleProject;
 	}
 
 	public void initialize() {
+		// Initalize bestSolution to null
+		bestSolution = null;
+		
 		// Initialize all individuals in the population.
-		for (int i=0; i<maxNumberOfRulesPerSolution; i++)
-		{
-			Individual newIndividual = new Individual(sampleProject, availableMetrics, maxNumberOfRulesPerSolution);
-			this.individuals.add(newIndividual);
+		for (int i = 0; i < maxNumberOfSolutions; i++) {
+			Individual individual = new Individual(sampleProject, availableMetrics, maxNumberOfRulesPerSolution);
+			this.individuals.add(individual);
 		}
 	}
 
-	public void setSampleProject(OpenSourceProject sampleProject) {
-		// TODO Auto-generated method stub
-		this.sampleProject = sampleProject;
+	public void purgeAndRenew() {
+		// Remove all current individuals
+		this.individuals.clear();
+		
+		// Re-initialize this object
+		this.initialize();
+	}
+
+	public void evaluateSolutions() {
+		float bestFitnessValue = (float) 1.1, fitnessValue;
+		Individual currentIndividual;
+
+		for (int i = 0; i < this.individuals.size(); i++) {
+			currentIndividual = this.individuals.get(i);
+
+			currentIndividual.GenerateSummary();
+			fitnessValue = currentIndividual.FitnessFunction();
+			
+			// TODO check that the bestFitnessValue is supposed to be the smallest one
+			if (fitnessValue < bestFitnessValue) {
+				bestFitnessValue = fitnessValue;
+				this.bestSolution = currentIndividual;
+			}
+		}
+	}
+
+	public Individual getBestSolution() {
+		return bestSolution;
 	}
 }
