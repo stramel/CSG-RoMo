@@ -4,6 +4,7 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.naming.InvalidNameException;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -116,20 +117,18 @@ public class GUI extends JFrame implements ActionListener {
 			controller.run();
 			JOptionPane.showMessageDialog(this, "Finished! " + Integer.toString(controller.getBestSolutions().size()) + " best solutions have been found!",
 					"Finished!", JOptionPane.INFORMATION_MESSAGE);
-		} catch (Exception e) {
+		} catch (InvalidNameException e) {
 			e.printStackTrace();
-			if (e.getMessage() != "null"){
-				JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.",
-						"File Path Error", JOptionPane.INFORMATION_MESSAGE);
-				if (e.getLocalizedMessage() == "Summary Table") {
-					pathToMetricsResults.requestFocusInWindow(); 
-				} else if (e.getLocalizedMessage() == "Metric Results") {
-					pathToSampleSummary.requestFocusInWindow();
-				}
-			} else {
-				JOptionPane.showMessageDialog(this, "There was a problem:\n"+ e.getMessage(),
-						"Error", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.",
+					"File Path Error", JOptionPane.INFORMATION_MESSAGE);
+			if (e.getLocalizedMessage() == "Summary Table") {
+				pathToMetricsResults.requestFocusInWindow(); 
+			} else if (e.getLocalizedMessage() == "Metric Results") {
+				pathToSampleSummary.requestFocusInWindow();
 			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, "There was a problem:\n"+ e.getMessage(),
+					"Error", JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
 
