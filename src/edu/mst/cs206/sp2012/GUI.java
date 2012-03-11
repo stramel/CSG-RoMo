@@ -115,7 +115,7 @@ public class GUI extends JFrame implements ActionListener {
 		try
 		{
 			controller.run();
-			JOptionPane.showMessageDialog(this, "Finished! " + Integer.toString(controller.getBestSolutions().size()) + " best solutions have been found!",
+			JOptionPane.showMessageDialog(this, "Finished! A best solution has been found!",
 					"Finished!", JOptionPane.INFORMATION_MESSAGE);
 		} catch (InvalidNameException e) {
 			e.printStackTrace();

@@ -21,6 +21,10 @@ public class Population {
 		this.individuals = new Vector<Individual>(maxNumberOfSolutions);
 	}
 
+	public Population() {
+		this.individuals = new Vector<Individual>();
+	}
+
 	public void setSampleProject(OpenSourceProject sampleProject) {
 		this.sampleProject = sampleProject;
 	}
@@ -64,5 +68,9 @@ public class Population {
 
 	public Individual getBestSolution() {
 		return bestSolution;
+	}
+
+	public void add(Individual individual) {
+		this.individuals.add(individual);
 	}
 }

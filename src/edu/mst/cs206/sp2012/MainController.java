@@ -1,6 +1,5 @@
 package edu.mst.cs206.sp2012;
 
-import java.util.Vector;
 import javax.naming.InvalidNameException;
 
 public class MainController {
@@ -9,7 +8,7 @@ public class MainController {
 	private final int maxNumberOfRulesPerSolution;
 	private final String urlToSampleSummary;
 	private final String urlToMetricsResults;
-	private Vector<Individual> bestSolutions;
+	private Population bestSolutions;
 	private String[] availableMetrics;
 	
 	public MainController(int numberOfIterations, int numberOfFinalSolutions,
@@ -21,7 +20,7 @@ public class MainController {
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.urlToSampleSummary = urlToSampleSummaries;
 		this.urlToMetricsResults = urlToMetricsResults;
-		this.bestSolutions = new Vector<Individual>(numberOfFinalSolutions);
+		this.bestSolutions = new Population();
 		
 		// Hard-coded metrics!
 		this.availableMetrics = new String[6];
@@ -52,8 +51,8 @@ public class MainController {
 		}
 	}
 	
-	public Vector<Individual> getBestSolutions() {
+	public Individual getBestSolution() {
 		// Output the best solutions that are stored in ctrl.bestSolutions;
-		return bestSolutions;
+		return bestSolutions.getBestSolution();
 	}
 }
