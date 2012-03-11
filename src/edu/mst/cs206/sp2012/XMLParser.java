@@ -71,8 +71,8 @@ public class XMLParser {
 			for (int i = 0; i < classList.getLength(); i++) {
 				Node classNode = classList.item(i);
 				
-				if (classNode.getNodeType() == Node.ELEMENT_NODE) {
-					elements.add(new edu.mst.cs206.sp2012.Element(classNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.CLASS));
+				if (classNode.getNodeType() == Node.ELEMENT_NODE) {				
+					elements.add(new edu.mst.cs206.sp2012.Element(getNodeValue(classNode), edu.mst.cs206.sp2012.Element.Type.CLASS));
 				}
 			}
 			
@@ -83,7 +83,7 @@ public class XMLParser {
 				Node methodNode = methodList.item(i);
 				
 				if (methodNode.getNodeType() == Node.ELEMENT_NODE) {
-					elements.add(new edu.mst.cs206.sp2012.Element(methodNode.getNodeValue(), edu.mst.cs206.sp2012.Element.Type.METHOD));
+					elements.add(new edu.mst.cs206.sp2012.Element(getNodeValue(methodNode), edu.mst.cs206.sp2012.Element.Type.METHOD));
 				}
 			}
 		} catch (Exception e) {
@@ -132,12 +132,10 @@ public class XMLParser {
 	}
 	
 	// TODO Delete this block if not needed!
-	/*private static String getTagValue(String tag, Element element)
+	private static String getNodeValue(Node node)
 	{
-		NodeList nList = element.getElementsByTagName(tag).item(0).getChildNodes();
-		Node node = (Node) nList.item(0);
-		return node.getNodeValue();
-	}*/
+		return node.getChildNodes().item(0).getNodeValue();
+	}
 	
 	private static Node getFirstChildByTagName(String tag, Node element)
 	{
