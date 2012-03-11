@@ -117,8 +117,14 @@ public class GUI extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this, "Finished! " + Integer.toString(controller.getBestSolutions().size()) + " best solutions have been found!",
 					"Finished!", JOptionPane.INFORMATION_MESSAGE);
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+" , please fix and try again.",
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.",
 					"File Path Error", JOptionPane.INFORMATION_MESSAGE);
+			if (e.getLocalizedMessage() == "Summary Table") {
+				pathToMetricsResults.requestFocusInWindow(); 
+			} else if (e.getLocalizedMessage() == "Metric Results") {
+				pathToSampleSummary.requestFocusInWindow();
+			}
 		}
 	}
 
