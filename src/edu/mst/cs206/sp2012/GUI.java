@@ -114,6 +114,8 @@ public class GUI extends JFrame implements ActionListener {
 		try
 		{
 			controller.run();
+			JOptionPane.showMessageDialog(this, "Finished! " + Integer.toString(controller.getBestSolutions().size()) + " best solutions have been found!",
+					"Finished!", JOptionPane.INFORMATION_MESSAGE);
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.",
