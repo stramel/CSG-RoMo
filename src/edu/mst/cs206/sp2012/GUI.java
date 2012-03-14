@@ -3,7 +3,8 @@ package edu.mst.cs206.sp2012;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.Map.Entry;
+import java.util.Vector;
 import javax.naming.InvalidNameException;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
@@ -15,8 +16,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GUI extends JFrame implements ActionListener {
-	
+	private static final boolean DEBUG = true;
 	private static final long serialVersionUID = 1331420879L;
+	private MainController controller;
 	private JPanel inputPanel;
 	private JTextField numberOfIterations;
 	private JTextField numberOfFinalSolutions;
@@ -109,12 +111,12 @@ public class GUI extends JFrame implements ActionListener {
 
 		final String METRICS_RESULT_PATH = getPathToMetricsResults();
 		
-		MainController controller = new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
+		this.controller = new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
 				NUM_RULES_PER_SOLUTIONS, SAMPLE_SUMMARY_PATH,
 				METRICS_RESULT_PATH);
 		try
 		{
-			controller.run();
+			this.controller.run();
 			JOptionPane.showMessageDialog(this, "Finished! A best solution has been found!",
 					"Finished!", JOptionPane.INFORMATION_MESSAGE);
 		} catch (InvalidNameException e) {
@@ -192,5 +194,18 @@ public class GUI extends JFrame implements ActionListener {
 			throw new NumberFormatException(errorMessage);
 		}
 		return temp;
+	}
+	
+	private void outputRulesToFile(String file) {
+		Vector<Rule> bestSolutionRules = this.controller.getBestSolution().getRules();
+	
+		for (int i = 0; i < bestSolutionRules.size(); i++) {	
+			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {
+			    String metricID = entry.getKey();
+			    int threshold = entry.getValue();
+			    
+			    // those two vars are the values we needed to save for this metric
+			}
+		}
 	}
 }

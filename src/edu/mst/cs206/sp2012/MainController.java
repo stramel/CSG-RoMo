@@ -32,14 +32,7 @@ public class MainController {
 		this.availableMetrics[5] = "NOM";	// Number of Methods
 	}
 
-	public void run() throws InvalidNameException {
-		System.out.println("Hard coded number of Iterations: " + numberOfIterations);
-		System.out.println("Hard coded number of Final Solutions: " + maxNumberOfSolutions);
-		System.out.println("Maximum number of Rules per Solution: " + maxNumberOfRulesPerSolution);
-		System.out.println("URL to Sample Summaries: " + urlToSampleSummary);
-		System.out.println("URL to Metrics Results: " + urlToMetricsResults);
-
-		
+	public void run() throws InvalidNameException {		
 		Population currentPopulation = new Population(maxNumberOfSolutions, maxNumberOfRulesPerSolution, availableMetrics);
 		currentPopulation.setSampleProject(new OpenSourceProject(urlToMetricsResults, urlToSampleSummary, availableMetrics));
 		currentPopulation.initialize();

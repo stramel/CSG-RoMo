@@ -11,10 +11,6 @@ public class Population {
 	private Individual bestSolution;
 
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution, String[] availableMetrics) {
-		System.out.println("Initializing the population.");
-		System.out.println("Population: there may only be " + maxNumberOfSolutions + " individuals in this population.");
-		System.out.println("Population: each individual can only have " + maxNumberOfRulesPerSolution + " rules.");
-		
 		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.maxNumberOfSolutions = maxNumberOfSolutions;
 		this.availableMetrics = availableMetrics;
@@ -49,7 +45,7 @@ public class Population {
 	}
 
 	public void evaluateSolutions() {
-		float bestFitnessValue = (float) 1.1, fitnessValue;
+		float bestFitnessValue = (float) -0.1, fitnessValue;
 		Individual currentIndividual;
 
 		for (int i = 0; i < this.individuals.size(); i++) {
@@ -59,7 +55,7 @@ public class Population {
 			fitnessValue = currentIndividual.FitnessFunction();
 			
 			// TODO check that the bestFitnessValue is supposed to be the smallest one
-			if (fitnessValue < bestFitnessValue) {
+			if (fitnessValue > bestFitnessValue) {
 				bestFitnessValue = fitnessValue;
 				this.bestSolution = currentIndividual;
 			}
