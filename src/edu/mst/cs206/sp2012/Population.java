@@ -27,7 +27,7 @@ public class Population {
 
 	public void initialize() {
 		// Initalize bestSolution to null
-		bestSolution = null;
+		this.bestSolution = null;
 		
 		// Initialize all individuals in the population.
 		for (int i = 0; i < maxNumberOfSolutions; i++) {
@@ -53,8 +53,8 @@ public class Population {
 
 			currentIndividual.GenerateSummary();
 			fitnessValue = currentIndividual.FitnessFunction();
-			
-			// TODO check that the bestFitnessValue is supposed to be the smallest one
+						
+			// TODO check that the bestFitnessValue is supposed to be the largest one
 			if (fitnessValue > bestFitnessValue) {
 				bestFitnessValue = fitnessValue;
 				this.bestSolution = currentIndividual;
@@ -63,7 +63,11 @@ public class Population {
 	}
 
 	public Individual getBestSolution() {
-		return bestSolution;
+		if (this.bestSolution == null) {
+			this.evaluateSolutions();
+		}
+		
+		return this.bestSolution;
 	}
 
 	public void add(Individual individual) {

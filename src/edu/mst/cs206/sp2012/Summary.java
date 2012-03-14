@@ -27,12 +27,13 @@ public class Summary {
 	public int Intersection(Summary otherSummary) {
 		int numIntersections = 0;
 
-		for (int i = 0; i < otherSummary.getSummarySize(); i++) {
-			for (int j = 0; j < this.getSummarySize(); j++) {
-				Element element = this.elements.get(j);
-				
-				if ((element.getName()).equals((otherSummary.getElement(i)).getName())) {
+		for (int i = 0; i < this.getSummarySize(); i++) {
+			Element element = this.elements.get(i);
+			
+			for (int j = 0; j < otherSummary.getSummarySize(); j++) {
+				if ((element.getName()).equals((otherSummary.getElement(j)).getName())) {
 					numIntersections++;
+					break;
 				}
 			}
 		}
