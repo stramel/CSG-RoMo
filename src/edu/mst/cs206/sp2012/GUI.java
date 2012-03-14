@@ -48,10 +48,12 @@ public class GUI extends JFrame implements ActionListener {
 
 	    public void actionPerformed(ActionEvent evt) {
 	        // Show dialog; this method does not return until dialog is closed
-	        chooser.showOpenDialog(frame);
+	        int result = chooser.showOpenDialog(frame);
 
 	        // Get the selected file
-	        textField.setText(chooser.getSelectedFile().getAbsolutePath());
+	        if ( result == JFileChooser.APPROVE_OPTION){
+	        	textField.setText(chooser.getSelectedFile().getAbsolutePath());
+	        }
 	    }
 	};
 	
