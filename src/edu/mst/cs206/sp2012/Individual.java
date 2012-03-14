@@ -8,6 +8,9 @@ public class Individual {
 	private Summary generatedSummary;
 	private OpenSourceProject project;
 	private Vector<Rule> rulesList = new Vector<Rule>();
+	private float precision;
+	private float recall;
+	private boolean fitnessCalculated;
 	
 	/**public Individual(OpenSourceProject project, String[] availableMetrics, int maxNumberOfRules)
 	 * 
@@ -64,6 +67,7 @@ public class Individual {
 	 */
 	public void GenerateSummary() {
 		Vector<Element> elements = project.getElements();
+		this.fitnessCalculated = false;
 		
 		for (int i = 0; i < elements.size(); i++) {
 			for (int j = 0; j < rulesList.size(); j++) {
@@ -81,12 +85,40 @@ public class Individual {
 	 * @return the value of the FitnessFunction.
 	 */
 	public float FitnessFunction() {
-		if (generatedSummary.getSummarySize() == 0) {
-			return (float) 1;
+		if (!this.fitnessCalculated) {
+			if (generatedSummary.getSummarySize() == 0) {
+				this.recall = 0;
+				this.precision = 0;
+			} else {
+				int intersectionValue = project.getSummary().Intersection(generatedSummary);
+				this.recall = intersectionValue / generatedSummary.getSummarySize();
+				this.precision = intersectionValue / project.getSummary().getSummarySize();
+			}
+			
+			this.fitnessCalculated = true;
 		}
 		
-		int intersectionValue = project.getSummary().Intersection(generatedSummary);
-		return ((intersectionValue / generatedSummary.getSummarySize()) + (intersectionValue / project.getSummary().getSummarySize())) / 2;		
+		return (this.recall + this.precision) / 2;		
+	}
+	
+	public float getPrecision() {
+		if (!this.fitnessCalculated) {
+			this.FitnessFunction();
+		}
+		
+		return this.precision;
+	}
+	
+	public float getRecall() {
+		if (!this.fitnessCalculated) {
+			this.FitnessFunction();
+		}
+		
+		return this.recall;
+	}
+	
+	public Vector<Rule> getRules() {
+		return this.rulesList;
 	}
 }
 

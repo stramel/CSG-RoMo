@@ -57,4 +57,8 @@ public class Rule {
     	
 		return evaluatesTrue;
     }
+    
+    public HashMap<String, Integer> getThresholds() {
+    	return this.thresholds;
+    }
 }

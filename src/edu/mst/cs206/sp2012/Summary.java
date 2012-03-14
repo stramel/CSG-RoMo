@@ -30,13 +30,8 @@ public class Summary {
 		for (int i = 0; i < otherSummary.getSummarySize(); i++) {
 			for (int j = 0; j < this.getSummarySize(); j++) {
 				Element element = this.elements.get(j);
-
-				System.out.println(element.getName());
 				
-				if ( 
-						(element.getName()).equals(
-								(otherSummary.getElement(i)).getName()
-						)) {
+				if ((element.getName()).equals((otherSummary.getElement(i)).getName())) {
 					numIntersections++;
 				}
 			}
