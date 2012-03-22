@@ -21,8 +21,8 @@ public class Summary {
 
 	/**public int Intersection(Summary otherSummary)
 	 * 
-	 * @param otherSummary of type Summary to intersect with the generatedSummary of type Summary.
-	 * @return numIntersections - the number of intersections that occur between the two Summaries.  
+	 * @param otherSummary of type Summary elements is to intersect with the generatedSummary of type Summary elements.
+	 * @return numIntersections - the number of intersections that occur between the two Summaries' elements.  
 	 */
 	public int Intersection(Summary otherSummary) {
 		int numIntersections = 0;
