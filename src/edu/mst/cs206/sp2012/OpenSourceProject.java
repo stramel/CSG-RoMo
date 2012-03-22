@@ -19,10 +19,6 @@ public class OpenSourceProject {
 	 * @throws InvalidNameException 
 	 */
 	public OpenSourceProject(String urlToMetricsXML, String urlToSampleSummaryXML, String[] metricsToSave) throws InvalidNameException {
-		System.out.println("Initialize a new OpenSourceProject object.");
-		System.out.println("OpenSourceProject: all elements in this object will be built from the data provided in the Metrics-plugin XML located at " + urlToMetricsXML );
-		System.out.println("OpenSourceProject: a manually-created Summary table is located in the file located at " + urlToSampleSummaryXML);
-
 		this.elements = XMLParser.parseMetricsXML(urlToMetricsXML, metricsToSave);
 		this.summary = XMLParser.parseSummaryXML(urlToSampleSummaryXML);
 	}

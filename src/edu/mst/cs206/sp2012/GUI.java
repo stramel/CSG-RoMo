@@ -3,7 +3,8 @@ package edu.mst.cs206.sp2012;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.Map.Entry;
+import java.util.Vector;
 import javax.naming.InvalidNameException;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
@@ -15,8 +16,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GUI extends JFrame implements ActionListener {
-	
+	private static final boolean DEBUG = true;
 	private static final long serialVersionUID = 1331420879L;
+	private MainController controller;
 	private JPanel inputPanel;
 	private JTextField numberOfIterations;
 	private JTextField numberOfFinalSolutions;
@@ -46,10 +48,12 @@ public class GUI extends JFrame implements ActionListener {
 
 	    public void actionPerformed(ActionEvent evt) {
 	        // Show dialog; this method does not return until dialog is closed
-	        chooser.showOpenDialog(frame);
+	        int result = chooser.showOpenDialog(frame);
 
 	        // Get the selected file
-	        textField.setText(chooser.getSelectedFile().getAbsolutePath());
+	        if ( result == JFileChooser.APPROVE_OPTION){
+	        	textField.setText(chooser.getSelectedFile().getAbsolutePath());
+	        }
 	    }
 	};
 	
@@ -109,26 +113,38 @@ public class GUI extends JFrame implements ActionListener {
 
 		final String METRICS_RESULT_PATH = getPathToMetricsResults();
 		
-		MainController controller = new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
+		this.controller = new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
 				NUM_RULES_PER_SOLUTIONS, SAMPLE_SUMMARY_PATH,
 				METRICS_RESULT_PATH);
 		try
 		{
-			controller.run();
-			JOptionPane.showMessageDialog(this, "Finished! A best solution has been found!",
-					"Finished!", JOptionPane.INFORMATION_MESSAGE);
+			this.controller.run();
+			JOptionPane.showMessageDialog(this, "Finished! The best solution has been found!", "Finished!", JOptionPane.INFORMATION_MESSAGE);
+			
+			if (GUI.DEBUG) {
+				JOptionPane.showMessageDialog(this, "The best solution has a Recall value of " + this.controller.getBestSolution().getRecall() + ", and a Precision value of " + this.controller.getBestSolution().getPrecision(), "Fitness Values", JOptionPane.INFORMATION_MESSAGE);
+				
+				// TODO get a string to save the output rules to
+				outputRulesToFile("");
+			}
 		} catch (InvalidNameException e) {
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.",
-					"File Path Error", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.", "File Path Error", JOptionPane.INFORMATION_MESSAGE);
+			
 			if (e.getLocalizedMessage() == "Summary Table") {
 				pathToMetricsResults.requestFocusInWindow(); 
 			} else if (e.getLocalizedMessage() == "Metric Results") {
 				pathToSampleSummary.requestFocusInWindow();
 			}
+			
+			if (GUI.DEBUG) {
+				e.printStackTrace();
+			}
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "There was a problem:\n"+ e.getMessage(),
-					"Error", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "There was a problem!", "Error", JOptionPane.INFORMATION_MESSAGE);
+			
+			if (GUI.DEBUG) {
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -192,5 +208,21 @@ public class GUI extends JFrame implements ActionListener {
 			throw new NumberFormatException(errorMessage);
 		}
 		return temp;
+	}
+	
+	private void outputRulesToFile(String file) {
+		// TODO change this to actually save the text in a file, and maybe in a cleaner format...
+		Individual bestSolution = this.controller.getBestSolution();
+		Vector<Rule> bestSolutionRules = bestSolution.getRules();
+
+		System.out.print("Add element to summary if (");
+		for (int i = 0; i < bestSolutionRules.size(); i++) {
+			System.out.print(" ( ");
+			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {			    
+			    System.out.print(entry.getKey() + " > " + entry.getValue() + " && ");
+			}
+			System.out.print(" ) || ");
+		}
+		System.out.print(")\n");
 	}
 }
