@@ -119,20 +119,32 @@ public class GUI extends JFrame implements ActionListener {
 		try
 		{
 			this.controller.run();
-			JOptionPane.showMessageDialog(this, "Finished! A best solution has been found!",
-					"Finished!", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Finished! The best solution has been found!", "Finished!", JOptionPane.INFORMATION_MESSAGE);
+			
+			if (GUI.DEBUG) {
+				JOptionPane.showMessageDialog(this, "The best solution has a Recall value of " + this.controller.getBestSolution().getRecall() + ", and a Precision value of " + this.controller.getBestSolution().getPrecision(), "Fitness Values", JOptionPane.INFORMATION_MESSAGE);
+				
+				// TODO get a string to save the output rules to
+				outputRulesToFile("");
+			}
 		} catch (InvalidNameException e) {
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.",
-					"File Path Error", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.", "File Path Error", JOptionPane.INFORMATION_MESSAGE);
+			
 			if (e.getLocalizedMessage() == "Summary Table") {
 				pathToMetricsResults.requestFocusInWindow(); 
 			} else if (e.getLocalizedMessage() == "Metric Results") {
 				pathToSampleSummary.requestFocusInWindow();
 			}
+			
+			if (GUI.DEBUG) {
+				e.printStackTrace();
+			}
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "There was a problem:\n"+ e.getMessage(),
-					"Error", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "There was a problem!", "Error", JOptionPane.INFORMATION_MESSAGE);
+			
+			if (GUI.DEBUG) {
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -199,15 +211,18 @@ public class GUI extends JFrame implements ActionListener {
 	}
 	
 	private void outputRulesToFile(String file) {
-		Vector<Rule> bestSolutionRules = this.controller.getBestSolution().getRules();
-	
-		for (int i = 0; i < bestSolutionRules.size(); i++) {	
-			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {
-			    String metricID = entry.getKey();
-			    int threshold = entry.getValue();
-			    
-			    // those two vars are the values we needed to save for this metric
+		// TODO change this to actually save the text in a file, and maybe in a cleaner format...
+		Individual bestSolution = this.controller.getBestSolution();
+		Vector<Rule> bestSolutionRules = bestSolution.getRules();
+
+		System.out.print("Add element to summary if (");
+		for (int i = 0; i < bestSolutionRules.size(); i++) {
+			System.out.print(" ( ");
+			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {			    
+			    System.out.print(entry.getKey() + " > " + entry.getValue() + " && ");
 			}
+			System.out.print(" ) || ");
 		}
+		System.out.print(")\n");
 	}
 }
