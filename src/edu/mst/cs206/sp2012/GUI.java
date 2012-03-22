@@ -213,16 +213,20 @@ public class GUI extends JFrame implements ActionListener {
 	private void outputRulesToFile(String file) {
 		// TODO change this to actually save the text in a file, and maybe in a cleaner format...
 		Individual bestSolution = this.controller.getBestSolution();
+		
 		Vector<Rule> bestSolutionRules = bestSolution.getRules();
 
-		System.out.print("Add element to summary if (");
+		String humanReadableRulesOfBestSolution = "Add element to summary if (";
 		for (int i = 0; i < bestSolutionRules.size(); i++) {
-			System.out.print(" ( ");
-			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {			    
-			    System.out.print(entry.getKey() + " > " + entry.getValue() + " && ");
+			humanReadableRulesOfBestSolution += " ( "; 
+			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {
+				
+				humanReadableRulesOfBestSolution += entry.getKey() + " > " + entry.getValue() + " && ";
 			}
-			System.out.print(" ) || ");
+			humanReadableRulesOfBestSolution += " ) || "; 
 		}
-		System.out.print(")\n");
+		humanReadableRulesOfBestSolution += ")\n";
+		
+		System.out.print(humanReadableRulesOfBestSolution);
 	}
 }
