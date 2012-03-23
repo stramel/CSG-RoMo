@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-
+/**This Class builds the GUI console for the project.*/
 public class GUI extends JFrame implements ActionListener {
 	private static final boolean DEBUG = true;
 	private static final long serialVersionUID = 1331420879L;
@@ -31,7 +31,10 @@ public class GUI extends JFrame implements ActionListener {
 	private JTextField pathToMetricsResults;
 	private static NumberFormat nf = NumberFormat.getInstance();
 	
-	
+	/**public static void main(String[] args)
+	 * This function creates a new GUI frame.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		GUI gui = new GUI();
 	    gui.setVisible(true);

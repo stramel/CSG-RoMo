@@ -3,11 +3,8 @@ package edu.mst.cs206.sp2012;
 import java.util.Random;
 import java.util.Vector;
 import java.util.HashMap;
-/**This Class will build a Rule for the Individual*/
-/**public class Rule
- * This function will find metrics to remove for the values desired and add metrics to the values desired,
- * generates a threshold, saves that thresholds to a list, and generates the logical expressions.    
- */
+/**This Class will build a Rule for the Individual*/   
+
 public class Rule {
 	private HashMap<String, Integer> thresholds = new HashMap<String, Integer>();
 	private Vector<Boolean> andBetween = new Vector<Boolean>();

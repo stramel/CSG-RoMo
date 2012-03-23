@@ -10,15 +10,12 @@ import org.w3c.dom.Element;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Vector;
-/**public class XMLParser
+/**
  * This class will Parse through an XML to grab the values created by the metrics.
- * @author nebt33
- *
  */
-/**public class XMlParser
- * This function will confirm the className, save the class into the elements, save the methods of this class into elements or 
- * throw an exception if any of these fail.  
- */
+//public class XMlParser
+//This function will confirm the className, save the class into the elements, save the methods of this class into elements or 
+//throw an exception if any of these fail.  
 public class XMLParser {
 	public static Vector<edu.mst.cs206.sp2012.Element> parseMetricsXML(String filename, String[] metricsToSave) throws InvalidNameException {
 		Vector<edu.mst.cs206.sp2012.Element> elements = new Vector<edu.mst.cs206.sp2012.Element>();
