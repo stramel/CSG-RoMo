@@ -3,6 +3,7 @@ package edu.mst.cs206.sp2012;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.NumberFormat;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Map.Entry;
@@ -17,6 +18,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
 public class GUI extends JFrame implements ActionListener {
 	private static final boolean DEBUG = true;
 	private static final long serialVersionUID = 1331420879L;
@@ -27,6 +29,8 @@ public class GUI extends JFrame implements ActionListener {
 	private JTextField numberOfRulesPerSolution;
 	private JTextField pathToSampleSummary;
 	private JTextField pathToMetricsResults;
+	private static NumberFormat nf = NumberFormat.getInstance();
+	
 	
 	public static void main(String[] args) {
 		GUI gui = new GUI();
@@ -120,20 +124,22 @@ public class GUI extends JFrame implements ActionListener {
 				METRICS_RESULT_PATH);
 		try
 		{
+			nf.setMinimumFractionDigits(3);
+		    nf.setGroupingUsed(false); 
 			this.controller.run();
 			JOptionPane.showMessageDialog(this, "Finished! The best solution has been found!", "Finished!", JOptionPane.INFORMATION_MESSAGE);
 			
 			String humanReadableRules = getRulesOfBestSolutionAsHumanReadableString();
 			if (GUI.DEBUG) {
-				JOptionPane.showMessageDialog(this, "The best solution has a Recall value of " + this.controller.getBestSolution().getRecall() + ", and a Precision value of " + this.controller.getBestSolution().getPrecision(), "Fitness Values", JOptionPane.INFORMATION_MESSAGE);
-				
-				// TODO get a string to save the output rules to
-				JOptionPane.showMessageDialog(this, humanReadableRules, "Rules of the Best Found Solution", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(this, "The best solution has a Recall value of " + nf.format(this.controller.getBestSolution().getRecall()) + ", and a Precision value of " + nf.format(this.controller.getBestSolution().getPrecision()), "Fitness Values", JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 			BufferedWriter rulesToFile = new BufferedWriter(new FileWriter("rulesOfBestSolution.txt"));
 			rulesToFile.write(humanReadableRules);
 			rulesToFile.close();
+			
+			JOptionPane.showMessageDialog(this, "The best solution has been\n output to the file 'rulesOfBestSolution.txt'", "Best solution written to file", JOptionPane.INFORMATION_MESSAGE);
+			
 			
 		} catch (InvalidNameException e) {
 			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.", "File Path Error", JOptionPane.INFORMATION_MESSAGE);
@@ -229,7 +235,9 @@ public class GUI extends JFrame implements ActionListener {
 			humanReadableRulesOfBestSolution += " ( "; 
 			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {
 				
-				humanReadableRulesOfBestSolution += entry.getKey() + " > " + entry.getValue() + " && ";
+				humanReadableRulesOfBestSolution += entry.getKey() + " > " + entry.getValue();
+				String logicalConnector = ( bestSolutionRules.get(i).getAndBetweens().get(i) ? " && " : " OR ");
+				humanReadableRulesOfBestSolution += logicalConnector;
 			}
 			humanReadableRulesOfBestSolution += " ) || "; 
 		}
