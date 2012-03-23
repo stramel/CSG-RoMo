@@ -9,7 +9,7 @@ public class Element {
 	private Type type;
 	private HashMap<String, Integer> metrics;
 
-	/**public Element(String name, Type type, HashMap<String,Integer> metrics
+	/**public Element(String name, Type type, HashMap<String,Integer> metrics)
 	 * This constructor will pass in a name, type, and metrics setting them equal to each other in this class.
 	 * @param name of type String
 	 * @param type of type Type
