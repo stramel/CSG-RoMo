@@ -101,6 +101,10 @@ public class Individual {
 		return (this.recall + this.precision) / 2;		
 	}
 	
+	/**public float getPrecision()
+	 * This function will return the precision.
+	 * @return precision
+	 */
 	public float getPrecision() {
 		if (!this.fitnessCalculated) {
 			this.FitnessFunction();
@@ -109,6 +113,10 @@ public class Individual {
 		return this.precision;
 	}
 	
+	/**public float getRecall()
+	 * This function will return the FitnessFuntion
+	 * @return FitnessFunction
+	 */
 	public float getRecall() {
 		if (!this.fitnessCalculated) {
 			this.FitnessFunction();
@@ -117,6 +125,10 @@ public class Individual {
 		return this.recall;
 	}
 	
+	/**public Vector<Rule> getRules()
+	 * Returns the rulesList
+	 * @return rulesList
+	 */
 	public Vector<Rule> getRules() {
 		return this.rulesList;
 	}

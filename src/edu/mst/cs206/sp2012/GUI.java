@@ -33,17 +33,18 @@ public class GUI extends JFrame implements ActionListener {
 	
 	/**public static void main(String[] args)
 	 * This function creates a new GUI frame.
-	 * @param args
+	 * @param args of type String[]
 	 */
 	public static void main(String[] args) {
 		GUI gui = new GUI();
 	    gui.setVisible(true);
 	}
 	
+	/**public class FileSystemNavigator extends AbstractAction
+	 * This function creates the Frame and TextFields for the GUI
+	 *
+	 */
 	public class FileSystemNavigator extends AbstractAction {
-	    /**
-		 * 
-		 */
 		private static final long serialVersionUID = 1L;
 		JFrame frame;
 	    JFileChooser chooser;
@@ -54,7 +55,7 @@ public class GUI extends JFrame implements ActionListener {
 	        this.frame = new JFrame();
 	        this.textField = textField;
 	    }
-
+     
 	    public void actionPerformed(ActionEvent evt) {
 	        // Show dialog; this method does not return until dialog is closed
 	        int result = chooser.showOpenDialog(frame);
@@ -66,6 +67,9 @@ public class GUI extends JFrame implements ActionListener {
 	    }
 	};
 	
+	/**public GUI()
+	 * This function builds all the panels for the GUI
+	 */
 	public GUI()
 	{
 		setSize(550,200);
@@ -113,6 +117,9 @@ public class GUI extends JFrame implements ActionListener {
 	    add(inputPanel);
 	}
 
+	/**public void actionPerformed(ActionEvent arg0)
+	 * This function creates the controller for GUI
+	 */
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		final int NUM_ITERATIONS = getNumberOfIterations();
@@ -165,14 +172,27 @@ public class GUI extends JFrame implements ActionListener {
 		}
 	}
 
+	/**private String getPathToMetricsResults()
+	 * Returns the Text of pathToMetricsResults
+	 * @return pathToMetricsResults.getText()
+	 */
 	private String getPathToMetricsResults() {
 		return pathToMetricsResults.getText();
 	}
 
+	/**private String getPathToSampleSummary()
+	 * Return the Text of the pathToSampleSummary
+	 * @return pathToSampleSummary.getText()
+	 */
 	private String getPathToSampleSummary() {
 		return pathToSampleSummary.getText();
 	}
 
+	/**private int getNumberOfRulesPerSoultion() throws NumberFOrmatException
+	 * This function will throw errors if things were inputed into GUI incorrectly.
+	 * @return temp
+	 * @throws NumberFormatException
+	 */
 	private int getNumberOfRulesPerSolution() throws NumberFormatException {
 		final String USER_INPUT = numberOfRulesPerSolution.getText();
 		int temp = 0;
@@ -191,6 +211,12 @@ public class GUI extends JFrame implements ActionListener {
 		return temp; 
 	}
 
+	/**private int getNumberOfFinalSoultion() throws NumberFormatException
+	 * 
+	 * This function will throw errors if things were inputed into GUI incorrectly.
+	 * @return temp
+	 * @throws NumberFormatExceptionn
+	 */
 	private int getNumberOfFinalSolutions() throws NumberFormatException {
 		final String USER_INPUT = numberOfFinalSolutions.getText();
 		int temp = 0;
@@ -209,6 +235,12 @@ public class GUI extends JFrame implements ActionListener {
 		return temp;
 	}
 
+	/**private int getNumberofIterations() throws NumberFormatException
+	 * 
+	 * This function will throw errors if things were inputed into GUI incorrectly.
+	 * @return temp
+	 * @throws NumberFormatExceptionn
+	 */
 	private int getNumberOfIterations() throws NumberFormatException {
 		final String USER_INPUT = numberOfIterations.getText();
 		int temp = 0;
@@ -227,6 +259,10 @@ public class GUI extends JFrame implements ActionListener {
 		return temp;
 	}
 	
+	/**private String getRulesofBestSoultionAsHumanReadableString()
+	 * This function will output the human readable form of the rules from the machine code values.
+	 * @return humanReadableRulesOfBestSoultion
+	 */
 	private String getRulesOfBestSolutionAsHumanReadableString() {
 		// TODO change this to actually save the text in a file, and maybe in a cleaner format...
 		Individual bestSolution = this.controller.getBestSolution();
