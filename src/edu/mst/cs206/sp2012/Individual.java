@@ -90,7 +90,7 @@ public class Individual {
 				this.recall = 0;
 				this.precision = 0;
 			} else {
-				int intersectionValue = project.getSummary().Intersection(generatedSummary);
+				float intersectionValue = project.getSummary().Intersection(generatedSummary);
 				this.recall = intersectionValue / generatedSummary.getSummarySize();
 				this.precision = intersectionValue / project.getSummary().getSummarySize();
 			}
