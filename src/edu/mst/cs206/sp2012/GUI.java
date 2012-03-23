@@ -272,13 +272,18 @@ public class GUI extends JFrame implements ActionListener {
 		String humanReadableRulesOfBestSolution = "Add element to summary if (";
 		for (int i = 0; i < bestSolutionRules.size(); i++) {
 			humanReadableRulesOfBestSolution += " ( "; 
+			int j = 0;
 			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {
 				
 				humanReadableRulesOfBestSolution += entry.getKey() + " > " + entry.getValue();
-				String logicalConnector = ( i < bestSolutionRules.get(i).getAndBetweens().size() && bestSolutionRules.get(i).getAndBetweens().get(i) ? " && " : " OR ");
+				String logicalConnector = ( j < bestSolutionRules.get(i).getAndBetweens().size() ? (bestSolutionRules.get(i).getAndBetweens().get(j) ? " && " : " OR ") : (""));
 				humanReadableRulesOfBestSolution += logicalConnector;
+				j++;
 			}
-			humanReadableRulesOfBestSolution += " ) || "; 
+			humanReadableRulesOfBestSolution += " )";
+			if ( bestSolutionRules.size() - 1 > i ) {
+				humanReadableRulesOfBestSolution += " || "; 
+			}
 		}
 		humanReadableRulesOfBestSolution += ")\n";
 		
