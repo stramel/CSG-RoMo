@@ -3,6 +3,8 @@ package edu.mst.cs206.sp2012;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.Map.Entry;
 import java.util.Vector;
 import javax.naming.InvalidNameException;
@@ -121,12 +123,18 @@ public class GUI extends JFrame implements ActionListener {
 			this.controller.run();
 			JOptionPane.showMessageDialog(this, "Finished! The best solution has been found!", "Finished!", JOptionPane.INFORMATION_MESSAGE);
 			
+			String humanReadableRules = getRulesOfBestSolutionAsHumanReadableString();
 			if (GUI.DEBUG) {
 				JOptionPane.showMessageDialog(this, "The best solution has a Recall value of " + this.controller.getBestSolution().getRecall() + ", and a Precision value of " + this.controller.getBestSolution().getPrecision(), "Fitness Values", JOptionPane.INFORMATION_MESSAGE);
 				
 				// TODO get a string to save the output rules to
-				outputRulesToFile("");
+				JOptionPane.showMessageDialog(this, humanReadableRules, "Rules of the Best Found Solution", JOptionPane.INFORMATION_MESSAGE);
 			}
+			
+			BufferedWriter rulesToFile = new BufferedWriter(new FileWriter("rulesOfBestSolution.txt"));
+			rulesToFile.write(humanReadableRules);
+			rulesToFile.close();
+			
 		} catch (InvalidNameException e) {
 			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.", "File Path Error", JOptionPane.INFORMATION_MESSAGE);
 			
@@ -210,7 +218,7 @@ public class GUI extends JFrame implements ActionListener {
 		return temp;
 	}
 	
-	private void outputRulesToFile(String file) {
+	private String getRulesOfBestSolutionAsHumanReadableString() {
 		// TODO change this to actually save the text in a file, and maybe in a cleaner format...
 		Individual bestSolution = this.controller.getBestSolution();
 		
@@ -227,6 +235,6 @@ public class GUI extends JFrame implements ActionListener {
 		}
 		humanReadableRulesOfBestSolution += ")\n";
 		
-		System.out.print(humanReadableRulesOfBestSolution);
+		return humanReadableRulesOfBestSolution;
 	}
 }
