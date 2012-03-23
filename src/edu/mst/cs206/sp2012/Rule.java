@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class Rule {
 	private HashMap<String, Integer> thresholds = new HashMap<String, Integer>();
+	private Vector<Boolean> andBetween = new Vector<Boolean>();
 
 	public Rule(String[] availableMetrics, Integer[] maxMetricsThresholds) {		
 		int thresholdsToCreate = new Random().nextInt(availableMetrics.length) + 1;
@@ -41,24 +42,46 @@ public class Rule {
 			
 			// Save this threshold to the list
 			this.thresholds.put(metricsToUse.get(i), thresholdValue);
-		}		
+		}
+		
+		for (int i = 1; i < metricsToUse.size(); i++) {			
+			// Generate the logical operator for in-between the thresholds
+			this.andBetween.add(true);//new Random().nextBoolean());
+		}
 	}
 	
     public boolean evaluate(Element element) {
     	boolean evaluatesTrue = true;
     	String[] keys = thresholds.keySet().toArray(new String[0]);
+    	int i = -1;
     	
-    	for (int i = 0; i < keys.length; i++) {
-    		if (element.MetricExists(keys[i]) && element.MetricValue(keys[i]).compareTo(thresholds.get(keys[i])) < 0) {
-    			evaluatesTrue = false;
-    			break;
-    		}
-    	}
+    	do {
+    		// Reset evaluatesTrue
+    		evaluatesTrue = true;
+    		
+    		// Check the current string of ands to see if they are true
+    		do {
+    			i++; // Increment i for the next value in the chain
+    			
+    			// Check the value against this threshold
+        		if (element.MetricExists(keys[i]) && element.MetricValue(keys[i]).compareTo(thresholds.get(keys[i])) < 0) {
+        			evaluatesTrue = false;
+        			break;
+        		}
+    		} while (i < this.andBetween.size() && this.andBetween.get(i)); // true here means to do another and
+    		
+    		// Fix for if the last loop broke before the end of an and chain
+    		while (i < this.andBetween.size() && this.andBetween.get(i)) { i++; }
+    	} while (!evaluatesTrue && i < this.andBetween.size());
     	
 		return evaluatesTrue;
     }
     
-    public HashMap<String, Integer> getThresholds() {
+    public HashMap<String, Integer> getThresholds() {		
     	return this.thresholds;
+    }
+    
+    public Vector<Boolean> getAndBetweens() {
+    	return this.andBetween;
     }
 }
