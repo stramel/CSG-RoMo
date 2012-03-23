@@ -235,7 +235,9 @@ public class GUI extends JFrame implements ActionListener {
 			humanReadableRulesOfBestSolution += " ( "; 
 			for (Entry<String, Integer> entry : bestSolutionRules.get(i).getThresholds().entrySet()) {
 				
-				humanReadableRulesOfBestSolution += entry.getKey() + " > " + entry.getValue() + " && ";
+				humanReadableRulesOfBestSolution += entry.getKey() + " > " + entry.getValue();
+				String logicalConnector = ( bestSolutionRules.get(i).getAndBetweens().get(i) ? " && " : " OR ");
+				humanReadableRulesOfBestSolution += logicalConnector;
 			}
 			humanReadableRulesOfBestSolution += " ) || "; 
 		}
