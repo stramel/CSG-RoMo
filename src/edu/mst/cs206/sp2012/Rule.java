@@ -3,7 +3,11 @@ package edu.mst.cs206.sp2012;
 import java.util.Random;
 import java.util.Vector;
 import java.util.HashMap;
-
+/**This Class will build a Rule for the Individual*/
+/**public class Rule
+ * This function will find metrics to remove for the values desired and add metrics to the values desired,
+ * generates a threshold, saves that thresholds to a list, and generates the logical expressions.    
+ */
 public class Rule {
 	private HashMap<String, Integer> thresholds = new HashMap<String, Integer>();
 	private Vector<Boolean> andBetween = new Vector<Boolean>();
@@ -46,10 +50,14 @@ public class Rule {
 		
 		for (int i = 1; i < metricsToUse.size(); i++) {			
 			// Generate the logical operator for in-between the thresholds
-			this.andBetween.add(true);//new Random().nextBoolean());
+			this.andBetween.add(new Random().nextBoolean());
 		}
 	}
-	
+	/**public boolean evaluate(Element element)
+	 * This function will check the string of ands to see if true and loop back to look for more.
+	 * @param element of type Element
+	 * @return evaluatesTrue
+	 */
     public boolean evaluate(Element element) {
     	boolean evaluatesTrue = true;
     	String[] keys = thresholds.keySet().toArray(new String[0]);
@@ -77,10 +85,18 @@ public class Rule {
 		return evaluatesTrue;
     }
     
+    /**public HashMap<String, Integer> getThresholds()
+     * Returns thresholds
+     * @return thresholds
+     */
     public HashMap<String, Integer> getThresholds() {		
     	return this.thresholds;
     }
     
+    /**public Vector<Boolean> getAndBetweens()
+     * Returns andBetween
+     * @return andBetween
+     */
     public Vector<Boolean> getAndBetweens() {
     	return this.andBetween;
     }
