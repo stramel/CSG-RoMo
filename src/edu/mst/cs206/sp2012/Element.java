@@ -64,7 +64,7 @@ public class Element {
 	
 	/**public boolean isClass()
 	 * Returns the type of type CLASS
-	 * @return type
+	 * @return type if true when class
 	 */
 	public boolean isClass() {
 		return (type == Type.CLASS);
@@ -72,7 +72,7 @@ public class Element {
 	
 	/**public boolean isMethod()
 	 * Returns the type of type METHOD
-	 * @return type
+	 * @return type if true when method
 	 */
 	public boolean isMethod() {
 		return (type == Type.METHOD);		
