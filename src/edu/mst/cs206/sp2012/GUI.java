@@ -126,14 +126,14 @@ public class GUI extends JFrame implements ActionListener {
 			String humanReadableRules = getRulesOfBestSolutionAsHumanReadableString();
 			if (GUI.DEBUG) {
 				JOptionPane.showMessageDialog(this, "The best solution has a Recall value of " + this.controller.getBestSolution().getRecall() + ", and a Precision value of " + this.controller.getBestSolution().getPrecision(), "Fitness Values", JOptionPane.INFORMATION_MESSAGE);
-				
-				// TODO get a string to save the output rules to
-				JOptionPane.showMessageDialog(this, humanReadableRules, "Rules of the Best Found Solution", JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 			BufferedWriter rulesToFile = new BufferedWriter(new FileWriter("rulesOfBestSolution.txt"));
 			rulesToFile.write(humanReadableRules);
 			rulesToFile.close();
+			
+			JOptionPane.showMessageDialog(this, "The best solution has been\n output to the file 'rulesOfBestSolution.txt'", "Best solution written to file", JOptionPane.INFORMATION_MESSAGE);
+			
 			
 		} catch (InvalidNameException e) {
 			JOptionPane.showMessageDialog(this, "There was a problem with the path to the "+ e.getMessage()+", please fix and try again.", "File Path Error", JOptionPane.INFORMATION_MESSAGE);
