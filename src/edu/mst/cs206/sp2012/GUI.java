@@ -76,22 +76,51 @@ public class GUI extends JFrame implements ActionListener {
 		setTitle("cs206sp2012 Project");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		
 		inputPanel = new JPanel (new FlowLayout());
 		
-		numberOfIterations = new JTextField(20);
-		inputPanel.add(new JLabel("Number of Iterations: "));
-	    inputPanel.add(numberOfIterations);
+		addNumberOfIterationsField();
+		addNumberOfFinalSolutionsField();
+	    addNumberOfRulesPerSolutionField();
+		addSampleSummaryUrlField();
+	    addMetrixFileUrlField();
+	    addRunButton();
+	    integrateComponents();
+	}
+
+	/**
+	 * 
+	 */
+	private void integrateComponents() {
+		add(inputPanel);
+	}
+
+	/**
+	 * 
+	 */
+	private void addRunButton() {
+		JButton runButton = new JButton ("Run");
+	    runButton.addActionListener(this);
+	    inputPanel.add(runButton);
+	}
+
+	/**
+	 * 
+	 */
+	private void addMetrixFileUrlField() {
+		JLabel labelForMetricsResult = new JLabel("Path to Metrics Results: ");
+	    pathToMetricsResults = new JTextField(20);
+	    JButton browseForMetricsResults = new JButton(new FileSystemNavigator(pathToMetricsResults));
+	    browseForMetricsResults.setText("Browse...");
 	    
-		numberOfFinalSolutions = new JTextField(20);
-		inputPanel.add(new JLabel("Number of Final Solutions: "));
-	    inputPanel.add(numberOfFinalSolutions);
-	    
-	    numberOfRulesPerSolution = new JTextField(20);
-		inputPanel.add(new JLabel("Number of Rules per Solution: "));
-	    inputPanel.add(numberOfRulesPerSolution);
-	    
+		inputPanel.add(labelForMetricsResult);
+	    inputPanel.add(pathToMetricsResults);
+	    inputPanel.add(browseForMetricsResults);
+	}
+
+	/**
+	 * 
+	 */
+	private void addSampleSummaryUrlField() {
 		pathToSampleSummary = new JTextField(20);
 		JButton browseForSampleSummary = new JButton(new FileSystemNavigator(pathToSampleSummary));
 	    browseForSampleSummary.setText("Browse...");
@@ -99,22 +128,33 @@ public class GUI extends JFrame implements ActionListener {
 	    inputPanel.add(new JLabel("Path to Sample Summary: "));
 	    inputPanel.add(pathToSampleSummary);
 	    inputPanel.add(browseForSampleSummary);
-	    
-	    JLabel labelForMetricsResult = new JLabel("Path to Metrics Results: ");
-	    pathToMetricsResults = new JTextField(20);
-	    JButton browseForMetricsResults = new JButton(new FileSystemNavigator(pathToMetricsResults));
-	    browseForMetricsResults.setText("Browse...");
-	    
-	    
-		inputPanel.add(labelForMetricsResult);
-	    inputPanel.add(pathToMetricsResults);
-	    inputPanel.add(browseForMetricsResults);
-	    
-	    JButton runButton = new JButton ("Run");
-	    runButton.addActionListener(this);
-	    inputPanel.add(runButton);
-	    
-	    add(inputPanel);
+	}
+
+	/**
+	 * 
+	 */
+	private void addNumberOfRulesPerSolutionField() {
+		numberOfRulesPerSolution = new JTextField(20);
+		inputPanel.add(new JLabel("Number of Rules per Solution: "));
+	    inputPanel.add(numberOfRulesPerSolution);
+	}
+
+	/**
+	 * 
+	 */
+	private void addNumberOfFinalSolutionsField() {
+		numberOfFinalSolutions = new JTextField(20);
+		inputPanel.add(new JLabel("Number of Final Solutions: "));
+	    inputPanel.add(numberOfFinalSolutions);
+	}
+
+	/**
+	 * 
+	 */
+	private void addNumberOfIterationsField() {
+		numberOfIterations = new JTextField(20);
+		inputPanel.add(new JLabel("Number of Iterations: "));
+	    inputPanel.add(numberOfIterations);
 	}
 
 	/**public void actionPerformed(ActionEvent arg0)
@@ -126,7 +166,6 @@ public class GUI extends JFrame implements ActionListener {
 		final int NUM_FINAL_SOLUTIONS = getNumberOfFinalSolutions();
 		final int NUM_RULES_PER_SOLUTIONS = getNumberOfRulesPerSolution();
 		final String SAMPLE_SUMMARY_PATH = getPathToSampleSummary();
-
 		final String METRICS_RESULT_PATH = getPathToMetricsResults();
 		
 		this.controller = new MainController(NUM_ITERATIONS, NUM_FINAL_SOLUTIONS,
