@@ -34,24 +34,8 @@ public class Element {
 	 * Sets Name of Element
 	 * @param name of type String
 	 */
-	private void setName(String name) {
-		this.name = name;
-	}
-	
-	/**public String getName()
-	 * Returns name of Element
-	 * @return name of Element
-	 */
 	public String getName() {
 		return name;
-	}
-	
-	/**public void setType(Type type)
-	 * Sets the type to type.
-	 * @param type of type Type
-	 */
-	private void setType(Type type) {
-		this.type = type;
 	}
 	
 	/**public Type getType()
@@ -76,23 +60,6 @@ public class Element {
 	 */
 	public boolean isMethod() {
 		return (type == Type.METHOD);		
-	}
-	
-	/**public void setMetrics(HashMap<String, Integer> metrics)
-	 * Sets metrics to metrics.
-	 * @param metrics of type HashMap
-	 */
-	private void setMetrics(HashMap<String, Integer> metrics) {
-		this.metrics = metrics;
-	}
-	
-	/**public void setMetric(String metricID, Integer value)
-	 * Sets the metrics ID and value.
-	 * @param metricID of type String
-	 * @param value of type Integer
-	 */
-	private void setMetric(String metricID, Integer value) {
-		this.metrics.put(metricID, value);
 	}
 	
 	/**public HashMap<String, Integer> getMetrics()
