@@ -30,11 +30,11 @@ public class Element {
 		this(name, type, new HashMap<String, Integer>(0));
 	}
 	
-	/**public void setName(String name)
+	/**private void setName(String name)
 	 * Sets Name of Element
 	 * @param name of type String
 	 */
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
 	
@@ -50,7 +50,7 @@ public class Element {
 	 * Sets the type to type.
 	 * @param type of type Type
 	 */
-	public void setType(Type type) {
+	private void setType(Type type) {
 		this.type = type;
 	}
 	
@@ -82,7 +82,7 @@ public class Element {
 	 * Sets metrics to metrics.
 	 * @param metrics of type HashMap
 	 */
-	public void setMetrics(HashMap<String, Integer> metrics) {
+	private void setMetrics(HashMap<String, Integer> metrics) {
 		this.metrics = metrics;
 	}
 	
@@ -91,7 +91,7 @@ public class Element {
 	 * @param metricID of type String
 	 * @param value of type Integer
 	 */
-	public void setMetric(String metricID, Integer value) {
+	private void setMetric(String metricID, Integer value) {
 		this.metrics.put(metricID, value);
 	}
 	
