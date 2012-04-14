@@ -41,11 +41,11 @@ public class Individual {
 			// Loop over all elements available for the given open source project
 			for (int j = 0; j < elements.size(); j++) {
 				
-				final boolean availableMetricExistsInMetricResults = elements.get(j).MetricExists(availableMetrics[i]);
-				if (availableMetricExistsInMetricResults)
+				final boolean availableMetric = elements.get(j).MetricExists(availableMetrics[i]);
+				if (availableMetric)
 				{
-					final boolean actualMetricResultIsGreaterThanCurrentMetricMax = elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0;
-					if (actualMetricResultIsGreaterThanCurrentMetricMax) {
+					final boolean actualMetricResult = elements.get(j).MetricValue(availableMetrics[i]).compareTo(maxMetricsThresholds[i]) > 0;
+					if (actualMetricResult) {
 						// If the availableMetric exists in the metricResults and the 
 						//  value of the metric result exceeds the current maximum value
 						//  for the given metric, then update the maximum value of the given

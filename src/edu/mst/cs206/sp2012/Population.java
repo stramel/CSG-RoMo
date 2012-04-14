@@ -45,7 +45,7 @@ public class Population {
 	 * all of the necessary parameters. 
 	 */
 	public void initialize() {
-		// Initalize bestSolution to null
+		// Initialize bestSolution to null
 		this.bestSolution = null;
 		
 		// Initialize all individuals in the population.
