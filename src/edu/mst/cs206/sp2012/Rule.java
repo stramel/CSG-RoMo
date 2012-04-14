@@ -55,7 +55,7 @@ public class Rule {
 	 * @param element of type Element
 	 * @return evaluatesTrue
 	 */
-    public boolean evaluate(Element element) {
+    public boolean evaluateElement(Element element) {
     	boolean evaluatesTrue = true;
     	String[] keys = thresholds.keySet().toArray(new String[0]);
     	int i = -1;

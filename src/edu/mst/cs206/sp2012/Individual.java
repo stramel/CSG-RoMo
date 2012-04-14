@@ -71,7 +71,7 @@ public class Individual {
 		
 		for (int i = 0; i < elements.size(); i++) {
 			for (int j = 0; j < rulesList.size(); j++) {
-				if (rulesList.get(j).evaluate(elements.get(i))) {
+				if (rulesList.get(j).evaluateElement(elements.get(i))) {
 					// add this element to the generated summary
 					this.generatedSummary.addElement(elements.get(i));
 					break;
