@@ -4,8 +4,8 @@ import java.util.Vector;
 
 /**This class will store all of the individuals and evaluate their fitness*/
 public class Population {
-	private int maxNumberOfRulesPerSolution;
-	private int maxNumberOfSolutions;
+	private int maxRulesPerSolution;
+	private int maxSolutions;
 	private String[] availableMetrics;
 	private OpenSourceProject sampleProject;
 	private Vector<Individual> individuals;
@@ -19,8 +19,8 @@ public class Population {
 	 * @param availableMetrics of type String[]
 	 */
 	public Population(int maxNumberOfSolutions, int maxNumberOfRulesPerSolution, String[] availableMetrics) {
-		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
-		this.maxNumberOfSolutions = maxNumberOfSolutions;
+		this.maxRulesPerSolution = maxNumberOfRulesPerSolution;
+		this.maxSolutions = maxNumberOfSolutions;
 		this.availableMetrics = availableMetrics;
 		this.individuals = new Vector<Individual>(maxNumberOfSolutions);
 	}
@@ -49,16 +49,16 @@ public class Population {
 		this.bestSolution = null;
 		
 		// Initialize all individuals in the population.
-		for (int i = 0; i < maxNumberOfSolutions; i++) {
-			Individual individual = new Individual(sampleProject, availableMetrics, maxNumberOfRulesPerSolution);
+		for (int i = 0; i < maxSolutions; i++) {
+			Individual individual = new Individual(sampleProject, availableMetrics, maxRulesPerSolution);
 			this.individuals.add(individual);
 		}
 	}
 
-	/**public void purgeAndRenew()
+	/**public void clearIndividuals()
 	 * Clear the individuals and re-initialize them.
 	 */
-	public void purgeAndRenew() {
+	public void clearIndividuals() {
 		// Remove all current individuals
 		this.individuals.clear();
 		

@@ -65,7 +65,7 @@ public class MainController {
 		for (int i = 0; i < numberOfIterations; i++) {
 			currentPopulation.evaluateSolutions();
 			bestSolutions.add(currentPopulation.getBestSolution());
-			currentPopulation.purgeAndRenew();
+			currentPopulation.clearIndividuals();
 		}
 	}
 	
