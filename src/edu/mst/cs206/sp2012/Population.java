@@ -66,12 +66,12 @@ public class Population {
 		this.initialize();
 	}
 
-	/**public void evaluateSolutions()
+	/**protected void evaluateSolutions()
 	 * Generates a summary for each of the individuals and then runs the fitness 
 	 * function on each them storing the individual with the highest fitness value
 	 * in the bestSolution variable.
 	 */
-	public void evaluateSolutions() {
+	protected void evaluateSolutions() {
 		float bestFitnessValue = (float) -0.1, fitnessValue;
 		Individual currentIndividual;
 
