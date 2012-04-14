@@ -32,7 +32,6 @@ public class Individual {
 		final int rulesToCreate = new Random().nextInt(maxNumberOfRules) + 1;
 		Integer[] maxMetricsThresholds = new Integer[availableMetrics.length];
 		Vector<Element> elements = project.getElements();
-		this.generatedSummary = new Summary();
 		
 		// Find the max of each metric
 		for (int i = 0; i < maxMetricsThresholds.length; i++) {
