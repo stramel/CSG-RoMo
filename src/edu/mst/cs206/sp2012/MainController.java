@@ -5,8 +5,8 @@ import javax.naming.InvalidNameException;
 /**This class is our core library, operating as a service to be called by any given user interface*/
 public class MainController {
 	private final int numberOfIterations;
-	private final int maxNumberOfSolutions;
-	private final int maxNumberOfRulesPerSolution;
+	private final int maxSolutions;
+	private final int maxRulesPerSolution;
 	private final String urlToSampleSummary;
 	private final String urlToMetricsResults;
 	private Population bestSolutions;
@@ -19,19 +19,19 @@ public class MainController {
 	 * availableMetrics is currently a hard-coded list of metric IDs that will be utilized by this project.
 	 * 
 	 * 
-	 * @param numberOfIterations of type int
-	 * @param numberOfFinalSolutions of type int
+	 * @param numIterations of type int
+	 * @param numFinalSolutions of type int
 	 * @param maxNumberOfRulesPerSolution of type int
 	 * @param urlToSampleSummaries of type String
 	 * @param urlToMetricsResults of type String
 	 */
-	public MainController(int numberOfIterations, int numberOfFinalSolutions,
+	public MainController(int numIterations, int numFinalSolutions,
 			int maxNumberOfRulesPerSolution, String urlToSampleSummaries,
 			String urlToMetricsResults)
 	{
-		this.numberOfIterations = numberOfIterations;
-		this.maxNumberOfSolutions = numberOfFinalSolutions;
-		this.maxNumberOfRulesPerSolution = maxNumberOfRulesPerSolution;
+		this.numberOfIterations = numIterations;
+		this.maxSolutions = numFinalSolutions;
+		this.maxRulesPerSolution = maxNumberOfRulesPerSolution;
 		this.urlToSampleSummary = urlToSampleSummaries;
 		this.urlToMetricsResults = urlToMetricsResults;
 		this.bestSolutions = new Population();
@@ -58,7 +58,7 @@ public class MainController {
 	 * bestSolutions. The population is purged and renewed for the next iteration.
 	 */
 	public void run() throws InvalidNameException {		
-		Population currentPopulation = new Population(maxNumberOfSolutions, maxNumberOfRulesPerSolution, availableMetrics);
+		Population currentPopulation = new Population(maxSolutions, maxRulesPerSolution, availableMetrics);
 		currentPopulation.setSampleProject(new OpenSourceProject(urlToMetricsResults, urlToSampleSummary, availableMetrics));
 		currentPopulation.initialize();
 		
