@@ -8,9 +8,10 @@ import java.util.HashMap;
 public class Rule {
 	private HashMap<String, Integer> thresholds = new HashMap<String, Integer>();
 	private Vector<Boolean> andBetween = new Vector<Boolean>();
+	private static final Random randomizer = new Random();
 
 	public Rule(String[] availableMetrics, Integer[] maxMetricsThresholds) {		
-		int thresholdsToCreate = new Random().nextInt(availableMetrics.length) + 1;
+		int thresholdsToCreate = randomizer.nextInt(availableMetrics.length) + 1;
 		Vector<String> metricsToUse = new Vector<String>();
 		
 		if (thresholdsToCreate > (availableMetrics.length / 2)) {
@@ -23,7 +24,7 @@ public class Rule {
 				int metricToRemove;
 				
 				do {
-					metricToRemove = new Random().nextInt(availableMetrics.length);
+					metricToRemove = randomizer.nextInt(availableMetrics.length);
 				} while (!metricsToUse.remove(availableMetrics[metricToRemove]));
 			}
 		} else {
@@ -32,14 +33,14 @@ public class Rule {
 				int metricToAdd;
 				
 				do {
-					metricToAdd = new Random().nextInt(availableMetrics.length);
+					metricToAdd = randomizer.nextInt(availableMetrics.length);
 				} while (metricsToUse.contains(availableMetrics[metricToAdd]) || !metricsToUse.add(availableMetrics[metricToAdd]));
 			}
 		}
 		
 		for (int i = 0; i < metricsToUse.size(); i++) {			
 			// Generate the threshold
-			int thresholdValue = new Random().nextInt(maxMetricsThresholds[i]);
+			int thresholdValue = randomizer.nextInt(maxMetricsThresholds[i]);
 			
 			// Save this threshold to the list
 			this.thresholds.put(metricsToUse.get(i), thresholdValue);
@@ -47,9 +48,10 @@ public class Rule {
 		
 		for (int i = 1; i < metricsToUse.size(); i++) {			
 			// Generate the logical operator for in-between the thresholds
-			this.andBetween.add(new Random().nextBoolean());
+			this.andBetween.add(randomizer.nextBoolean());
 		}
 	}
+	
 	/**public boolean evaluate(Element element)
 	 * This function will check the string of ands to see if true and loop back to look for more.
 	 * @param element of type Element
