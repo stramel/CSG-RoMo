@@ -10,43 +10,23 @@ public class Rule {
 	private Vector<Boolean> andBetween = new Vector<Boolean>();
 	private static final Random randomizer = new Random();
 
-	public Rule(String[] availableMetrics, Integer[] maxMetricsThresholds) {		
-		int thresholdsToCreate = randomizer.nextInt(availableMetrics.length) + 1;
-		Vector<String> metricsToUse = new Vector<String>();
+	public Rule(String[] availableMetrics, Integer[] maxMetricsThresholds) {
+		final int N = availableMetrics.length;
 		
-		if (thresholdsToCreate > (availableMetrics.length / 2)) {
-			// Remove metrics to hit the value wanted
-			for (int i = 0; i < availableMetrics.length; i++) {
-				metricsToUse.add(availableMetrics[i]);
-			}
+		for (int i=0; i<N; i++) {
 			
-			for (int i = metricsToUse.size() - thresholdsToCreate; i > 0; i--) {
-				int metricToRemove;
+			// Randomly determine if a metric will be added to the Rule.
+			final boolean addMetric = randomizer.nextBoolean();
+			if (addMetric){
+				final int upperBound = maxMetricsThresholds[i];
 				
-				do {
-					metricToRemove = randomizer.nextInt(availableMetrics.length);
-				} while (!metricsToUse.remove(availableMetrics[metricToRemove]));
-			}
-		} else {
-			// Add metrics to hit the value wanted
-			for (int i = 0; i < thresholdsToCreate; i++) {
-				int metricToAdd;
-				
-				do {
-					metricToAdd = randomizer.nextInt(availableMetrics.length);
-				} while (metricsToUse.contains(availableMetrics[metricToAdd]) || !metricsToUse.add(availableMetrics[metricToAdd]));
+				final int lowerBound = randomizer.nextInt(upperBound);
+				final String metricKey = availableMetrics[i];
+				thresholds.put(metricKey, lowerBound);
 			}
 		}
 		
-		for (int i = 0; i < metricsToUse.size(); i++) {			
-			// Generate the threshold
-			int thresholdValue = randomizer.nextInt(maxMetricsThresholds[i]);
-			
-			// Save this threshold to the list
-			this.thresholds.put(metricsToUse.get(i), thresholdValue);
-		}
-		
-		for (int i = 1; i < metricsToUse.size(); i++) {			
+		for (int i = 1; i < thresholds.size(); i++) {			
 			// Generate the logical operator for in-between the thresholds
 			this.andBetween.add(randomizer.nextBoolean());
 		}
