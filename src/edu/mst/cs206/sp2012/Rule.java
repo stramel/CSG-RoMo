@@ -38,30 +38,45 @@ public class Rule {
 	 * @return evaluatesTrue
 	 */
     public boolean evaluateElement(Element element) {
-    	boolean evaluatesTrue = true;
-    	String[] keys = thresholds.keySet().toArray(new String[0]);
-    	int i = -1;
     	
-    	do {
-    		// Reset evaluatesTrue
-    		evaluatesTrue = true;
-    		
-    		// Check the current string of ands to see if they are true
-    		do {
-    			i++; // Increment i for the next value in the chain
-    			
-    			// Check the value against this threshold
-        		if (element.MetricExists(keys[i]) && element.MetricValue(keys[i]).compareTo(thresholds.get(keys[i])) < 0) {
-        			evaluatesTrue = false;
-        			break;
-        		}
-    		} while (i < this.andBetween.size() && this.andBetween.get(i)); // true here means to do another and
-    		
-    		// Fix for if the last loop broke before the end of an and chain
-    		while (i < this.andBetween.size() && this.andBetween.get(i)) { i++; }
-    	} while (!evaluatesTrue && i < this.andBetween.size());
+    	// Build up a set of applicable metrics for the given element.
+    	HashMap<String, Integer> applicableMetrics = new HashMap<String, Integer>();
+    	Vector<String> applicableMetricIDs = new Vector<String>();
+    	for (String metricID: this.thresholds.keySet()) {
+	      final boolean metricAppliesToElement = element.MetricExists(metricID);
+	      if (metricAppliesToElement)
+	      {
+	      	applicableMetrics.put(metricID, this.thresholds.get(metricID));
+	        applicableMetricIDs.add(metricID);
+	      }
+      }
     	
-		return evaluatesTrue;
+    	// If no metrics apply to this element, then by default return false.
+    	boolean noMetricsApplyToElement = (applicableMetricIDs.size() == 0);
+    	if (noMetricsApplyToElement){
+    		return false;
+    	}
+    	
+    	// Initialize the evaluated rule with the first metric evaluated on the element.
+    	final String firstMetricID = applicableMetricIDs.get(0);
+    	boolean evaluatedRule = ( element.MetricValue(firstMetricID) >= thresholds.get(firstMetricID) );
+    	
+    	// With this initial evaluation, now proceed with evaluating the rest of the metrics in the Rule.
+    	//  Make sure to skip the first metric, though. It was already evaluated.
+    	for (int i=1; i < applicableMetricIDs.size(); i++) {
+    		final String currentMetricID = applicableMetricIDs.get(i);
+    		final boolean ruleEvaluatedOnCurrentMetric = ( element.MetricValue(currentMetricID) >= thresholds.get(currentMetricID) );
+    		
+    	  final boolean logicalSeparaterIsAnd = this.andBetween.get(i-1);
+    	  if (logicalSeparaterIsAnd) {
+    	  	evaluatedRule = evaluatedRule && ruleEvaluatedOnCurrentMetric;
+    	  }
+    	  else {
+    	  	evaluatedRule = evaluatedRule || ruleEvaluatedOnCurrentMetric;
+    	  }
+    	}
+    	
+    	return evaluatedRule;
     }
     
     /**public HashMap<String, Integer> getThresholds()
