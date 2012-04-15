@@ -80,11 +80,11 @@ public class GUI extends JFrame implements ActionListener {
 		
 		addNumberOfIterationsField();
 		addNumberOfFinalSolutionsField();
-	    addNumberOfRulesPerSolutionField();
+	  addNumberOfRulesPerSolutionField();
 		addSampleSummaryUrlField();
-	    addMetrixFileUrlField();
-	    addRunButton();
-	    integrateComponents();
+	  addMetrixFileUrlField();
+	  addRunButton();
+	  integrateComponents();
 	}
 
 	/**
