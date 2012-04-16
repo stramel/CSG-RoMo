@@ -8,10 +8,8 @@ user:gui.setInputs(i, s, r, urlSummary, urlMetrics)
 user:gui.run()
 gui:validateInputs(i, s, r, urlSummary, urlMetrics)
 [c:alt Invalid input]
-  [c:alt Integer-input field is not a valid integer]
-    gui:abortWithMessage("Please input a positive intege")
-    user:gui.setFocus()
-  [/c]
+  gui:abortWithMessage("Please provide a valid input")
+  user:gui.setFocusToInputField()
   --[else]
   gui:controller.new(NUM_ITER, NUM_SOL, NUM_RULES, URL_SUMMARY, URL_METRICS)
   gui:BEST_RULES=controller.run()
