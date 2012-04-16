@@ -1,0 +1,18 @@
+gui:GUI "GUI"
+/controller:MainController "Service"
+/bestSolutions:Population "Olympic atheletes"
+/currentPop:Population "Regular Joes"
+
+gui:controller.new(NUM_ITER, NUM_SOL, NUM_RULES, URL_SUMMARY, URL_METRICS)
+controller:METRICS={MLOC, PAR, VG, NBD, NSC, NOM}
+controller:config={METRICS, NUM_ITER, NUM_SOL, NUM_RULES, URL_SUMMARY, URL_METRICS}
+controller:bestSolutions.new()
+
+gui:BEST_RULES=controller.run()
+controller:currentPop.new(config)
+[c:loop 0 <= i < #NUM_ITER]
+  controller:currentPop.init(size=NUM_SOL, rulesPerIndividual=NUM_RULES)
+  controller:currentPop.evaluate(metrics=METRICS, sample=URL_SUMMARY, ossProject=URL_METRICS)
+  controller:bestIndividual=currentPop.getBest()
+  controller:bestSolutions.add(bestIndividual)
+[/c]
