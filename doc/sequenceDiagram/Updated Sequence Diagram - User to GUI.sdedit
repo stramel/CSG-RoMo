@@ -4,43 +4,13 @@ user:User "End user"
 
 user:User Interface=gui.new
 gui:gui.buildInterface()
-user:gui.setNumberOfIterations(i)
-user:gui.setNumberOfSolutionsPerIteration(j)
-user:gui.setMaximumNumberOfRulesPerIteration(k)
-user:gui.setUrlToSampleSummary(urlSummary)
-user:gui.setUrlToMetrics(urlMetrics)
+user:gui.setInputs(i, s, r, urlSummary, urlMetrics)
 user:gui.run()
-gui:validateInputs(i, j, k, urlSummary, urlMetrics)
+gui:validateInputs(i, s, r, urlSummary, urlMetrics)
 [c:alt Invalid input]
-  [c:alt i is not a valid integer]
-    gui:abortWithMessage("Please input a positive integer for # Iterations")
-    user:gui.setFocus(numberOfIterationsInput)
-    --[else]
-    gui:NUM_ITER=validateNumberOfIterations(i)
-  [/c]
-  [c:alt j is not a valid integer]
-    gui:abortWithMessage("Please input a positive integer for # Solutions")
-    user:gui.setFocus(numberOfSolutionsInput)
-    --[else]
-    gui:NUM_SOL=validateNumberOfSolutions(j)
-  [/c]
-  [c:alt k is not a valid integer]
-    gui:abortWithMessage("Please input a positive integer for # Rules")
-    user:gui.setFocus(numberOfRulesInput)
-    --[else]
-    gui:NUM_RULES=validateNumberOfRules(k)
-  [/c]
-  [c:alt urlSummary is not a regular file]
-    gui:abortWithMessage("Please input the URL to a Sample Summary XML file")
-    user:gui.setFocus(urlSampleSummaryInput)
-    --[else]
-    gui:URL_SUMMARY=validateSampleSummaryUrl(urlSummary)
-  [/c]
-  [c:alt urlMetric is not a regular file]
-    gui:abortWithMessage("Please input the URL to a Metric results XML file")
-    user:gui.setFocus(urlMetricsResultInput)
-    --[else]
-    gui:URL_METRICS=validateMetricsUrl(urlMetrics)
+  [c:alt Integer-input field is not a valid integer]
+    gui:abortWithMessage("Please input a positive intege")
+    user:gui.setFocus()
   [/c]
   --[else]
   gui:controller.new(NUM_ITER, NUM_SOL, NUM_RULES, URL_SUMMARY, URL_METRICS)
