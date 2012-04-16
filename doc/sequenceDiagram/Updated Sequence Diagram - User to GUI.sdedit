@@ -1,8 +1,8 @@
-user:User "End user"
-/gui:GUI
-/controller:MainController
+user:Actor "End user"
+/gui:GUI "GUI"
+/controller:MainController "Service"
 
-user:User Interface=gui.new
+user:gui.new
 gui:gui.buildInterface()
 user:gui.setInputs(i, s, r, urlSummary, urlMetrics)
 user:gui.run()
@@ -14,5 +14,5 @@ gui:validateInputs(i, s, r, urlSummary, urlMetrics)
   gui:controller.new(NUM_ITER, NUM_SOL, NUM_RULES, URL_SUMMARY, URL_METRICS)
   gui:BEST_RULES=controller.run()
   gui:writeRulesToFile(BEST_RULES)
-  user:File Containing the Best Rules=gui.getPathToBestRulesFile()
+  user:gui.Read File with Best Rules
 [/c]
